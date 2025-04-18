@@ -36,3 +36,11 @@ document.querySelectorAll(".lang-bn").forEach((el) => {
 document.querySelectorAll(".lang-en").forEach((el) => {
   el.classList.remove("d-none");
 });
+
+// Activate Bootstrap tooltips
+var tooltipTriggerList = [].slice.call(
+  document.querySelectorAll('[data-bs-toggle="tooltip"]')
+);
+var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+  return new bootstrap.Tooltip(tooltipTriggerEl);
+});
