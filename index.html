@@ -1,0 +1,570 @@
+<!DOCTYPE html>
+<html lang="bn">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TravelHub BD</title>
+    <!-- Bootstrap 5 CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <!-- Custom CSS  -->
+    <link rel="stylesheet" href="./styles/style.css" />
+  </head>
+  <body>
+    <!-- নেভিগেশন বার -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary sticky-top">
+      <div class="container">
+        <a class="navbar-brand fw-bold" href="#">
+          <img
+            src="./img/logo/travelhub-bd-logo.png"
+            alt="TravelHub BD Logo"
+            class="logo-img"
+            style="height: 40px"
+          />
+          <span class="lang-en d-none">TravelHub BD</span>
+          <span class="lang-bn">ট্রাভেলহাব বিডি</span>
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link active" href="#"
+                ><span class="lang-bn">হোম</span
+                ><span class="lang-en d-none">Home</span></a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#"
+                ><span class="lang-bn">টিকিট বুকিং</span
+                ><span class="lang-en d-none">Ticket Booking</span></a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#"
+                ><span class="lang-bn">ভিসা তথ্য</span
+                ><span class="lang-en d-none">Visa Info</span></a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#"
+                ><span class="lang-bn">পরামর্শ</span
+                ><span class="lang-en d-none">Advice</span></a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#"
+                ><span class="lang-bn">যোগাযোগ</span
+                ><span class="lang-en d-none">Contact</span></a
+              >
+            </li>
+          </ul>
+
+          <div class="language-switcher">
+            <button class="language-btn" id="languageToggle">
+              <img
+                src="https://flagcdn.com/w20/bd.png"
+                class="language-flag lang-bn"
+                alt="Bangla"
+              />
+              <img
+                src="https://flagcdn.com/w20/gb.png"
+                class="language-flag lang-en d-none"
+                alt="English"
+              />
+              <span class="lang-bn">বাংলা</span>
+              <span class="lang-en d-none">English</span>
+            </button>
+          </div>
+
+          <a href="#" class="btn btn-light ms-lg-3"
+            ><span class="lang-bn">লগ ইন</span
+            ><span class="lang-en d-none">Login</span></a
+          >
+        </div>
+      </div>
+    </nav>
+
+    <!-- হিরো সেকশন -->
+    <section class="hero-section text-center">
+      <div class="container">
+        <h1 class="display-4 fw-bold mb-4 lang-bn">
+          🌍 আপনার যাত্রা শুরু হোক এখানে! ✈️
+        </h1>
+        <h1 class="display-4 fw-bold mb-4 lang-en d-none">
+          🌍 Start Your Journey Here! ✈️
+        </h1>
+
+        <p class="lead mb-5 lang-bn">
+          আপনার স্বপ্ন গন্তব্যে পৌঁছানোর সহজতম উপায়!
+        </p>
+        <p class="lead mb-5 lang-en d-none">
+          The easiest way to reach your dream destination!
+        </p>
+      </div>
+    </section>
+
+    <!-- সুবিধা সেকশন -->
+    <section class="py-5">
+      <div class="container">
+        <div class="text-center mb-5">
+          <h2 class="fw-bold lang-bn">
+            আপনার স্বপ্ন গন্তব্যে পৌঁছানোর সহজতম উপায়!
+          </h2>
+          <h2 class="fw-bold lang-en d-none">
+            The easiest way to reach your dream destination!
+          </h2>
+          <p class="lead lang-bn">
+            আপনি যদি একজন ভ্রমণপিপাসু, ব্যবসায়ী বা গ্রুপ ট্যুরের পরিকল্পনা
+            করছেন তবে আমাদের টিকিট বুকিং সেবা আপনার জন্য!
+          </p>
+          <p class="lead lang-en d-none">
+            Whether you're a traveler, business person or planning a group tour,
+            our ticket booking service is for you!
+          </p>
+        </div>
+
+        <div class="row g-4">
+          <div class="col-md-4">
+            <div class="text-center p-4 h-100">
+              <div class="feature-icon">
+                <i class="fas fa-tag"></i>
+              </div>
+              <h3 class="lang-bn">স্বচ্ছ টিকিটের দাম</h3>
+              <h3 class="lang-en d-none">Transparent Pricing</h3>
+              <p class="lang-bn">
+                কোন গোপন চার্জ নেই! আমরা সম্পূর্ণ স্বচ্ছভাবে টিকিটের মূল্য
+                প্রদর্শন করি যাতে আপনি সঠিক সিদ্ধান্ত নিতে পারেন।
+              </p>
+              <p class="lang-en d-none">
+                No hidden charges! We display ticket prices completely
+                transparently so you can make the right decision.
+              </p>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="text-center p-4 h-100">
+              <div class="feature-icon">
+                <i class="fas fa-bolt"></i>
+              </div>
+              <h3 class="lang-bn">রিয়েল-টাইম বুকিং</h3>
+              <h3 class="lang-en d-none">Real-time Booking</h3>
+              <p class="lang-bn">
+                দ্রুত এবং নিরাপদ প্রক্রিয়ার মাধ্যমে মুহূর্তের মধ্যে আপনার টিকিট
+                বুক করুন। আমাদের সিস্টেম সর্বদা আপডেটেড।
+              </p>
+              <p class="lang-en d-none">
+                Book your tickets instantly through fast and secure process. Our
+                system is always updated.
+              </p>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="text-center p-4 h-100">
+              <div class="feature-icon">
+                <i class="fas fa-star"></i>
+              </div>
+              <h3 class="lang-bn">বিশেষ সুবিধা</h3>
+              <h3 class="lang-en d-none">Special Benefits</h3>
+              <p class="lang-bn">
+                ব্যবসায়ীদের জন্য ডেডিকেটেড সার্ভিস এবং গ্রুপ ট্যুরে সেরা
+                চুক্তি। আমাদের বিশেষ অফারগুলো উপভোগ করুন।
+              </p>
+              <p class="lang-en d-none">
+                Dedicated service for business people and best deals for group
+                tours. Enjoy our special offers.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- আমাদের সেবা -->
+    <section class="py-5 bg-light">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-lg-6 mb-4 mb-lg-0">
+            <img src="./img/1.jpg" alt="ভ্রমণ" class="img-fluid rounded" />
+          </div>
+          <div class="col-lg-6">
+            <h2 class="fw-bold mb-4 lang-bn">
+              আপনার ভ্রমণের স্পৃহা জাগানোর উপায়!
+            </h2>
+            <h2 class="fw-bold mb-4 lang-en d-none">
+              Spark your travel inspiration!
+            </h2>
+            <p class="lead mb-4 lang-bn">
+              আমাদের সেবা ব্যবহার করে আপনি শুধু টিকিটই নয়, ভিসার তথ্য ও
+              অন্যান্য ভ্রমণ পরামর্শও পাবেন। আপনার যাত্রার জন্য সবকিছু একসাথে!
+            </p>
+            <p class="lead mb-4 lang-en d-none">
+              Using our service you'll get not just tickets but also visa
+              information and other travel advice. Everything for your journey
+              in one place!
+            </p>
+            <ul class="list-unstyled">
+              <li class="mb-3">
+                <i class="fas fa-check-circle text-primary me-2"></i>
+                <span class="lang-bn">১০০+ এয়ারলাইনের সাথে পার্টনারশিপ</span
+                ><span class="lang-en d-none"
+                  >Partnership with 100+ airlines</span
+                >
+              </li>
+              <li class="mb-3">
+                <i class="fas fa-check-circle text-primary me-2"></i>
+                <span class="lang-bn">২৪/৭ কাস্টমার সাপোর্ট</span
+                ><span class="lang-en d-none">24/7 customer support</span>
+              </li>
+              <li class="mb-3">
+                <i class="fas fa-check-circle text-primary me-2"></i>
+                <span class="lang-bn">সুরক্ষিত পেমেন্ট সিস্টেম</span
+                ><span class="lang-en d-none">Secure payment system</span>
+              </li>
+              <li class="mb-3">
+                <i class="fas fa-check-circle text-primary me-2"></i>
+                <span class="lang-bn">ভিসা প্রসেসিং সহায়তা</span
+                ><span class="lang-en d-none">Visa processing assistance</span>
+              </li>
+              <li class="mb-3">
+                <i class="fas fa-check-circle text-primary me-2"></i>
+                <span class="lang-bn">ভ্রমণ বীমা সুবিধা</span
+                ><span class="lang-en d-none">Travel insurance facility</span>
+              </li>
+            </ul>
+            <a href="#" class="btn btn-primary btn-lg mt-3 lang-bn"
+              >আরও জানুন</a
+            >
+            <a href="#" class="btn btn-primary btn-lg mt-3 lang-en d-none"
+              >Learn More</a
+            >
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- টেস্টিমোনিয়াল -->
+    <section class="py-5">
+      <div class="container">
+        <div class="text-center mb-5">
+          <h2 class="fw-bold lang-bn">আমাদের গ্রাহকদের মতামত</h2>
+          <h2 class="fw-bold lang-en d-none">Customer Testimonials</h2>
+          <p class="lead lang-bn">
+            আমাদের সেবা ব্যবহার করে হাজারো যাত্রী তাদের স্বপ্নের ভ্রমণ উপভোগ
+            করেছেন
+          </p>
+          <p class="lead lang-en d-none">
+            Thousands of travelers have enjoyed their dream trips using our
+            service
+          </p>
+        </div>
+
+        <div class="row g-4">
+          <div class="col-md-4">
+            <div class="card h-100">
+              <div class="card-body text-center p-4">
+                <img
+                  src="https://randomuser.me/api/portraits/women/32.jpg"
+                  alt="গ্রাহক"
+                  class="testimonial-img mb-3"
+                />
+                <h5 class="card-title">আয়েশা খান</h5>
+                <h5 class="card-title d-none lang-en">Ayesha Khan</h5>
+                <div class="text-warning mb-3">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                </div>
+                <p class="card-text lang-bn">
+                  "অসাধারণ সেবা! মালয়েশিয়া ভ্রমণের জন্য টিকিট বুক করেছিলাম,
+                  সবকিছু খুব সহজ এবং স্বচ্ছ ছিল। বিশেষ করে ভিসা প্রসেসিংয়ে
+                  তাদের সহায়তা খুব উপকারী ছিল।"
+                </p>
+                <p class="card-text d-none lang-en">
+                  "Excellent service! Booked tickets for Malaysia trip,
+                  everything was very easy and transparent. Their visa
+                  processing assistance was especially helpful."
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card h-100">
+              <div class="card-body text-center p-4">
+                <img
+                  src="https://randomuser.me/api/portraits/men/45.jpg"
+                  alt="গ্রাহক"
+                  class="testimonial-img mb-3"
+                />
+                <h5 class="card-title">রফিকুল ইসলাম</h5>
+                <h5 class="card-title d-none lang-en">Rafiqul Islam</h5>
+                <div class="text-warning mb-3">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star-half-alt"></i>
+                </div>
+                <p class="card-text lang-bn">
+                  "ব্যবসায়িক ভ্রমণের জন্য নিয়মিত এই সাইট ব্যবহার করি। তাদের
+                  ব্যবসায়িক ক্লায়েন্ট সার্ভিস সত্যিই চমৎকার। সর্বনিম্ন দামে
+                  সেরা সেবা পাওয়া যায়।"
+                </p>
+                <p class="card-text d-none lang-en">
+                  "I use this site regularly for business travel. Their business
+                  client service is truly excellent. Best service at minimum
+                  price."
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card h-100">
+              <div class="card-body text-center p-4">
+                <img
+                  src="https://randomuser.me/api/portraits/women/68.jpg"
+                  alt="গ্রাহক"
+                  class="testimonial-img mb-3"
+                />
+                <h5 class="card-title">তানিয়া আহমেদ</h5>
+                <h5 class="card-title d-none lang-en">Tania Ahmed</h5>
+                <div class="text-warning mb-3">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                </div>
+                <p class="card-text lang-bn">
+                  "১৫ জনের গ্রুপ নিয়ে থাইল্যান্ড ভ্রমণ করেছি। গ্রুপ ডিসকাউন্ট
+                  এবং সমস্ত ব্যবস্থাপনায় তারা খুব পেশাদারিত্ব দেখিয়েছে। সবাই
+                  খুব উপভোগ করেছি!"
+                </p>
+                <p class="card-text d-none lang-en">
+                  "Traveled to Thailand with a group of 15. Their group discount
+                  and all arrangements showed great professionalism. Everyone
+                  enjoyed it very much!"
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- কল টু অ্যাকশন -->
+    <section class="py-5 bg-primary text-white">
+      <div class="container text-center">
+        <h2 class="display-5 fw-bold mb-4 lang-bn">এখনই বুক করুন!</h2>
+        <h2 class="display-5 fw-bold mb-4 lang-en d-none">Book Now!</h2>
+        <p class="lead mb-5 lang-bn">
+          আপনার বিমান টিকিট বুকিং এবং ভিসার তথ্যের জন্য আজই আমাদের ওয়েবসাইটে
+          যান এবং আপনার স্বপ্নের যাত্রা শুরু করুন!
+        </p>
+        <p class="lead mb-5 lang-en d-none">
+          Visit our website today for your flight ticket booking and visa
+          information and start your dream journey!
+        </p>
+        <a href="#" class="btn btn-light btn-lg px-5 lang-bn">
+          <i class="fas fa-plane me-2"></i> এখনই বুক করুন 🌏
+        </a>
+        <a href="#" class="btn btn-light btn-lg px-5 lang-en d-none">
+          <i class="fas fa-plane me-2"></i> Book Now 🌏
+        </a>
+      </div>
+    </section>
+
+    <!-- ফুটার -->
+    <footer class="footer">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-4 mb-4 mb-lg-0">
+            <h5 class="fw-bold mb-4">
+              <img
+                src="./img/logo/travelhub-bd-logo.png"
+                alt="TravelHub BD Logo"
+                class="logo-img"
+                style="height: 40px; margin-right: 10px"
+              /><span class="lang-bn">ট্রাভেলহাব বিডি</span
+              ><span class="lang-en d-none">TravelHub BD</span>
+            </h5>
+            <p class="lang-bn">
+              আপনার স্বপ্ন গন্তব্যে পৌঁছানোর সহজতম উপায়! আমরা আপনাকে প্রদান করি
+              সেরা ভ্রমণ অভিজ্ঞতা এবং সাশ্রয়ী মূল্যে টিকিট বুকিং সুবিধা।
+            </p>
+            <p class="lang-en d-none">
+              The easiest way to reach your dream destination! We provide you
+              the best travel experience and affordable ticket booking
+              facilities.
+            </p>
+            <div class="mt-4">
+              <a href="#" class="text-white me-3"
+                ><i class="fab fa-facebook-f fa-lg"></i
+              ></a>
+              <a href="#" class="text-white me-3"
+                ><i class="fab fa-twitter fa-lg"></i
+              ></a>
+              <a href="#" class="text-white me-3"
+                ><i class="fab fa-instagram fa-lg"></i
+              ></a>
+              <a href="#" class="text-white"
+                ><i class="fab fa-linkedin-in fa-lg"></i
+              ></a>
+            </div>
+          </div>
+          <div class="col-lg-2 col-md-6 mb-4 mb-md-0">
+            <h5 class="fw-bold mb-4 lang-bn">লিংক</h5>
+            <h5 class="fw-bold mb-4 lang-en d-none">Links</h5>
+            <ul class="list-unstyled">
+              <li class="mb-2">
+                <a href="#" class="text-white text-decoration-none lang-bn"
+                  >হোম</a
+                ><a
+                  href="#"
+                  class="text-white text-decoration-none lang-en d-none"
+                  >Home</a
+                >
+              </li>
+              <li class="mb-2">
+                <a href="#" class="text-white text-decoration-none lang-bn"
+                  >টিকিট বুকিং</a
+                ><a
+                  href="#"
+                  class="text-white text-decoration-none lang-en d-none"
+                  >Ticket Booking</a
+                >
+              </li>
+              <li class="mb-2">
+                <a href="#" class="text-white text-decoration-none lang-bn"
+                  >ভিসা তথ্য</a
+                ><a
+                  href="#"
+                  class="text-white text-decoration-none lang-en d-none"
+                  >Visa Info</a
+                >
+              </li>
+              <li class="mb-2">
+                <a href="#" class="text-white text-decoration-none lang-bn"
+                  >পরামর্শ</a
+                ><a
+                  href="#"
+                  class="text-white text-decoration-none lang-en d-none"
+                  >Advice</a
+                >
+              </li>
+              <li>
+                <a href="#" class="text-white text-decoration-none lang-bn"
+                  >যোগাযোগ</a
+                ><a
+                  href="#"
+                  class="text-white text-decoration-none lang-en d-none"
+                  >Contact</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+            <h5 class="fw-bold mb-4 lang-bn">যোগাযোগ</h5>
+            <h5 class="fw-bold mb-4 lang-en d-none">Contact</h5>
+            <ul class="list-unstyled">
+              <li class="mb-3">
+                <i class="fas fa-map-marker-alt me-2"></i> InterContinental
+                Hotel Building -3 (Ground Fl)<br />
+                1 Minto Road Dhaka-1000, Bangladesh<br />
+                Email : travelhubbd9@gmail.com
+              </li>
+              <li class="mb-3">
+                <i class="fas fa-phone me-2"></i> +88 01713-066646<br />
+                +88 01833-328668<br />
+                +88 01616-666369
+              </li>
+              <li>
+                <i class="fas fa-envelope me-2"></i> www.travelhubbd9@gmail.com
+              </li>
+            </ul>
+          </div>
+          <div class="col-lg-3 col-md-6">
+            <h5 class="fw-bold mb-4 lang-bn">নিউজলেটার</h5>
+            <h5 class="fw-bold mb-4 lang-en d-none">Newsletter</h5>
+            <p class="lang-bn">
+              আমাদের বিশেষ অফার এবং ভ্রমণ টিপস পেতে সাবস্ক্রাইব করুন
+            </p>
+            <p class="lang-en d-none">
+              Subscribe to get our special offers and travel tips
+            </p>
+            <form>
+              <div class="input-group mb-3">
+                <input
+                  type="email"
+                  class="form-control"
+                  placeholder="আপনার ইমেইল"
+                  lang="bn"
+                />
+                <input
+                  type="email"
+                  class="form-control d-none"
+                  placeholder="Your Email"
+                  lang="en"
+                />
+                <button class="btn btn-light lang-bn" type="button">
+                  সাবস্ক্রাইব
+                </button>
+                <button class="btn btn-light lang-en d-none" type="button">
+                  Subscribe
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+        <hr class="mt-4 mb-3 bg-light" />
+        <div class="row">
+          <div class="col-md-6 text-center text-md-start">
+            <p class="mb-0">
+              &copy; ২০২৩ <span class="lang-bn">ট্রাভেলহাব বিডি</span
+              ><span class="lang-en d-none">TravelHub BD</span>.
+              <span class="lang-bn">সকল অধিকার সংরক্ষিত</span
+              ><span class="lang-en d-none">All rights reserved</span>
+            </p>
+          </div>
+          <div class="col-md-6 text-center text-md-end">
+            <a href="#" class="text-white text-decoration-none me-3 lang-bn"
+              >প্রাইভেসি পলিসি</a
+            >
+            <a
+              href="#"
+              class="text-white text-decoration-none me-3 lang-en d-none"
+              >Privacy Policy</a
+            >
+            <a href="#" class="text-white text-decoration-none lang-bn"
+              >শর্তাবলী</a
+            >
+            <a href="#" class="text-white text-decoration-none lang-en d-none"
+              >Terms</a
+            >
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Bootstrap 5 JS Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- ভাষা পরিবর্তন স্ক্রিপ্ট -->
+    <script src="./js/languageSwitch.js"></script>
+  </body>
+</html>
