@@ -26,88 +26,168 @@
     <!-- নেভিগেশন বার - Enhanced with Bootstrap 5 -->
     <nav
       class="navbar navbar-expand-lg navbar-dark bg-primary sticky-top shadow-sm"
+      style="background: linear-gradient(135deg, #0d6efd 0%, #0b5ed7 100%)"
     >
       <div class="container">
-        <a class="navbar-brand fw-bold d-flex align-items-center" href="#">
+        <!-- Logo with Animation -->
+        <a
+          class="navbar-brand fw-bold d-flex align-items-center"
+          href="#"
+          style="transition: all 0.3s"
+        >
           <img
             src="./img/logo/travelhub-bd-logo.png"
             alt="TravelHub BD Logo"
             class="logo-img me-2"
+            style="height: 40px; transition: transform 0.3s"
+            onmouseover="this.style.transform='scale(1.1)'"
+            onmouseout="this.style.transform='scale(1)'"
           />
-          <span class="lang-en d-none">TravelHub BD</span>
-          <span class="lang-bn">ট্রাভেলহাব বিডি</span>
+          <span
+            class="lang-en d-none"
+            style="font-family: 'Montserrat', sans-serif"
+            >TravelHub BD</span
+          >
+          <span class="lang-bn" style="font-family: 'Hind Siliguri', sans-serif"
+            >ট্রাভেলহাব বিডি</span
+          >
         </a>
+
+        <!-- Mobile Toggle Button -->
         <button
           class="navbar-toggler"
           type="button"
           data-bs-toggle="collapse"
           data-bs-target="#navbarNav"
-          aria-controls="navbarNav"
-          aria-expanded="false"
           aria-label="Toggle navigation"
+          style="border: none; box-shadow: none"
         >
           <span class="navbar-toggler-icon"></span>
         </button>
+
+        <!-- Navigation Links -->
         <div class="collapse navbar-collapse" id="navbarNav">
           <ul class="navbar-nav ms-auto">
-            <li class="nav-item">
-              <a class="nav-link active" href="#"
-                ><i class="fas fa-home me-1"></i><span class="lang-bn">হোম</span
-                ><span class="lang-en d-none">Home</span></a
+            <!-- Home Link -->
+            <li class="nav-item mx-1">
+              <a
+                class="nav-link active d-flex align-items-center"
+                href="index.html"
+                style="position: relative"
               >
+                <i class="fas fa-home me-1"></i>
+                <span class="lang-bn">হোম</span>
+                <span class="lang-en d-none">Home</span>
+                <span class="nav-link-underline"></span>
+              </a>
             </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#"
-                ><i class="fas fa-ticket-alt me-1"></i
-                ><span class="lang-bn">টিকিট বুকিং</span
-                ><span class="lang-en d-none">Ticket Booking</span></a
+
+            <!-- Ticket Booking Link -->
+            <li class="nav-item mx-1">
+              <a
+                class="nav-link d-flex align-items-center"
+                href="./pages/ticketBooking.html"
+                style="position: relative"
               >
+                <i class="fas fa-ticket-alt me-1"></i>
+                <span class="lang-bn">টিকিট বুকিং</span>
+                <span class="lang-en d-none">Tickets</span>
+                <span class="nav-link-underline"></span>
+              </a>
             </li>
-            <li class="nav-item">
-              <a class="nav-link" href="./pages/visaInfo.html"
-                ><i class="fas fa-passport me-1"></i
-                ><span class="lang-bn">ভিসা তথ্য</span
-                ><span class="lang-en d-none">Visa Info</span></a
+
+            <!-- Visa Info Link -->
+            <li class="nav-item mx-1">
+              <a
+                class="nav-link d-flex align-items-center"
+                href="./pages/visaInfo.html"
+                style="position: relative"
               >
+                <i class="fas fa-passport me-1"></i>
+                <span class="lang-bn">ভিসা তথ্য</span>
+                <span class="lang-en d-none">Visa</span>
+                <span class="nav-link-underline"></span>
+              </a>
             </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#"
-                ><i class="fas fa-comments me-1"></i
-                ><span class="lang-bn">পরামর্শ</span
-                ><span class="lang-en d-none">Advice</span></a
+
+            <!-- Advice Link -->
+            <li class="nav-item mx-1">
+              <a
+                class="nav-link d-flex align-items-center"
+                href="./pages/advice.html"
+                style="position: relative"
               >
+                <i class="fas fa-comments me-1"></i>
+                <span class="lang-bn">পরামর্শ</span>
+                <span class="lang-en d-none">Advice</span>
+                <span class="nav-link-underline"></span>
+              </a>
             </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#"
-                ><i class="fas fa-phone-alt me-1"></i
-                ><span class="lang-bn">যোগাযোগ</span
-                ><span class="lang-en d-none">Contact</span></a
+
+            <!-- Contact Link -->
+            <li class="nav-item mx-1">
+              <a
+                class="nav-link d-flex align-items-center"
+                href="#"
+                style="position: relative"
               >
+                <i class="fas fa-phone-alt me-1"></i>
+                <span class="lang-bn">যোগাযোগ</span>
+                <span class="lang-en d-none">Contact</span>
+                <span class="nav-link-underline"></span>
+              </a>
             </li>
           </ul>
 
-          <div class="language-switcher ms-3">
-            <button class="btn btn-outline-light btn-sm" id="languageToggle">
+          <!-- Language Switcher with Tooltip -->
+          <div
+            class="language-switcher ms-3"
+            data-bs-toggle="tooltip"
+            data-bs-placement="bottom"
+            title="Change Language"
+          >
+            <button
+              class="btn btn-outline-light btn-sm d-flex align-items-center"
+              id="languageToggle"
+              style="
+                border-radius: 20px;
+                padding: 5px 12px;
+                transition: all 0.3s;
+              "
+              onmouseover="this.style.backgroundColor='rgba(255,255,255,0.2)'"
+              onmouseout="this.style.backgroundColor='transparent'"
+            >
               <img
                 src="https://flagcdn.com/w20/bd.png"
                 class="language-flag lang-bn me-1"
                 alt="Bangla"
+                style="width: 20px; height: auto"
               />
               <img
                 src="https://flagcdn.com/w20/gb.png"
                 class="language-flag lang-en d-none me-1"
                 alt="English"
+                style="width: 20px; height: auto"
               />
-              <span class="lang-bn">বাংলা</span>
-              <span class="lang-en d-none">English</span>
+              <span class="lang-bn" style="font-size: 0.9rem">বাংলা</span>
+              <span class="lang-en d-none" style="font-size: 0.9rem"
+                >English</span
+              >
             </button>
           </div>
 
-          <a href="#" class="btn btn-light ms-lg-3"
-            ><i class="fas fa-sign-in-alt me-1"></i
-            ><span class="lang-bn">লগ ইন</span
-            ><span class="lang-en d-none">Login</span></a
+          <!-- Login Button with Hover Effect -->
+          <a
+            href="#"
+            class="btn btn-light ms-lg-3 d-flex align-items-center"
+            style="border-radius: 20px; padding: 8px 20px; transition: all 0.3s"
+            onmouseover="this.style.transform='translateY(-2px)'; this.style.boxShadow='0 4px 8px rgba(0,0,0,0.2)'"
+            onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='none'"
           >
+            <i class="fas fa-sign-in-alt me-1"></i>
+            <span class="lang-bn">লগ ইন</span>
+            <span class="lang-en d-none">Login</span>
+          </a>
         </div>
       </div>
     </nav>

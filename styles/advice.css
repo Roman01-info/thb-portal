@@ -1,0 +1,29 @@
+.advice-hero {
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+    url("https://images.unsplash.com/photo-1501555088652-021faa106b9b?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80");
+  background-size: cover;
+  background-position: center;
+  color: white;
+  padding: 120px 0;
+}
+.advice-card {
+  transition: transform 0.3s;
+  border: none;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  height: 100%;
+}
+.advice-card:hover {
+  transform: translateY(-10px);
+}
+.advice-icon {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  color: #0d6efd;
+}
+.country-card {
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}

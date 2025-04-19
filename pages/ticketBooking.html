@@ -3,64 +3,904 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Ticket Booking</title>
+    <title>Ticket Booking | TravelHub BD</title>
+    <!-- Bootstrap 5 CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <!-- custom css  -->
     <link rel="stylesheet" href="../styles/ticketBooking.css" />
+    <link rel="stylesheet" href="../styles/style.css" />
   </head>
   <body>
-    <div class="booking-container">
-      <h1 class="title">Ticket Booking</h1>
-      <form class="booking-form">
-        <div class="form-group">
-          <label for="name">Full Name</label>
-          <input
-            type="text"
-            id="name"
-            name="name"
-            placeholder="Enter your full name"
-            required
+    <!-- Navigation -->
+    <nav
+      class="navbar navbar-expand-lg navbar-dark bg-primary sticky-top shadow-sm"
+      style="background: linear-gradient(135deg, #0d6efd 0%, #0b5ed7 100%)"
+    >
+      <div class="container">
+        <a
+          class="navbar-brand fw-bold d-flex align-items-center"
+          href="#"
+          style="transition: all 0.3s"
+        >
+          <img
+            src="../img/logo/travelhub-bd-logo.png"
+            alt="TravelHub BD Logo"
+            class="logo-img me-2"
+            style="height: 40px; transition: transform 0.3s"
+            onmouseover="this.style.transform='scale(1.1)'"
+            onmouseout="this.style.transform='scale(1)'"
           />
+          <span
+            class="lang-en d-none"
+            style="font-family: 'Montserrat', sans-serif"
+            >TravelHub BD</span
+          >
+          <span class="lang-bn" style="font-family: 'Hind Siliguri', sans-serif"
+            >ট্রাভেলহাব বিডি</span
+          >
+        </a>
+
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item mx-1">
+              <a
+                class="nav-link d-flex align-items-center"
+                href="../index.html"
+                style="position: relative"
+              >
+                <i class="fas fa-home me-1"></i>
+                <span class="lang-bn">হোম</span>
+                <span class="lang-en d-none">Home</span>
+                <span class="nav-link-underline"></span>
+              </a>
+            </li>
+
+            <li class="nav-item mx-1">
+              <a
+                class="nav-link active d-flex align-items-center"
+                href="./ticketBooking.html"
+                style="position: relative"
+              >
+                <i class="fas fa-ticket-alt me-1"></i>
+                <span class="lang-bn">টিকিট বুকিং</span>
+                <span class="lang-en d-none">Tickets</span>
+                <span class="nav-link-underline"></span>
+              </a>
+            </li>
+
+            <li class="nav-item mx-1">
+              <a
+                class="nav-link d-flex align-items-center"
+                href="../pages/visaInfo.html"
+                style="position: relative"
+              >
+                <i class="fas fa-passport me-1"></i>
+                <span class="lang-bn">ভিসা তথ্য</span>
+                <span class="lang-en d-none">Visa</span>
+                <span class="nav-link-underline"></span>
+              </a>
+            </li>
+
+            <li class="nav-item mx-1">
+              <a
+                class="nav-link d-flex align-items-center"
+                href="../pages/advice.html"
+                style="position: relative"
+              >
+                <i class="fas fa-comments me-1"></i>
+                <span class="lang-bn">পরামর্শ</span>
+                <span class="lang-en d-none">Advice</span>
+                <span class="nav-link-underline"></span>
+              </a>
+            </li>
+
+            <li class="nav-item mx-1">
+              <a
+                class="nav-link d-flex align-items-center"
+                href="#"
+                style="position: relative"
+              >
+                <i class="fas fa-phone-alt me-1"></i>
+                <span class="lang-bn">যোগাযোগ</span>
+                <span class="lang-en d-none">Contact</span>
+                <span class="nav-link-underline"></span>
+              </a>
+            </li>
+          </ul>
+
+          <div
+            class="language-switcher ms-3"
+            data-bs-toggle="tooltip"
+            data-bs-placement="bottom"
+            title="Change Language"
+          >
+            <button
+              class="btn btn-outline-light btn-sm d-flex align-items-center"
+              id="languageToggle"
+              style="
+                border-radius: 20px;
+                padding: 5px 12px;
+                transition: all 0.3s;
+              "
+            >
+              <img
+                src="https://flagcdn.com/w20/bd.png"
+                class="language-flag lang-bn me-1"
+                alt="Bangla"
+                style="width: 20px; height: auto"
+              />
+              <img
+                src="https://flagcdn.com/w20/gb.png"
+                class="language-flag lang-en d-none me-1"
+                alt="English"
+                style="width: 20px; height: auto"
+              />
+              <span class="lang-bn" style="font-size: 0.9rem">বাংলা</span>
+              <span class="lang-en d-none" style="font-size: 0.9rem"
+                >English</span
+              >
+            </button>
+          </div>
+
+          <a
+            href="#"
+            class="btn btn-light ms-lg-3 d-flex align-items-center"
+            style="border-radius: 20px; padding: 8px 20px; transition: all 0.3s"
+          >
+            <i class="fas fa-sign-in-alt me-1"></i>
+            <span class="lang-bn">লগ ইন</span>
+            <span class="lang-en d-none">Login</span>
+          </a>
         </div>
-        <div class="form-group">
-          <label for="email">Email</label>
-          <input
-            type="email"
-            id="email"
-            name="email"
-            placeholder="Enter your email"
-            required
-          />
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="booking-hero text-center">
+      <div class="container">
+        <h1 class="display-4 fw-bold mb-4 lang-bn">ফ্লাইট টিকেট বুক করুন</h1>
+        <h1 class="display-4 fw-bold mb-4 lang-en d-none">
+          Book Your Flight Tickets
+        </h1>
+        <p class="lead fs-4 lang-bn">
+          সারা বিশ্বের যেকোনো গন্তব্যে সেরা দামে টিকেট বুক করুন
+        </p>
+        <p class="lead fs-4 lang-en d-none">
+          Find the best deals for flights to any destination worldwide
+        </p>
+      </div>
+    </section>
+
+    <!-- Booking Form Section -->
+    <section class="container mb-5">
+      <div class="booking-card card border-0">
+        <div class="booking-card-header">
+          <h3 class="mb-0 lang-bn">
+            <i class="fas fa-search me-2"></i> ফ্লাইট খুঁজুন
+          </h3>
+          <h3 class="mb-0 lang-en d-none">
+            <i class="fas fa-search me-2"></i> Find Flights
+          </h3>
         </div>
-        <div class="form-group">
-          <label for="phone">Phone Number</label>
-          <input
-            type="tel"
-            id="phone"
-            name="phone"
-            placeholder="Enter your phone number"
-            required
-          />
+        <div class="card-body p-4">
+          <ul
+            class="nav nav-tabs flight-type-tabs mb-4"
+            id="flightTypeTab"
+            role="tablist"
+          >
+            <li class="nav-item" role="presentation">
+              <button
+                class="nav-link active"
+                id="round-trip-tab"
+                data-bs-toggle="tab"
+                data-bs-target="#round-trip"
+                type="button"
+                role="tab"
+              >
+                <i class="fas fa-exchange-alt me-2"></i>
+                <span class="lang-bn">রাউন্ড ট্রিপ</span>
+                <span class="lang-en d-none">Round Trip</span>
+              </button>
+            </li>
+            <li class="nav-item" role="presentation">
+              <button
+                class="nav-link"
+                id="one-way-tab"
+                data-bs-toggle="tab"
+                data-bs-target="#one-way"
+                type="button"
+                role="tab"
+              >
+                <i class="fas fa-arrow-right me-2"></i>
+                <span class="lang-bn">ওয়ান ওয়ে</span>
+                <span class="lang-en d-none">One Way</span>
+              </button>
+            </li>
+            <li class="nav-item" role="presentation">
+              <button
+                class="nav-link"
+                id="multi-city-tab"
+                data-bs-toggle="tab"
+                data-bs-target="#multi-city"
+                type="button"
+                role="tab"
+              >
+                <i class="fas fa-map-marked-alt me-2"></i>
+                <span class="lang-bn">মাল্টি সিটি</span>
+                <span class="lang-en d-none">Multi City</span>
+              </button>
+            </li>
+          </ul>
+
+          <div class="tab-content" id="flightTypeTabContent">
+            <!-- Round Trip Tab -->
+            <div
+              class="tab-pane fade show active"
+              id="round-trip"
+              role="tabpanel"
+            >
+              <form>
+                <div class="row g-3">
+                  <div class="col-md-6">
+                    <label for="from-city" class="form-label lang-bn"
+                      >উড়ানের স্থান</label
+                    >
+                    <label for="from-city" class="form-label lang-en d-none"
+                      >Flying From</label
+                    >
+                    <div class="input-group">
+                      <span class="input-group-text"
+                        ><i class="fas fa-plane-departure"></i
+                      ></span>
+                      <input
+                        type="text"
+                        class="form-control"
+                        id="from-city"
+                        placeholder="ঢাকা (DAC)"
+                        lang="bn"
+                      />
+                      <input
+                        type="text"
+                        class="form-control d-none"
+                        id="from-city-en"
+                        placeholder="Dhaka (DAC)"
+                        lang="en"
+                      />
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <label for="to-city" class="form-label lang-bn"
+                      >গন্তব্য</label
+                    >
+                    <label for="to-city" class="form-label lang-en d-none"
+                      >Flying To</label
+                    >
+                    <div class="input-group">
+                      <span class="input-group-text"
+                        ><i class="fas fa-plane-arrival"></i
+                      ></span>
+                      <input
+                        type="text"
+                        class="form-control"
+                        id="to-city"
+                        placeholder="দুবাই (DXB)"
+                        lang="bn"
+                      />
+                      <input
+                        type="text"
+                        class="form-control d-none"
+                        id="to-city-en"
+                        placeholder="Dubai (DXB)"
+                        lang="en"
+                      />
+                    </div>
+                  </div>
+                  <div class="col-md-3">
+                    <label for="departure-date" class="form-label lang-bn"
+                      >প্রস্থানের তারিখ</label
+                    >
+                    <label
+                      for="departure-date"
+                      class="form-label lang-en d-none"
+                      >Departure Date</label
+                    >
+                    <div class="input-group">
+                      <span class="input-group-text"
+                        ><i class="far fa-calendar-alt"></i
+                      ></span>
+                      <input
+                        type="date"
+                        class="form-control"
+                        id="departure-date"
+                      />
+                    </div>
+                  </div>
+                  <div class="col-md-3">
+                    <label for="return-date" class="form-label lang-bn"
+                      >ফিরে আসার তারিখ</label
+                    >
+                    <label for="return-date" class="form-label lang-en d-none"
+                      >Return Date</label
+                    >
+                    <div class="input-group">
+                      <span class="input-group-text"
+                        ><i class="far fa-calendar-alt"></i
+                      ></span>
+                      <input
+                        type="date"
+                        class="form-control"
+                        id="return-date"
+                      />
+                    </div>
+                  </div>
+                  <div class="col-md-3">
+                    <label for="passengers" class="form-label lang-bn"
+                      >যাত্রী</label
+                    >
+                    <label for="passengers" class="form-label lang-en d-none"
+                      >Passengers</label
+                    >
+                    <div class="input-group">
+                      <span class="input-group-text"
+                        ><i class="fas fa-users"></i
+                      ></span>
+                      <select class="form-select" id="passengers">
+                        <option value="1" lang="bn">১ যাত্রী</option>
+                        <option value="1" lang="en" class="d-none">
+                          1 Passenger
+                        </option>
+                        <option value="2" lang="bn">২ যাত্রী</option>
+                        <option value="2" lang="en" class="d-none">
+                          2 Passengers
+                        </option>
+                        <option value="3" lang="bn">৩ যাত্রী</option>
+                        <option value="3" lang="en" class="d-none">
+                          3 Passengers
+                        </option>
+                        <option value="4" lang="bn">৪ যাত্রী</option>
+                        <option value="4" lang="en" class="d-none">
+                          4 Passengers
+                        </option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="col-md-3">
+                    <label for="class" class="form-label lang-bn">ক্লাস</label>
+                    <label for="class" class="form-label lang-en d-none"
+                      >Class</label
+                    >
+                    <div class="input-group">
+                      <span class="input-group-text"
+                        ><i class="fas fa-chair"></i
+                      ></span>
+                      <select class="form-select" id="class">
+                        <option value="economy" lang="bn">ইকোনমি</option>
+                        <option value="economy" lang="en" class="d-none">
+                          Economy
+                        </option>
+                        <option value="business" lang="bn">বিজনেস</option>
+                        <option value="business" lang="en" class="d-none">
+                          Business
+                        </option>
+                        <option value="first" lang="bn">ফার্স্ট ক্লাস</option>
+                        <option value="first" lang="en" class="d-none">
+                          First Class
+                        </option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="col-12 text-center mt-3">
+                    <button type="submit" class="btn btn-primary search-btn">
+                      <i class="fas fa-search me-2"></i>
+                      <span class="lang-bn">ফ্লাইট খুঁজুন</span>
+                      <span class="lang-en d-none">Search Flights</span>
+                    </button>
+                  </div>
+                </div>
+              </form>
+            </div>
+
+            <!-- One Way Tab -->
+            <div class="tab-pane fade" id="one-way" role="tabpanel">
+              <!-- Similar form for one-way flights -->
+            </div>
+
+            <!-- Multi City Tab -->
+            <div class="tab-pane fade" id="multi-city" role="tabpanel">
+              <!-- Similar form for multi-city flights -->
+            </div>
+          </div>
         </div>
-        <div class="form-group">
-          <label for="date">Date</label>
-          <input type="date" id="date" name="date" required />
+      </div>
+    </section>
+
+    <!-- Flight Results Section -->
+    <section class="container mb-5">
+      <h2 class="fw-bold mb-4 lang-bn">
+        <i class="fas fa-list-alt me-2"></i> উপলব্ধ ফ্লাইটসমূহ
+      </h2>
+      <h2 class="fw-bold mb-4 lang-en d-none">
+        <i class="fas fa-list-alt me-2"></i> Available Flights
+      </h2>
+
+      <div class="row g-4">
+        <!-- Flight Card 1 -->
+        <div class="col-md-6">
+          <div class="ticket-card card p-3">
+            <div class="d-flex justify-content-between align-items-center mb-3">
+              <img
+                src="https://upload.wikimedia.org/wikipedia/en/thumb/9/9b/Biman_Bangladesh_Airlines_Logo.svg/1200px-Biman_Bangladesh_Airlines_Logo.svg.png"
+                alt="Biman Bangladesh"
+                class="airline-logo"
+              />
+              <span class="badge price-badge fs-5 lang-bn">৳ ৩৫,৯৯৯</span>
+              <span class="badge price-badge fs-5 lang-en d-none">$ 349</span>
+            </div>
+
+            <div class="row align-items-center text-center mb-3">
+              <div class="col-4">
+                <div class="time-display">08:00</div>
+                <div class="text-muted small lang-bn">ঢাকা (DAC)</div>
+                <div class="text-muted small lang-en d-none">Dhaka (DAC)</div>
+              </div>
+              <div class="col-4">
+                <div class="flight-icon">
+                  <i class="fas fa-plane"></i>
+                </div>
+                <div class="text-muted small lang-bn">২ ঘণ্টা ৩০ মিনিট</div>
+                <div class="text-muted small lang-en d-none">2h 30m</div>
+              </div>
+              <div class="col-4">
+                <div class="time-display">10:30</div>
+                <div class="text-muted small lang-bn">দুবাই (DXB)</div>
+                <div class="text-muted small lang-en d-none">Dubai (DXB)</div>
+              </div>
+            </div>
+
+            <div class="d-flex justify-content-between align-items-center">
+              <span class="badge bg-light text-dark lang-bn"
+                ><i class="fas fa-suitcase me-1"></i> ২০ কেজি</span
+              >
+              <span class="badge bg-light text-dark lang-en d-none"
+                ><i class="fas fa-suitcase me-1"></i> 20kg</span
+              >
+
+              <button class="btn btn-sm btn-outline-primary lang-bn">
+                <i class="fas fa-ticket-alt me-1"></i> বুক করুন
+              </button>
+              <button class="btn btn-sm btn-outline-primary lang-en d-none">
+                <i class="fas fa-ticket-alt me-1"></i> Book Now
+              </button>
+            </div>
+          </div>
         </div>
-        <div class="form-group">
-          <label for="time">Time</label>
-          <input type="time" id="time" name="time" required />
+
+        <!-- Flight Card 2 -->
+        <div class="col-md-6">
+          <div class="ticket-card card p-3">
+            <div class="d-flex justify-content-between align-items-center mb-3">
+              <img
+                src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d0/Emirates_logo.svg/1200px-Emirates_logo.svg.png"
+                alt="Emirates"
+                class="airline-logo"
+              />
+              <span class="badge price-badge fs-5 lang-bn">৳ ৪২,৫০০</span>
+              <span class="badge price-badge fs-5 lang-en d-none">$ 415</span>
+            </div>
+
+            <div class="row align-items-center text-center mb-3">
+              <div class="col-4">
+                <div class="time-display">14:30</div>
+                <div class="text-muted small lang-bn">ঢাকা (DAC)</div>
+                <div class="text-muted small lang-en d-none">Dhaka (DAC)</div>
+              </div>
+              <div class="col-4">
+                <div class="flight-icon">
+                  <i class="fas fa-plane"></i>
+                </div>
+                <div class="text-muted small lang-bn">২ ঘণ্টা ১৫ মিনিট</div>
+                <div class="text-muted small lang-en d-none">2h 15m</div>
+              </div>
+              <div class="col-4">
+                <div class="time-display">16:45</div>
+                <div class="text-muted small lang-bn">দুবাই (DXB)</div>
+                <div class="text-muted small lang-en d-none">Dubai (DXB)</div>
+              </div>
+            </div>
+
+            <div class="d-flex justify-content-between align-items-center">
+              <span class="badge bg-light text-dark lang-bn"
+                ><i class="fas fa-suitcase me-1"></i> ৩০ কেজি</span
+              >
+              <span class="badge bg-light text-dark lang-en d-none"
+                ><i class="fas fa-suitcase me-1"></i> 30kg</span
+              >
+
+              <button class="btn btn-sm btn-outline-primary lang-bn">
+                <i class="fas fa-ticket-alt me-1"></i> বুক করুন
+              </button>
+              <button class="btn btn-sm btn-outline-primary lang-en d-none">
+                <i class="fas fa-ticket-alt me-1"></i> Book Now
+              </button>
+            </div>
+          </div>
         </div>
-        <div class="form-group">
-          <label for="tickets">Number of Tickets</label>
-          <input
-            type="number"
-            id="tickets"
-            name="tickets"
-            min="1"
-            placeholder="Enter number of tickets"
-            required
-          />
+
+        <!-- More flight cards can be added here -->
+      </div>
+    </section>
+
+    <!-- Special Offers Section -->
+    <section class="container mb-5">
+      <h2 class="fw-bold mb-4 lang-bn">
+        <i class="fas fa-percentage me-2"></i> বিশেষ অফার
+      </h2>
+      <h2 class="fw-bold mb-4 lang-en d-none">
+        <i class="fas fa-percentage me-2"></i> Special Offers
+      </h2>
+
+      <div class="row">
+        <div class="col-md-4 mb-4">
+          <div class="card h-100 border-0 shadow-sm">
+            <img
+              src="https://images.unsplash.com/photo-1523482580672-f109ba8cb9be?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
+              class="card-img-top"
+              alt="Malaysia Offer"
+            />
+            <div class="card-body">
+              <h5 class="card-title lang-bn">মালয়েশিয়া</h5>
+              <h5 class="card-title lang-en d-none">Malaysia</h5>
+              <p class="card-text text-muted lang-bn">
+                <i class="fas fa-plane text-primary me-2"></i> ঢাকা থেকে
+                কুয়ালালামপুর
+              </p>
+              <p class="card-text text-muted lang-en d-none">
+                <i class="fas fa-plane text-primary me-2"></i> Dhaka to Kuala
+                Lumpur
+              </p>
+              <div class="d-flex justify-content-between align-items-center">
+                <span class="text-danger fw-bold lang-bn">৳ ২৯,৯৯৯ থেকে</span>
+                <span class="text-danger fw-bold lang-en d-none"
+                  >From ৳ 29,999</span
+                >
+                <button class="btn btn-sm btn-outline-primary lang-bn">
+                  বিস্তারিত
+                </button>
+                <button class="btn btn-sm btn-outline-primary lang-en d-none">
+                  Details
+                </button>
+              </div>
+            </div>
+          </div>
         </div>
-        <button type="submit" class="submit-btn">Book Now</button>
-      </form>
-    </div>
+
+        <div class="col-md-4 mb-4">
+          <div class="card h-100 border-0 shadow-sm">
+            <img
+              src="https://images.unsplash.com/photo-1528181304800-259b08848526?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
+              class="card-img-top"
+              alt="Thailand Offer"
+            />
+            <div class="card-body">
+              <h5 class="card-title lang-bn">থাইল্যান্ড</h5>
+              <h5 class="card-title lang-en d-none">Thailand</h5>
+              <p class="card-text text-muted lang-bn">
+                <i class="fas fa-plane text-primary me-2"></i> ঢাকা থেকে ব্যাংকক
+              </p>
+              <p class="card-text text-muted lang-en d-none">
+                <i class="fas fa-plane text-primary me-2"></i> Dhaka to Bangkok
+              </p>
+              <div class="d-flex justify-content-between align-items-center">
+                <span class="text-danger fw-bold lang-bn">৳ ২৫,৫০০ থেকে</span>
+                <span class="text-danger fw-bold lang-en d-none"
+                  >From ৳ 25,500</span
+                >
+                <button class="btn btn-sm btn-outline-primary lang-bn">
+                  বিস্তারিত
+                </button>
+                <button class="btn btn-sm btn-outline-primary lang-en d-none">
+                  Details
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4 mb-4">
+          <div class="card h-100 border-0 shadow-sm">
+            <img
+              src="https://images.unsplash.com/photo-1518684079-3c830dcef090?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
+              class="card-img-top"
+              alt="Dubai Offer"
+            />
+            <div class="card-body">
+              <h5 class="card-title lang-bn">দুবাই</h5>
+              <h5 class="card-title lang-en d-none">Dubai</h5>
+              <p class="card-text text-muted lang-bn">
+                <i class="fas fa-plane text-primary me-2"></i> ঢাকা থেকে দুবাই
+              </p>
+              <p class="card-text text-muted lang-en d-none">
+                <i class="fas fa-plane text-primary me-2"></i> Dhaka to Dubai
+              </p>
+              <div class="d-flex justify-content-between align-items-center">
+                <span class="text-danger fw-bold lang-bn">৳ ৩২,৯৯৯ থেকে</span>
+                <span class="text-danger fw-bold lang-en d-none"
+                  >From ৳ 32,999</span
+                >
+                <button class="btn btn-sm btn-outline-primary lang-bn">
+                  বিস্তারিত
+                </button>
+                <button class="btn btn-sm btn-outline-primary lang-en d-none">
+                  Details
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-5">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-4 mb-4 mb-lg-0">
+            <h5 class="fw-bold mb-4 d-flex align-items-center">
+              <img
+                src="../img/logo/travelhub-bd-logo-white.png"
+                alt="TravelHub BD Logo"
+                class="logo-img me-2"
+                style="height: 40px"
+              />
+              <span class="lang-bn">ট্রাভেলহাব বিডি</span>
+              <span class="lang-en d-none">TravelHub BD</span>
+            </h5>
+            <p class="lang-bn">
+              আপনার স্বপ্ন গন্তব্যে পৌঁছানোর সহজতম উপায়! আমরা আপনাকে প্রদান করি
+              সেরা ভ্রমণ অভিজ্ঞতা এবং সাশ্রয়ী মূল্যে টিকিট বুকিং সুবিধা।
+            </p>
+            <p class="lang-en d-none">
+              The easiest way to reach your dream destination! We provide you
+              the best travel experience and affordable ticket booking
+              facilities.
+            </p>
+            <div class="mt-4">
+              <a href="#" class="text-white me-3 fs-5"
+                ><i class="fab fa-facebook-f"></i
+              ></a>
+              <a href="#" class="text-white me-3 fs-5"
+                ><i class="fab fa-twitter"></i
+              ></a>
+              <a href="#" class="text-white me-3 fs-5"
+                ><i class="fab fa-instagram"></i
+              ></a>
+              <a href="#" class="text-white me-3 fs-5"
+                ><i class="fab fa-linkedin-in"></i
+              ></a>
+              <a href="#" class="text-white fs-5"
+                ><i class="fab fa-youtube"></i
+              ></a>
+            </div>
+          </div>
+          <div class="col-lg-2 col-md-6 mb-4 mb-md-0">
+            <h5 class="fw-bold mb-4 lang-bn">লিংক</h5>
+            <h5 class="fw-bold mb-4 lang-en d-none">Links</h5>
+            <ul class="list-unstyled">
+              <li class="mb-2">
+                <a
+                  href="../index.html"
+                  class="text-white text-decoration-none lang-bn"
+                  ><i class="fas fa-chevron-right me-1"></i> হোম</a
+                >
+                <a
+                  href="../index.html"
+                  class="text-white text-decoration-none lang-en d-none"
+                  ><i class="fas fa-chevron-right me-1"></i> Home</a
+                >
+              </li>
+              <li class="mb-2">
+                <a
+                  href="./ticketBooking.html"
+                  class="text-white text-decoration-none lang-bn"
+                  ><i class="fas fa-chevron-right me-1"></i> টিকিট বুকিং</a
+                >
+                <a
+                  href="./ticketBooking.html"
+                  class="text-white text-decoration-none lang-en d-none"
+                  ><i class="fas fa-chevron-right me-1"></i> Tickets</a
+                >
+              </li>
+              <li class="mb-2">
+                <a
+                  href="../pages/visaInfo.html"
+                  class="text-white text-decoration-none lang-bn"
+                  ><i class="fas fa-chevron-right me-1"></i> ভিসা তথ্য</a
+                >
+                <a
+                  href="../pages/visaInfo.html"
+                  class="text-white text-decoration-none lang-en d-none"
+                  ><i class="fas fa-chevron-right me-1"></i> Visa</a
+                >
+              </li>
+              <li class="mb-2">
+                <a
+                  href="../pages/advice.html"
+                  class="text-white text-decoration-none lang-bn"
+                  ><i class="fas fa-chevron-right me-1"></i> পরামর্শ</a
+                >
+                <a
+                  href="../pages/advice.html"
+                  class="text-white text-decoration-none lang-en d-none"
+                  ><i class="fas fa-chevron-right me-1"></i> Advice</a
+                >
+              </li>
+              <li>
+                <a href="#" class="text-white text-decoration-none lang-bn"
+                  ><i class="fas fa-chevron-right me-1"></i> যোগাযোগ</a
+                >
+                <a
+                  href="#"
+                  class="text-white text-decoration-none lang-en d-none"
+                  ><i class="fas fa-chevron-right me-1"></i> Contact</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+            <h5 class="fw-bold mb-4 lang-bn">যোগাযোগ</h5>
+            <h5 class="fw-bold mb-4 lang-en d-none">Contact</h5>
+            <ul class="list-unstyled">
+              <li class="mb-3 d-flex">
+                <i class="fas fa-map-marker-alt me-3 mt-1"></i>
+                <span
+                  >InterContinental Hotel Building -3 (Ground Fl)<br />
+                  1 Minto Road Dhaka-1000, Bangladesh</span
+                >
+              </li>
+              <li class="mb-3 d-flex">
+                <i class="fas fa-phone me-3 mt-1"></i>
+                <span>
+                  +88 01713-066646<br />
+                  +88 01833-328668<br />
+                  +88 01616-666369
+                </span>
+              </li>
+              <li class="d-flex">
+                <i class="fas fa-envelope me-3 mt-1"></i>
+                <span>travelhubbd9@gmail.com</span>
+              </li>
+            </ul>
+          </div>
+          <div class="col-lg-3 col-md-6">
+            <h5 class="fw-bold mb-4 lang-bn">নিউজলেটার</h5>
+            <h5 class="fw-bold mb-4 lang-en d-none">Newsletter</h5>
+            <p class="lang-bn">
+              আমাদের বিশেষ অফার এবং ভ্রমণ টিপস পেতে সাবস্ক্রাইব করুন
+            </p>
+            <p class="lang-en d-none">
+              Subscribe to get our special offers and travel tips
+            </p>
+            <form>
+              <div class="input-group mb-3">
+                <input
+                  type="email"
+                  class="form-control"
+                  placeholder="আপনার ইমেইল"
+                  lang="bn"
+                />
+                <input
+                  type="email"
+                  class="form-control d-none"
+                  placeholder="Your Email"
+                  lang="en"
+                />
+                <button class="btn btn-light lang-bn" type="button">
+                  সাবস্ক্রাইব
+                </button>
+                <button class="btn btn-light lang-en d-none" type="button">
+                  Subscribe
+                </button>
+              </div>
+            </form>
+            <div class="mt-4">
+              <h6 class="fw-bold lang-bn">পেমেন্ট মাধ্যম</h6>
+              <h6 class="fw-bold lang-en d-none">Payment Methods</h6>
+              <div class="d-flex flex-wrap gap-2 mt-2">
+                <img
+                  src="https://www.bkash.com/uploaded_contents/contents/Logo_bKash_png_1_210x56.png"
+                  alt="bKash"
+                  style="height: 25px"
+                />
+                <img
+                  src="https://nagad.com.bd/wp-content/uploads/2022/09/Nagad-Logo-1.png"
+                  alt="Nagad"
+                  style="height: 25px"
+                />
+                <img
+                  src="https://www.dutchbanglabank.com/wp-content/uploads/2020/05/rocket-logo.png"
+                  alt="Rocket"
+                  style="height: 25px"
+                />
+                <img
+                  src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/Visa_Inc._logo.svg/2560px-Visa_Inc._logo.svg.png"
+                  alt="Visa"
+                  style="height: 25px"
+                />
+                <img
+                  src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/Mastercard-logo.svg/1280px-Mastercard-logo.svg.png"
+                  alt="Mastercard"
+                  style="height: 25px"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+        <hr class="mt-4 mb-3 bg-light" />
+        <div class="row">
+          <div class="col-md-6 text-center text-md-start text-white">
+            <p class="mb-0">
+              &copy; ২০২৩ <span class="lang-bn">ট্রাভেলহাব বিডি</span>
+              <span class="lang-en d-none">TravelHub BD</span>.
+              <span class="lang-bn">সকল অধিকার সংরক্ষিত</span>
+              <span class="lang-en d-none">All rights reserved</span>
+            </p>
+          </div>
+          <div class="col-md-6 text-center text-md-end">
+            <a href="#" class="text-white text-decoration-none me-3 lang-bn"
+              >প্রাইভেসি পলিসি</a
+            >
+            <a
+              href="#"
+              class="text-white text-decoration-none me-3 lang-en d-none"
+              >Privacy Policy</a
+            >
+            <a href="#" class="text-white text-decoration-none lang-bn"
+              >শর্তাবলী</a
+            >
+            <a href="#" class="text-white text-decoration-none lang-en d-none"
+              >Terms</a
+            >
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Bootstrap 5 JS Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Font Awesome -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js"></script>
+    <!-- Language Switch Script -->
+    <script src="../js/languageSwitch.js"></script>
+    <script>
+      // Initialize tooltips
+      var tooltipTriggerList = [].slice.call(
+        document.querySelectorAll('[data-bs-toggle="tooltip"]')
+      );
+      var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+        return new bootstrap.Tooltip(tooltipTriggerEl);
+      });
+
+      // Auto-focus on departure city field
+      document.addEventListener("DOMContentLoaded", function () {
+        document.getElementById("from-city").focus();
+      });
+    </script>
   </body>
 </html>

@@ -32,6 +32,44 @@
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
 }
 
+.nav-link {
+  position: relative;
+  padding: 8px 12px;
+  border-radius: 4px;
+  transition: all 0.3s;
+}
+
+.nav-link:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.nav-link-underline {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 0;
+  height: 2px;
+  background-color: white;
+  transition: all 0.3s;
+  transform: translateX(-50%);
+}
+
+.nav-link:hover .nav-link-underline {
+  width: 70%;
+}
+
+.nav-link.active .nav-link-underline {
+  width: 70%;
+  background-color: #ffc107;
+}
+
+.navbar {
+  padding: 24px 0;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+/* navbar design  */
+/* footer design  */
+
 .footer {
   background-color: #2c3e50;
   color: white;

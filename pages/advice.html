@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Visa Information</title>
+    <title>Travel Advice | TravelHub BD</title>
     <!-- Bootstrap 5 CSS -->
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
@@ -21,9 +21,10 @@
     />
     <!-- Custom CSS -->
     <link rel="stylesheet" href="../styles/style.css" />
-    <link rel="stylesheet" href="../styles/visaInfo.css" />
+    <link rel="stylesheet" href="../styles/advice.css" />
   </head>
   <body>
+    <!-- Navigation -->
     <nav
       class="navbar navbar-expand-lg navbar-dark bg-primary sticky-top shadow-sm"
       style="background: linear-gradient(135deg, #0d6efd 0%, #0b5ed7 100%)"
@@ -192,444 +193,284 @@
       </div>
     </nav>
 
-    <main>
-      <!-- Hero Section -->
-      <section class="hero-section text-center">
-        <div class="container">
-          <h1 class="display-4 fw-bold mb-4">Visa Information</h1>
-          <p class="lead fs-4">
-            We provide comprehensive visa information for all countries to help
-            you travel safely and confidently.
+    <!-- Hero Section -->
+    <section class="advice-hero text-center">
+      <div class="container">
+        <h1 class="display-4 fw-bold mb-4">Expert Travel Advice</h1>
+        <p class="lead fs-4">
+          Get professional tips and recommendations to make your journey smooth
+          and memorable
+        </p>
+      </div>
+    </section>
+
+    <!-- Travel Tips Section -->
+    <section class="py-5 bg-light">
+      <div class="container">
+        <div class="text-center mb-5">
+          <h2 class="fw-bold display-5 mb-3">Essential Travel Tips</h2>
+          <p class="lead text-muted">Practical advice for every traveler</p>
+        </div>
+
+        <div class="row g-4">
+          <div class="col-md-6 col-lg-3">
+            <div class="advice-card card">
+              <div class="card-body text-center p-4">
+                <div class="advice-icon">
+                  <i class="fas fa-suitcase-rolling"></i>
+                </div>
+                <h3>Packing Guide</h3>
+                <ul class="text-start text-muted">
+                  <li>Pack light and versatile clothing</li>
+                  <li>Essential medications and first-aid</li>
+                  <li>Travel-sized toiletries</li>
+                  <li>Important documents copies</li>
+                  <li>Universal power adapter</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-3">
+            <div class="advice-card card">
+              <div class="card-body text-center p-4">
+                <div class="advice-icon">
+                  <i class="fas fa-money-bill-wave"></i>
+                </div>
+                <h3>Money Matters</h3>
+                <ul class="text-start text-muted">
+                  <li>Carry multiple payment options</li>
+                  <li>Notify your bank before travel</li>
+                  <li>Small denominations of local currency</li>
+                  <li>Track expenses with apps</li>
+                  <li>Understand tipping culture</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-3">
+            <div class="advice-card card">
+              <div class="card-body text-center p-4">
+                <div class="advice-icon">
+                  <i class="fas fa-shield-alt"></i>
+                </div>
+                <h3>Safety Tips</h3>
+                <ul class="text-start text-muted">
+                  <li>Research local emergency numbers</li>
+                  <li>Keep valuables in hotel safe</li>
+                  <li>Be aware of common scams</li>
+                  <li>Share itinerary with family</li>
+                  <li>Trust your instincts</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-3">
+            <div class="advice-card card">
+              <div class="card-body text-center p-4">
+                <div class="advice-icon">
+                  <i class="fas fa-globe-asia"></i>
+                </div>
+                <h3>Cultural Etiquette</h3>
+                <ul class="text-start text-muted">
+                  <li>Learn basic local phrases</li>
+                  <li>Research dress codes</li>
+                  <li>Understand dining customs</li>
+                  <li>Respect religious sites</li>
+                  <li>Observe photography rules</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Country-Specific Advice -->
+    <section class="py-5">
+      <div class="container">
+        <div class="text-center mb-5">
+          <h2 class="fw-bold display-5 mb-3">Country-Specific Advice</h2>
+          <p class="lead text-muted">
+            Essential information for popular destinations
           </p>
-          <div class="mt-4">
-            <a href="#types" class="btn btn-primary btn-lg me-2">Visa Types</a>
-            <a href="#process" class="btn btn-outline-light btn-lg"
-              >Application Process</a
-            >
-          </div>
         </div>
-      </section>
 
-      <!-- Visa Types Section -->
-      <section id="types" class="py-5 bg-light">
-        <div class="container">
-          <div class="text-center mb-5">
-            <h2 class="fw-bold display-5 mb-3">Types of Visas</h2>
-            <p class="lead text-muted">
-              Choose the right visa for your travel purpose
-            </p>
-          </div>
-
-          <div class="row g-4">
-            <div class="col-md-6 col-lg-3">
-              <div class="visa-type-card card h-100">
-                <div class="card-body text-center p-4">
-                  <div class="visa-icon">
-                    <i class="fas fa-umbrella-beach"></i>
-                  </div>
-                  <h3>Tourist Visa</h3>
-                  <p class="text-muted">
-                    For leisure travel and sightseeing. Typically valid for
-                    30-90 days.
-                  </p>
-                  <a href="#" class="btn btn-outline-primary">Learn More</a>
-                </div>
-              </div>
-            </div>
-
-            <div class="col-md-6 col-lg-3">
-              <div class="visa-type-card card h-100">
-                <div class="card-body text-center p-4">
-                  <div class="visa-icon">
-                    <i class="fas fa-briefcase"></i>
-                  </div>
-                  <h3>Business Visa</h3>
-                  <p class="text-muted">
-                    For attending meetings, conferences, or work-related travel.
-                  </p>
-                  <a href="#" class="btn btn-outline-primary">Learn More</a>
-                </div>
-              </div>
-            </div>
-
-            <div class="col-md-6 col-lg-3">
-              <div class="visa-type-card card h-100">
-                <div class="card-body text-center p-4">
-                  <div class="visa-icon">
-                    <i class="fas fa-graduation-cap"></i>
-                  </div>
-                  <h3>Student Visa</h3>
-                  <p class="text-muted">
-                    For studying abroad at educational institutions. Requires
-                    admission proof.
-                  </p>
-                  <a href="#" class="btn btn-outline-primary">Learn More</a>
-                </div>
-              </div>
-            </div>
-
-            <div class="col-md-6 col-lg-3">
-              <div class="visa-type-card card h-100">
-                <div class="card-body text-center p-4">
-                  <div class="visa-icon">
-                    <i class="fas fa-hard-hat"></i>
-                  </div>
-                  <h3>Work Visa</h3>
-                  <p class="text-muted">
-                    For employment opportunities in foreign countries. Requires
-                    job offer.
-                  </p>
-                  <a href="#" class="btn btn-outline-primary">Learn More</a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- Application Process Section -->
-      <section id="process" class="py-5">
-        <div class="container">
-          <div class="text-center mb-5">
-            <h2 class="fw-bold display-5 mb-3">How to Apply for a Visa</h2>
-            <p class="lead text-muted">
-              Follow these steps for successful visa application
-            </p>
-          </div>
-
-          <div class="row justify-content-center">
-            <div class="col-lg-8">
-              <div class="process-step">
-                <div class="step-number">1</div>
-                <h3>Determine the type of visa</h3>
-                <p class="text-muted">
-                  Identify the correct visa type based on your purpose of travel
-                  (tourism, business, study, etc.).
-                </p>
-              </div>
-
-              <div class="process-step">
-                <div class="step-number">2</div>
-                <h3>Gather required documents</h3>
-                <p class="text-muted">
-                  Prepare all necessary documents including passport (valid for
-                  at least 6 months), photos, application form, financial
-                  proofs, and supporting documents.
-                </p>
-              </div>
-
-              <div class="process-step">
-                <div class="step-number">3</div>
-                <h3>Submit your application</h3>
-                <p class="text-muted">
-                  Submit your complete application to the respective embassy,
-                  consulate, or authorized visa application center.
-                </p>
-              </div>
-
-              <div class="process-step">
-                <div class="step-number">4</div>
-                <h3>Pay fees and schedule interview</h3>
-                <p class="text-muted">
-                  Pay the visa application fee and schedule an interview if
-                  required by the embassy.
-                </p>
-              </div>
-
-              <div class="process-step">
-                <div class="step-number">5</div>
-                <h3>Wait for processing</h3>
-                <p class="text-muted">
-                  Processing times vary by country and visa type. Track your
-                  application status online.
-                </p>
-              </div>
-
-              <div class="text-center mt-4">
-                <a href="#" class="btn btn-primary btn-lg">
-                  <i class="fas fa-download me-2"></i> Download Checklist
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- Requirements Section -->
-      <section class="py-5 bg-light">
-        <div class="container">
-          <div class="row align-items-center">
-            <div class="col-lg-6 mb-4 mb-lg-0">
+        <div class="row g-4">
+          <div class="col-md-4">
+            <div class="country-card card">
               <img
-                src="https://images.unsplash.com/photo-1580086319619-3ed498161c77?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
-                alt="Visa Documents"
-                class="img-fluid rounded shadow"
+                src="https://images.unsplash.com/photo-1523482580672-f109ba8cb9be?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
+                class="card-img-top"
+                alt="Malaysia"
               />
-            </div>
-            <div class="col-lg-6">
-              <h2 class="fw-bold display-5 mb-4">General Visa Requirements</h2>
-              <p class="lead text-muted mb-4">
-                While requirements vary by country, these are common documents
-                needed for most visa applications:
-              </p>
-              <ul class="list-group list-group-flush mb-4">
-                <li class="list-group-item bg-transparent">
-                  <i class="fas fa-check-circle text-primary me-2"></i> Valid
-                  passport (minimum 6 months validity)
-                </li>
-                <li class="list-group-item bg-transparent">
-                  <i class="fas fa-check-circle text-primary me-2"></i>
-                  Completed visa application form
-                </li>
-                <li class="list-group-item bg-transparent">
-                  <i class="fas fa-check-circle text-primary me-2"></i>
-                  Passport-sized photographs
-                </li>
-                <li class="list-group-item bg-transparent">
-                  <i class="fas fa-check-circle text-primary me-2"></i> Proof of
-                  travel arrangements
-                </li>
-                <li class="list-group-item bg-transparent">
-                  <i class="fas fa-check-circle text-primary me-2"></i> Proof of
-                  accommodation
-                </li>
-                <li class="list-group-item bg-transparent">
-                  <i class="fas fa-check-circle text-primary me-2"></i>
-                  Financial proof (bank statements)
-                </li>
-                <li class="list-group-item bg-transparent">
-                  <i class="fas fa-check-circle text-primary me-2"></i> Travel
-                  insurance (for Schengen visas)
-                </li>
-              </ul>
-              <a href="#" class="btn btn-outline-primary"
-                >View Country-Specific Requirements</a
-              >
+              <div class="card-body">
+                <h3 class="card-title">Malaysia</h3>
+                <ul class="text-muted">
+                  <li>
+                    <strong>Visa:</strong> Not required for stays under 90 days
+                  </li>
+                  <li><strong>Currency:</strong> Malaysian Ringgit (MYR)</li>
+                  <li><strong>Best Time:</strong> December-February</li>
+                  <li>
+                    <strong>Tips:</strong> Dress modestly, avoid public displays
+                    of affection
+                  </li>
+                </ul>
+                <a href="#" class="btn btn-outline-primary">More Details</a>
+              </div>
             </div>
           </div>
-        </div>
-      </section>
 
-      <!-- Contact Section -->
-      <section class="py-5">
-        <div class="container">
-          <div class="row justify-content-center">
-            <div class="col-lg-8">
-              <div class="contact-card card border-0 shadow">
-                <div class="card-body p-5 text-center">
-                  <h2 class="fw-bold display-5 mb-4">Need Visa Assistance?</h2>
-                  <p class="lead mb-5">
-                    Our visa experts are ready to help you with your application
-                    process. Contact us for personalized guidance and support.
-                  </p>
+          <div class="col-md-4">
+            <div class="country-card card">
+              <img
+                src="https://images.unsplash.com/photo-1528181304800-259b08848526?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
+                class="card-img-top"
+                alt="Thailand"
+              />
+              <div class="card-body">
+                <h3 class="card-title">Thailand</h3>
+                <ul class="text-muted">
+                  <li><strong>Visa:</strong> Visa on arrival (30 days)</li>
+                  <li><strong>Currency:</strong> Thai Baht (THB)</li>
+                  <li><strong>Best Time:</strong> November-April</li>
+                  <li>
+                    <strong>Tips:</strong> Remove shoes before entering temples
+                  </li>
+                </ul>
+                <a href="#" class="btn btn-outline-primary">More Details</a>
+              </div>
+            </div>
+          </div>
 
-                  <div class="row g-4 text-start">
-                    <div class="col-md-6">
-                      <div class="d-flex">
-                        <div class="me-3 text-primary">
-                          <i class="fas fa-envelope fa-2x"></i>
-                        </div>
-                        <div>
-                          <h5>Email Us</h5>
-                          <a
-                            href="mailto:support@travelhubbd.com"
-                            class="text-decoration-none"
-                            >support@travelhubbd.com</a
-                          >
-                        </div>
-                      </div>
-                    </div>
-
-                    <div class="col-md-6">
-                      <div class="d-flex">
-                        <div class="me-3 text-primary">
-                          <i class="fas fa-phone-alt fa-2x"></i>
-                        </div>
-                        <div>
-                          <h5>Call Us</h5>
-                          <a
-                            href="tel:+8801713066646"
-                            class="text-decoration-none"
-                            >+88 01713-066646</a
-                          ><br />
-                          <a
-                            href="tel:+8801833328668"
-                            class="text-decoration-none"
-                            >+88 01833-328668</a
-                          >
-                        </div>
-                      </div>
-                    </div>
-
-                    <div class="col-md-6">
-                      <div class="d-flex">
-                        <div class="me-3 text-primary">
-                          <i class="fas fa-map-marker-alt fa-2x"></i>
-                        </div>
-                        <div>
-                          <h5>Visit Us</h5>
-                          <p class="mb-0">
-                            InterContinental Hotel Building -3 (Ground Fl)<br />
-                            1 Minto Road Dhaka-1000, Bangladesh
-                          </p>
-                        </div>
-                      </div>
-                    </div>
-
-                    <div class="col-md-6">
-                      <div class="d-flex">
-                        <div class="me-3 text-primary">
-                          <i class="fas fa-clock fa-2x"></i>
-                        </div>
-                        <div>
-                          <h5>Working Hours</h5>
-                          <p class="mb-0">
-                            Sunday-Thursday: 9AM - 6PM<br />
-                            Friday-Saturday: Closed
-                          </p>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div class="mt-5">
-                    <a href="#" class="btn btn-primary btn-lg me-3">
-                      <i class="fas fa-calendar-alt me-2"></i> Book Appointment
-                    </a>
-                    <a href="#" class="btn btn-outline-primary btn-lg">
-                      <i class="fas fa-comments me-2"></i> Live Chat
-                    </a>
-                  </div>
-                </div>
+          <div class="col-md-4">
+            <div class="country-card card">
+              <img
+                src="https://images.unsplash.com/photo-1538970272646-f61fabb3be33?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
+                class="card-img-top"
+                alt="Dubai"
+              />
+              <div class="card-body">
+                <h3 class="card-title">Dubai, UAE</h3>
+                <ul class="text-muted">
+                  <li><strong>Visa:</strong> Required (pre-arranged)</li>
+                  <li><strong>Currency:</strong> UAE Dirham (AED)</li>
+                  <li><strong>Best Time:</strong> November-March</li>
+                  <li>
+                    <strong>Tips:</strong> No public intoxication, dress
+                    conservatively
+                  </li>
+                </ul>
+                <a href="#" class="btn btn-outline-primary">More Details</a>
               </div>
             </div>
           </div>
         </div>
-      </section>
 
-      <!-- FAQ Section -->
-      <section class="py-5 bg-light">
-        <div class="container">
-          <div class="text-center mb-5">
-            <h2 class="fw-bold display-5 mb-3">Frequently Asked Questions</h2>
-            <p class="lead text-muted">Find answers to common visa questions</p>
+        <div class="text-center mt-5">
+          <a href="#" class="btn btn-primary btn-lg">
+            <i class="fas fa-search me-2"></i> Browse All Destinations
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Health & Insurance -->
+    <section class="py-5 bg-light">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-lg-6 mb-4 mb-lg-0">
+            <img
+              src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
+              alt="Travel Health"
+              class="img-fluid rounded shadow"
+            />
           </div>
-
-          <div class="row justify-content-center">
-            <div class="col-lg-8">
-              <div class="accordion" id="faqAccordion">
-                <div class="accordion-item mb-3 border-0 shadow-sm">
-                  <h2 class="accordion-header" id="headingOne">
-                    <button
-                      class="accordion-button"
-                      type="button"
-                      data-bs-toggle="collapse"
-                      data-bs-target="#collapseOne"
-                    >
-                      How long does visa processing take?
-                    </button>
-                  </h2>
-                  <div
-                    id="collapseOne"
-                    class="accordion-collapse collapse show"
-                    data-bs-parent="#faqAccordion"
+          <div class="col-lg-6">
+            <h2 class="fw-bold display-5 mb-4">Health & Travel Insurance</h2>
+            <p class="lead text-muted mb-4">
+              Stay protected during your travels with proper health precautions
+              and insurance coverage.
+            </p>
+            <div class="accordion" id="healthAccordion">
+              <div class="accordion-item mb-3 border-0 shadow-sm">
+                <h2 class="accordion-header" id="headingOne">
+                  <button
+                    class="accordion-button"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#collapseOne"
                   >
-                    <div class="accordion-body">
-                      Processing times vary by country and visa type. Tourist
-                      visas typically take 5-15 working days, while work and
-                      student visas may take 4-8 weeks. We recommend applying at
-                      least 2 months before your planned travel date.
-                    </div>
-                  </div>
-                </div>
-
-                <div class="accordion-item mb-3 border-0 shadow-sm">
-                  <h2 class="accordion-header" id="headingTwo">
-                    <button
-                      class="accordion-button collapsed"
-                      type="button"
-                      data-bs-toggle="collapse"
-                      data-bs-target="#collapseTwo"
-                    >
-                      What is the visa success rate?
-                    </button>
-                  </h2>
-                  <div
-                    id="collapseTwo"
-                    class="accordion-collapse collapse"
-                    data-bs-parent="#faqAccordion"
-                  >
-                    <div class="accordion-body">
-                      Our visa success rate is over 92% for complete
-                      applications. We carefully review all documents before
-                      submission to ensure they meet embassy requirements. The
-                      main reasons for rejection are incomplete documentation
-                      and insufficient financial proof.
-                    </div>
-                  </div>
-                </div>
-
-                <div class="accordion-item mb-3 border-0 shadow-sm">
-                  <h2 class="accordion-header" id="headingThree">
-                    <button
-                      class="accordion-button collapsed"
-                      type="button"
-                      data-bs-toggle="collapse"
-                      data-bs-target="#collapseThree"
-                    >
-                      Can I apply for a visa without traveling?
-                    </button>
-                  </h2>
-                  <div
-                    id="collapseThree"
-                    class="accordion-collapse collapse"
-                    data-bs-parent="#faqAccordion"
-                  >
-                    <div class="accordion-body">
-                      Yes, we offer complete visa processing services where we
-                      handle the entire application process on your behalf. You
-                      only need to provide the required documents and attend the
-                      interview if mandatory.
-                    </div>
-                  </div>
-                </div>
-
-                <div class="accordion-item mb-3 border-0 shadow-sm">
-                  <h2 class="accordion-header" id="headingFour">
-                    <button
-                      class="accordion-button collapsed"
-                      type="button"
-                      data-bs-toggle="collapse"
-                      data-bs-target="#collapseFour"
-                    >
-                      Do you provide visa interview preparation?
-                    </button>
-                  </h2>
-                  <div
-                    id="collapseFour"
-                    class="accordion-collapse collapse"
-                    data-bs-parent="#faqAccordion"
-                  >
-                    <div class="accordion-body">
-                      Yes, we offer comprehensive interview preparation
-                      including common questions, document verification, and
-                      mock interviews. Our success rate for visa interviews is
-                      over 95% for prepared clients.
-                    </div>
+                    Vaccination Requirements
+                  </button>
+                </h2>
+                <div
+                  id="collapseOne"
+                  class="accordion-collapse collapse show"
+                  data-bs-parent="#healthAccordion"
+                >
+                  <div class="accordion-body">
+                    <ul>
+                      <li>
+                        Check destination-specific requirements 6-8 weeks before
+                        travel
+                      </li>
+                      <li>
+                        Common vaccines: Yellow Fever, Hepatitis A/B, Typhoid
+                      </li>
+                      <li>COVID-19 vaccination proof may be required</li>
+                      <li>Carry your vaccination certificate</li>
+                    </ul>
                   </div>
                 </div>
               </div>
 
-              <div class="text-center mt-5">
-                <a href="#" class="btn btn-outline-primary">
-                  <i class="fas fa-question-circle me-2"></i> View All FAQs
-                </a>
+              <div class="accordion-item mb-3 border-0 shadow-sm">
+                <h2 class="accordion-header" id="headingTwo">
+                  <button
+                    class="accordion-button collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#collapseTwo"
+                  >
+                    Travel Insurance Tips
+                  </button>
+                </h2>
+                <div
+                  id="collapseTwo"
+                  class="accordion-collapse collapse"
+                  data-bs-parent="#healthAccordion"
+                >
+                  <div class="accordion-body">
+                    <ul>
+                      <li>
+                        Ensure coverage for medical emergencies and evacuation
+                      </li>
+                      <li>Check for adventure activity coverage if needed</li>
+                      <li>Verify COVID-19 related coverage</li>
+                      <li>Keep emergency contact numbers handy</li>
+                      <li>Understand claim procedures before you travel</li>
+                    </ul>
+                  </div>
+                </div>
               </div>
+            </div>
+
+            <div class="mt-4">
+              <a href="#" class="btn btn-outline-primary me-2">
+                <i class="fas fa-syringe me-2"></i> Vaccination Centers
+              </a>
+              <a href="#" class="btn btn-primary">
+                <i class="fas fa-shield-alt me-2"></i> Get Insurance Quote
+              </a>
             </div>
           </div>
         </div>
-      </section>
-    </main>
+      </div>
+    </section>
 
     <!-- ফুটার - Enhanced with Bootstrap 5 -->
     <footer class="footer">
