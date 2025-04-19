@@ -53,3 +53,22 @@ document.addEventListener("DOMContentLoaded", function () {
     return new bootstrap.Tooltip(tooltipTriggerEl);
   });
 });
+
+// Add animation on scroll
+document.addEventListener("DOMContentLoaded", function () {
+  const featureCards = document.querySelectorAll(".feature-card");
+
+  featureCards.forEach((card, index) => {
+    // Add animation delay based on index
+    card.style.animationDelay = `${index * 0.1}s`;
+
+    // Add hover effect
+    card.addEventListener("mouseenter", function () {
+      this.style.transform = "translateY(-10px)";
+    });
+
+    card.addEventListener("mouseleave", function () {
+      this.style.transform = "translateY(0)";
+    });
+  });
+});

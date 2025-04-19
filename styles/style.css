@@ -96,3 +96,22 @@
 .logo-img:hover {
   transform: scale(1.05);
 }
+
+/* Custom CSS for enhanced features */
+.feature-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1) !important;
+  background-color: white !important;
+}
+
+.feature-card:hover .feature-icon {
+  background-color: rgba(13, 110, 253, 0.2) !important;
+  transform: scale(1.1);
+}
+
+.divider {
+  height: 4px;
+  width: 80px;
+  background: linear-gradient(to right, #0d6efd, #6ea8fe);
+  border-radius: 2px;
+}

@@ -242,78 +242,195 @@
     </section>
 
     <!-- সুবিধা সেকশন - Enhanced with Bootstrap 5 -->
-    <section class="py-5 bg-white">
-      <div class="container">
+    <section class="py-5 bg-white position-relative overflow-hidden mt-4">
+      <!-- Decorative elements -->
+      <div class="position-absolute top-0 start-0 w-100 h-100">
+        <div
+          class="position-absolute top-0 end-0 bg-light rounded-circle"
+          style="width: 300px; height: 300px; transform: translate(50%, -50%)"
+        ></div>
+        <div
+          class="position-absolute bottom-0 start-0 bg-primary opacity-10 rounded-circle"
+          style="width: 400px; height: 400px; transform: translate(-50%, 50%)"
+        ></div>
+      </div>
+
+      <div class="container position-relative">
         <div class="text-center mb-5">
-          <h2 class="fw-bold display-5 lang-bn">
+          <h2
+            class="fw-bold display-5 lang-bn animate__animated animate__fadeInDown"
+          >
             আপনার স্বপ্ন গন্তব্যে পৌঁছানোর সহজতম উপায়!
           </h2>
-          <h2 class="fw-bold display-5 lang-en d-none">
+          <h2
+            class="fw-bold display-5 lang-en d-none animate__animated animate__fadeInDown"
+          >
             The easiest way to reach your dream destination!
           </h2>
-          <div class="divider mx-auto bg-primary mb-4"></div>
-          <p class="lead lang-bn text-muted">
+          <div
+            class="divider mx-auto mt-4 bg-primary mb-3"
+            style="height: 4px; width: 90%"
+          ></div>
+          <p
+            class="lead lang-bn animate__animated animate__fadeIn animate__delay-1s"
+          >
             আপনি যদি একজন ভ্রমণপিপাসু, ব্যবসায়ী বা গ্রুপ ট্যুরের পরিকল্পনা
             করছেন তবে আমাদের টিকিট বুকিং সেবা আপনার জন্য!
           </p>
-          <p class="lead lang-en d-none text-muted">
+          <p
+            class="lead lang-en d-none animate__animated animate__fadeIn animate__delay-1s"
+          >
             Whether you're a traveler, business person or planning a group tour,
             our ticket booking service is for you!
           </p>
         </div>
 
         <div class="row g-4">
+          <!-- Feature 1 -->
           <div class="col-md-4">
-            <div class="text-center p-4 h-100 border rounded-3 shadow-sm">
-              <div class="feature-icon">
-                <i class="fas fa-tag"></i>
+            <div
+              class="text-center p-4 h-100 border-0 rounded-4 shadow-sm feature-card"
+              style="background-color: #f8f9fa; transition: all 0.3s ease"
+            >
+              <div
+                class="feature-icon mb-4 p-3 bg-primary bg-opacity-10 rounded-circle d-inline-flex align-items-center justify-content-center"
+                style="width: 80px; height: 80px; transition: all 0.3s ease"
+              >
+                <i
+                  class="fas fa-tag text-primary"
+                  style="font-size: 1.75rem"
+                ></i>
               </div>
-              <h3 class="lang-bn">স্বচ্ছ টিকিটের দাম</h3>
-              <h3 class="lang-en d-none">Transparent Pricing</h3>
-              <p class="lang-bn text-muted">
+              <h3 class="lang-bn mb-3">স্বচ্ছ টিকিটের দাম</h3>
+              <h3 class="lang-en d-none mb-3">Transparent Pricing</h3>
+              <p class="lang-bn text-muted mb-4">
                 কোন গোপন চার্জ নেই! আমরা সম্পূর্ণ স্বচ্ছভাবে টিকিটের মূল্য
                 প্রদর্শন করি যাতে আপনি সঠিক সিদ্ধান্ত নিতে পারেন।
               </p>
-              <a href="#" class="btn btn-outline-primary lang-bn">বিস্তারিত</a>
-              <a href="#" class="btn btn-outline-primary lang-en d-none"
-                >Details</a
+              <p class="lang-en d-none text-muted mb-4">
+                No hidden charges! We display ticket prices completely
+                transparently so you can make informed decisions.
+              </p>
+              <a
+                href="#"
+                class="btn btn-primary px-4 lang-bn"
+                style="border-radius: 20px"
               >
+                বিস্তারিত <i class="fas fa-arrow-right ms-2"></i>
+              </a>
+              <a
+                href="#"
+                class="btn btn-primary px-4 lang-en d-none"
+                style="border-radius: 20px"
+              >
+                Details <i class="fas fa-arrow-right ms-2"></i>
+              </a>
             </div>
           </div>
+
+          <!-- Feature 2 -->
           <div class="col-md-4">
-            <div class="text-center p-4 h-100 border rounded-3 shadow-sm">
-              <div class="feature-icon">
-                <i class="fas fa-bolt"></i>
+            <div
+              class="text-center p-4 h-100 border-0 rounded-4 shadow-sm feature-card"
+              style="background-color: #f8f9fa; transition: all 0.3s ease"
+            >
+              <div
+                class="feature-icon mb-4 p-3 bg-primary bg-opacity-10 rounded-circle d-inline-flex align-items-center justify-content-center"
+                style="width: 80px; height: 80px; transition: all 0.3s ease"
+              >
+                <i
+                  class="fas fa-bolt text-primary"
+                  style="font-size: 1.75rem"
+                ></i>
               </div>
-              <h3 class="lang-bn">রিয়েল-টাইম বুকিং</h3>
-              <h3 class="lang-en d-none">Real-time Booking</h3>
-              <p class="lang-bn text-muted">
+              <h3 class="lang-bn mb-3">রিয়েল-টাইম বুকিং</h3>
+              <h3 class="lang-en d-none mb-3">Real-time Booking</h3>
+              <p class="lang-bn text-muted mb-4">
                 দ্রুত এবং নিরাপদ প্রক্রিয়ার মাধ্যমে মুহূর্তের মধ্যে আপনার টিকিট
                 বুক করুন। আমাদের সিস্টেম সর্বদা আপডেটেড।
               </p>
-              <a href="#" class="btn btn-outline-primary lang-bn">বিস্তারিত</a>
-              <a href="#" class="btn btn-outline-primary lang-en d-none"
-                >Details</a
+              <p class="lang-en d-none text-muted mb-4">
+                Book your tickets instantly through a fast and secure process.
+                Our system is always up-to-date.
+              </p>
+              <a
+                href="#"
+                class="btn btn-primary px-4 lang-bn"
+                style="border-radius: 20px"
               >
+                বিস্তারিত <i class="fas fa-arrow-right ms-2"></i>
+              </a>
+              <a
+                href="#"
+                class="btn btn-primary px-4 lang-en d-none"
+                style="border-radius: 20px"
+              >
+                Details <i class="fas fa-arrow-right ms-2"></i>
+              </a>
             </div>
           </div>
+
+          <!-- Feature 3 -->
           <div class="col-md-4">
-            <div class="text-center p-4 h-100 border rounded-3 shadow-sm">
-              <div class="feature-icon">
-                <i class="fas fa-star"></i>
+            <div
+              class="text-center p-4 h-100 border-0 rounded-4 shadow-sm feature-card"
+              style="background-color: #f8f9fa; transition: all 0.3s ease"
+            >
+              <div
+                class="feature-icon mb-4 p-3 bg-primary bg-opacity-10 rounded-circle d-inline-flex align-items-center justify-content-center"
+                style="width: 80px; height: 80px; transition: all 0.3s ease"
+              >
+                <i
+                  class="fas fa-star text-primary"
+                  style="font-size: 1.75rem"
+                ></i>
               </div>
-              <h3 class="lang-bn">বিশেষ সুবিধা</h3>
-              <h3 class="lang-en d-none">Special Benefits</h3>
-              <p class="lang-bn text-muted">
+              <h3 class="lang-bn mb-3">বিশেষ সুবিধা</h3>
+              <h3 class="lang-en d-none mb-3">Special Benefits</h3>
+              <p class="lang-bn text-muted mb-4">
                 ব্যবসায়ীদের জন্য ডেডিকেটেড সার্ভিস এবং গ্রুপ ট্যুরে সেরা
                 চুক্তি। আমাদের বিশেষ অফারগুলো উপভোগ করুন।
               </p>
-              <a href="#" class="btn btn-outline-primary lang-bn">বিস্তারিত</a>
-              <a href="#" class="btn btn-outline-primary lang-en d-none"
-                >Details</a
+              <p class="lang-en d-none text-muted mb-4">
+                Dedicated service for business people and best deals for group
+                tours. Enjoy our special offers.
+              </p>
+              <a
+                href="#"
+                class="btn btn-primary px-4 lang-bn"
+                style="border-radius: 20px"
               >
+                বিস্তারিত <i class="fas fa-arrow-right ms-2"></i>
+              </a>
+              <a
+                href="#"
+                class="btn btn-primary px-4 lang-en d-none"
+                style="border-radius: 20px"
+              >
+                Details <i class="fas fa-arrow-right ms-2"></i>
+              </a>
             </div>
           </div>
+        </div>
+
+        <!-- Additional CTA -->
+        <div class="text-center mt-5 pt-3">
+          <a href="#" class="btn btn-outline-primary btn-lg px-4 me-2 lang-bn">
+            <i class="fas fa-question-circle me-2"></i> আরও জানুন
+          </a>
+          <a href="#" class="btn btn-primary btn-lg px-4 lang-bn">
+            <i class="fas fa-phone-alt me-2"></i> কল করুন
+          </a>
+
+          <a
+            href="#"
+            class="btn btn-outline-primary btn-lg px-4 me-2 lang-en d-none"
+          >
+            <i class="fas fa-question-circle me-2"></i> Learn More
+          </a>
+          <a href="#" class="btn btn-primary btn-lg px-4 lang-en d-none">
+            <i class="fas fa-phone-alt me-2"></i> Call Us
+          </a>
         </div>
       </div>
     </section>
