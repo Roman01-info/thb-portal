@@ -24,15 +24,18 @@
     <link rel="stylesheet" href="../styles/visaInfo.css" />
   </head>
   <body>
+    <!-- Enhanced Navigation -->
     <nav
-      class="navbar navbar-expand-lg navbar-dark bg-primary sticky-top shadow-sm"
-      style="background: linear-gradient(135deg, #0d6efd 0%, #0b5ed7 100%)"
+      class="navbar navbar-expand-lg navbar-dark fixed-top shadow-lg"
+      style="
+        backdrop-filter: blur(10px);
+        background: rgba(33, 37, 41, 0.95) !important;
+      "
     >
       <div class="container">
-        <!-- Logo with Animation -->
         <a
           class="navbar-brand fw-bold d-flex align-items-center"
-          href="#"
+          href="../index.html"
           style="transition: all 0.3s"
         >
           <img
@@ -43,17 +46,11 @@
             onmouseover="this.style.transform='scale(1.1)'"
             onmouseout="this.style.transform='scale(1)'"
           />
-          <span
-            class="lang-en d-none"
-            style="font-family: 'Montserrat', sans-serif"
+          <span style="font-family: 'Montserrat', sans-serif"
             >TravelHub BD</span
-          >
-          <span class="lang-bn" style="font-family: 'Hind Siliguri', sans-serif"
-            >ট্রাভেলহাব বিডি</span
           >
         </a>
 
-        <!-- Mobile Toggle Button -->
         <button
           class="navbar-toggler"
           type="button"
@@ -65,24 +62,20 @@
           <span class="navbar-toggler-icon"></span>
         </button>
 
-        <!-- Navigation Links -->
         <div class="collapse navbar-collapse" id="navbarNav">
           <ul class="navbar-nav ms-auto">
-            <!-- Home Link -->
             <li class="nav-item mx-1">
               <a
-                class="nav-link active d-flex align-items-center"
+                class="nav-link d-flex align-items-center"
                 href="../index.html"
                 style="position: relative"
               >
                 <i class="fas fa-home me-1"></i>
-                <span class="lang-bn">হোম</span>
-                <span class="lang-en d-none">Home</span>
+                <span>Home</span>
                 <span class="nav-link-underline"></span>
               </a>
             </li>
 
-            <!-- Ticket Booking Link -->
             <li class="nav-item mx-1">
               <a
                 class="nav-link d-flex align-items-center"
@@ -90,27 +83,35 @@
                 style="position: relative"
               >
                 <i class="fas fa-ticket-alt me-1"></i>
-                <span class="lang-bn">টিকিট বুকিং</span>
-                <span class="lang-en d-none">Tickets</span>
+                <span>Tickets</span>
                 <span class="nav-link-underline"></span>
               </a>
             </li>
 
-            <!-- Visa Info Link -->
             <li class="nav-item mx-1">
               <a
-                class="nav-link d-flex align-items-center"
+                class="nav-link active d-flex align-items-center"
                 href="../pages/visaInfo.html"
                 style="position: relative"
               >
                 <i class="fas fa-passport me-1"></i>
-                <span class="lang-bn">ভিসা তথ্য</span>
-                <span class="lang-en d-none">Visa Info</span>
+                <span>Visa Info</span>
                 <span class="nav-link-underline"></span>
               </a>
             </li>
 
-            <!-- Advice Link -->
+            <li class="nav-item mx-1">
+              <a
+                class="nav-link d-flex align-items-center"
+                href="../pages/packages.html"
+                style="position: relative"
+              >
+                <i class="fas fa-box me-1"></i>
+                <span>Packages</span>
+                <span class="nav-link-underline"></span>
+              </a>
+            </li>
+
             <li class="nav-item mx-1">
               <a
                 class="nav-link d-flex align-items-center"
@@ -118,65 +119,24 @@
                 style="position: relative"
               >
                 <i class="fas fa-comments me-1"></i>
-                <span class="lang-bn">পরামর্শ</span>
-                <span class="lang-en d-none">Advice</span>
+                <span>Advice</span>
                 <span class="nav-link-underline"></span>
               </a>
             </li>
 
-            <!-- Contact Link -->
             <li class="nav-item mx-1">
               <a
                 class="nav-link d-flex align-items-center"
-                href="contact.html"
+                href="../pages/contact.html"
                 style="position: relative"
               >
                 <i class="fas fa-phone-alt me-1"></i>
-                <span class="lang-bn">যোগাযোগ</span>
-                <span class="lang-en d-none">Contact</span>
+                <span>Contact</span>
                 <span class="nav-link-underline"></span>
               </a>
             </li>
           </ul>
 
-          <!-- Language Switcher with Tooltip -->
-          <div
-            class="language-switcher ms-3"
-            data-bs-toggle="tooltip"
-            data-bs-placement="bottom"
-            title="Change Language"
-          >
-            <button
-              class="btn btn-outline-light btn-sm d-flex align-items-center"
-              id="languageToggle"
-              style="
-                border-radius: 20px;
-                padding: 5px 12px;
-                transition: all 0.3s;
-              "
-              onmouseover="this.style.backgroundColor='rgba(255,255,255,0.2)'"
-              onmouseout="this.style.backgroundColor='transparent'"
-            >
-              <img
-                src="https://flagcdn.com/w20/bd.png"
-                class="language-flag lang-bn me-1"
-                alt="Bangla"
-                style="width: 20px; height: auto"
-              />
-              <img
-                src="https://flagcdn.com/w20/gb.png"
-                class="language-flag lang-en d-none me-1"
-                alt="English"
-                style="width: 20px; height: auto"
-              />
-              <span class="lang-bn" style="font-size: 0.9rem">বাংলা</span>
-              <span class="lang-en d-none" style="font-size: 0.9rem"
-                >English</span
-              >
-            </button>
-          </div>
-
-          <!-- Login Button with Hover Effect -->
           <a
             href="#"
             class="btn btn-light ms-lg-3 d-flex align-items-center"
@@ -185,388 +145,1219 @@
             onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='none'"
           >
             <i class="fas fa-sign-in-alt me-1"></i>
-            <span class="lang-bn">লগ ইন</span>
-            <span class="lang-en d-none">Login</span>
+            <span>Login</span>
           </a>
         </div>
       </div>
     </nav>
 
     <main>
-      <!-- Hero Section -->
-      <section class="hero-section text-center">
-        <div class="container">
-          <h1 class="display-4 fw-bold mb-4">Visa Information</h1>
-          <p class="lead fs-4">
-            We provide comprehensive visa information for all countries to help
-            you travel safely and confidently.
-          </p>
-          <div class="mt-4">
-            <a href="#types" class="btn btn-primary btn-lg me-2">Visa Types</a>
-            <a href="#process" class="btn btn-outline-light btn-lg"
-              >Application Process</a
-            >
-          </div>
+      <!-- Enhanced Hero Section -->
+      <section
+        class="hero-section d-flex align-items-center position-relative overflow-hidden"
+        style="
+          min-height: 100vh;
+          background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+          background-image: url('https://images.unsplash.com/photo-1436491865332-7a61a109cc05?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80');
+          background-size: cover;
+          background-position: center;
+          background-repeat: no-repeat;
+        "
+      >
+        <!-- Overlay -->
+        <div
+          class="position-absolute top-0 start-0 w-100 h-100"
+          style="
+            background: linear-gradient(
+              135deg,
+              rgba(102, 126, 234, 0.8) 0%,
+              rgba(118, 75, 162, 0.8) 100%
+            );
+          "
+        ></div>
+
+        <!-- Floating Animation Elements -->
+        <div class="position-absolute w-100 h-100">
+          <div
+            class="floating-element position-absolute bg-white opacity-10 rounded-circle"
+            style="
+              width: 120px;
+              height: 120px;
+              top: 15%;
+              left: 10%;
+              animation: float 6s ease-in-out infinite;
+            "
+          ></div>
+          <div
+            class="floating-element position-absolute bg-white opacity-5 rounded-circle"
+            style="
+              width: 80px;
+              height: 80px;
+              top: 70%;
+              right: 20%;
+              animation: float 8s ease-in-out infinite reverse;
+            "
+          ></div>
+          <div
+            class="floating-element position-absolute bg-warning opacity-20 rounded-circle"
+            style="
+              width: 100px;
+              height: 100px;
+              bottom: 20%;
+              left: 15%;
+              animation: float 7s ease-in-out infinite;
+            "
+          ></div>
         </div>
-      </section>
 
-      <!-- Visa Types Section -->
-      <section id="types" class="py-5 bg-light">
-        <div class="container">
-          <div class="text-center mb-5">
-            <h2 class="fw-bold display-5 mb-3">Types of Visas</h2>
-            <p class="lead text-muted">
-              Choose the right visa for your travel purpose
-            </p>
-          </div>
-
-          <div class="row g-4">
-            <div class="col-md-6 col-lg-3">
-              <div class="visa-type-card card h-100">
-                <div class="card-body text-center p-4">
-                  <div class="visa-icon">
-                    <i class="fas fa-umbrella-beach"></i>
-                  </div>
-                  <h3>Tourist Visa</h3>
-                  <p class="text-muted">
-                    For leisure travel and sightseeing. Typically valid for
-                    30-90 days.
-                  </p>
-                  <a href="#" class="btn btn-outline-primary">Learn More</a>
-                </div>
-              </div>
-            </div>
-
-            <div class="col-md-6 col-lg-3">
-              <div class="visa-type-card card h-100">
-                <div class="card-body text-center p-4">
-                  <div class="visa-icon">
-                    <i class="fas fa-briefcase"></i>
-                  </div>
-                  <h3>Business Visa</h3>
-                  <p class="text-muted">
-                    For attending meetings, conferences, or work-related travel.
-                  </p>
-                  <a href="#" class="btn btn-outline-primary">Learn More</a>
-                </div>
-              </div>
-            </div>
-
-            <div class="col-md-6 col-lg-3">
-              <div class="visa-type-card card h-100">
-                <div class="card-body text-center p-4">
-                  <div class="visa-icon">
-                    <i class="fas fa-graduation-cap"></i>
-                  </div>
-                  <h3>Student Visa</h3>
-                  <p class="text-muted">
-                    For studying abroad at educational institutions. Requires
-                    admission proof.
-                  </p>
-                  <a href="#" class="btn btn-outline-primary">Learn More</a>
-                </div>
-              </div>
-            </div>
-
-            <div class="col-md-6 col-lg-3">
-              <div class="visa-type-card card h-100">
-                <div class="card-body text-center p-4">
-                  <div class="visa-icon">
-                    <i class="fas fa-hard-hat"></i>
-                  </div>
-                  <h3>Work Visa</h3>
-                  <p class="text-muted">
-                    For employment opportunities in foreign countries. Requires
-                    job offer.
-                  </p>
-                  <a href="#" class="btn btn-outline-primary">Learn More</a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- Application Process Section -->
-      <section id="process" class="py-5">
-        <div class="container">
-          <div class="text-center mb-5">
-            <h2 class="fw-bold display-5 mb-3">How to Apply for a Visa</h2>
-            <p class="lead text-muted">
-              Follow these steps for successful visa application
-            </p>
-          </div>
-
+        <div class="container position-relative text-center text-white">
           <div class="row justify-content-center">
-            <div class="col-lg-8">
-              <div class="process-step">
-                <div class="step-number">1</div>
-                <h3>Determine the type of visa</h3>
-                <p class="text-muted">
-                  Identify the correct visa type based on your purpose of travel
-                  (tourism, business, study, etc.).
-                </p>
+            <div class="col-lg-10">
+              <div class="mb-4">
+                <span
+                  class="badge bg-warning text-dark px-4 py-2 rounded-pill fs-6 mb-4"
+                >
+                  <i class="fas fa-passport me-2"></i>Visa Processing Made Easy
+                </span>
               </div>
 
-              <div class="process-step">
-                <div class="step-number">2</div>
-                <h3>Gather required documents</h3>
-                <p class="text-muted">
-                  Prepare all necessary documents including passport (valid for
-                  at least 6 months), photos, application form, financial
-                  proofs, and supporting documents.
-                </p>
+              <h1 class="display-2 fw-bold mb-4" style="line-height: 1.2">
+                Your Visa Journey
+                <span class="text-warning d-block">Starts Here</span>
+              </h1>
+
+              <p
+                class="lead mb-5 fs-4"
+                style="max-width: 700px; margin: 0 auto"
+              >
+                Get comprehensive visa information and professional assistance
+                for all countries. We make visa processing simple, fast, and
+                hassle-free.
+              </p>
+
+              <!-- Quick Stats -->
+              <div class="row text-center g-4 mb-5">
+                <div class="col-md-3 col-6">
+                  <div
+                    class="stat-card bg-white bg-opacity-10 backdrop-blur p-4 rounded-4 border border-white border-opacity-20"
+                  >
+                    <div
+                      class="stat-number fw-bold display-6 text-warning mb-2"
+                    >
+                      50+
+                    </div>
+                    <div class="stat-label">Countries</div>
+                  </div>
+                </div>
+                <div class="col-md-3 col-6">
+                  <div
+                    class="stat-card bg-white bg-opacity-10 backdrop-blur p-4 rounded-4 border border-white border-opacity-20"
+                  >
+                    <div
+                      class="stat-number fw-bold display-6 text-warning mb-2"
+                    >
+                      95%
+                    </div>
+                    <div class="stat-label">Success Rate</div>
+                  </div>
+                </div>
+                <div class="col-md-3 col-6">
+                  <div
+                    class="stat-card bg-white bg-opacity-10 backdrop-blur p-4 rounded-4 border border-white border-opacity-20"
+                  >
+                    <div
+                      class="stat-number fw-bold display-6 text-warning mb-2"
+                    >
+                      24/7
+                    </div>
+                    <div class="stat-label">Support</div>
+                  </div>
+                </div>
+                <div class="col-md-3 col-6">
+                  <div
+                    class="stat-card bg-white bg-opacity-10 backdrop-blur p-4 rounded-4 border border-white border-opacity-20"
+                  >
+                    <div
+                      class="stat-number fw-bold display-6 text-warning mb-2"
+                    >
+                      10K+
+                    </div>
+                    <div class="stat-label">Visas Processed</div>
+                  </div>
+                </div>
               </div>
 
-              <div class="process-step">
-                <div class="step-number">3</div>
-                <h3>Submit your application</h3>
-                <p class="text-muted">
-                  Submit your complete application to the respective embassy,
-                  consulate, or authorized visa application center.
-                </p>
-              </div>
-
-              <div class="process-step">
-                <div class="step-number">4</div>
-                <h3>Pay fees and schedule interview</h3>
-                <p class="text-muted">
-                  Pay the visa application fee and schedule an interview if
-                  required by the embassy.
-                </p>
-              </div>
-
-              <div class="process-step">
-                <div class="step-number">5</div>
-                <h3>Wait for processing</h3>
-                <p class="text-muted">
-                  Processing times vary by country and visa type. Track your
-                  application status online.
-                </p>
-              </div>
-
-              <div class="text-center mt-4">
-                <a href="#" class="btn btn-primary btn-lg">
-                  <i class="fas fa-download me-2"></i> Download Checklist
+              <!-- CTA Buttons -->
+              <div class="d-flex flex-wrap justify-content-center gap-3">
+                <a
+                  href="#types"
+                  class="btn btn-warning btn-lg px-5 py-3 rounded-pill shadow-lg"
+                >
+                  <i class="fas fa-search me-2"></i> Explore Visa Types
+                </a>
+                <a
+                  href="#country-requirements"
+                  class="btn btn-outline-light btn-lg px-5 py-3 rounded-pill"
+                >
+                  <i class="fas fa-globe me-2"></i> Country Requirements
                 </a>
               </div>
             </div>
           </div>
         </div>
+
+        <!-- Scroll Indicator -->
+        <div
+          class="position-absolute bottom-0 start-50 translate-middle-x mb-4"
+        >
+          <a href="#types" class="text-white text-decoration-none">
+            <div class="scroll-indicator text-center">
+              <div class="mouse-icon mb-2 mx-auto">
+                <div class="wheel"></div>
+              </div>
+              <small class="d-block">Explore Visas</small>
+            </div>
+          </a>
+        </div>
       </section>
 
-      <!-- Requirements Section -->
-      <section class="py-5 bg-light">
+      <!-- Enhanced Visa Types Section -->
+      <section id="types" class="py-5" style="scroll-margin-top: 80px">
         <div class="container">
-          <div class="row align-items-center">
-            <div class="col-lg-6 mb-4 mb-lg-0">
-              <img
-                src="https://images.unsplash.com/photo-1580086319619-3ed498161c77?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
-                alt="Visa Documents"
-                class="img-fluid rounded shadow"
-              />
-            </div>
-            <div class="col-lg-6">
-              <h2 class="fw-bold display-5 mb-4">General Visa Requirements</h2>
-              <p class="lead text-muted mb-4">
-                While requirements vary by country, these are common documents
-                needed for most visa applications:
-              </p>
-              <ul class="list-group list-group-flush mb-4">
-                <li class="list-group-item bg-transparent">
-                  <i class="fas fa-check-circle text-primary me-2"></i> Valid
-                  passport (minimum 6 months validity)
-                </li>
-                <li class="list-group-item bg-transparent">
-                  <i class="fas fa-check-circle text-primary me-2"></i>
-                  Completed visa application form
-                </li>
-                <li class="list-group-item bg-transparent">
-                  <i class="fas fa-check-circle text-primary me-2"></i>
-                  Passport-sized photographs (2 copies, white background)
-                </li>
-                <li class="list-group-item bg-transparent">
-                  <i class="fas fa-check-circle text-primary me-2"></i> Proof of
-                  travel arrangements (flight reservations)
-                </li>
-                <li class="list-group-item bg-transparent">
-                  <i class="fas fa-check-circle text-primary me-2"></i> Proof of
-                  accommodation (hotel bookings)
-                </li>
-                <li class="list-group-item bg-transparent">
-                  <i class="fas fa-check-circle text-primary me-2"></i>
-                  Financial proof (bank statements for last 6 months)
-                </li>
-                <li class="list-group-item bg-transparent">
-                  <i class="fas fa-check-circle text-primary me-2"></i> Travel
-                  insurance (for Schengen visas)
-                </li>
-                <li class="list-group-item bg-transparent">
-                  <i class="fas fa-check-circle text-primary me-2"></i>
-                  Employment verification letter or business registration
-                </li>
-                <li class="list-group-item bg-transparent">
-                  <i class="fas fa-check-circle text-primary me-2"></i>
-                  Income tax returns (for business/work visas)
-                </li>
-              </ul>
-              <a href="#country-requirements" class="btn btn-outline-primary"
-                >View Country-Specific Requirements</a
+          <div class="text-center mb-5">
+            <span class="badge bg-primary px-3 py-2 rounded-pill mb-3">
+              <i class="fas fa-passport me-2"></i>Visa Categories
+            </span>
+            <h2 class="fw-bold display-4 mb-4">
+              Choose Your <span class="text-primary">Visa Type</span>
+            </h2>
+            <p class="lead text-muted" style="max-width: 600px; margin: 0 auto">
+              Select the appropriate visa category based on your travel purpose
+              and requirements
+            </p>
+          </div>
+
+          <div class="row g-4">
+            <!-- Tourist Visa -->
+            <div class="col-lg-3 col-md-6">
+              <div
+                class="visa-type-card bg-white rounded-4 shadow-lg border-0 overflow-hidden h-100"
               >
+                <div class="card-body text-center p-4">
+                  <div class="visa-icon-wrapper mb-4">
+                    <div
+                      class="visa-icon bg-gradient-primary text-white rounded-circle d-flex align-items-center justify-content-center mx-auto"
+                      style="
+                        width: 80px;
+                        height: 80px;
+                        background: linear-gradient(45deg, #667eea, #764ba2);
+                      "
+                    >
+                      <i class="fas fa-umbrella-beach fs-2"></i>
+                    </div>
+                  </div>
+                  <h4 class="fw-bold mb-3">Tourist Visa</h4>
+                  <p class="text-muted mb-4">
+                    Perfect for leisure travel, sightseeing, and vacation trips.
+                    Typically valid for 30-90 days with single or multiple
+                    entries.
+                  </p>
+                  <div class="features mb-4">
+                    <div class="feature-item d-flex align-items-center mb-2">
+                      <i class="fas fa-check text-success me-2"></i>
+                      <small>Leisure & Sightseeing</small>
+                    </div>
+                    <div class="feature-item d-flex align-items-center mb-2">
+                      <i class="fas fa-check text-success me-2"></i>
+                      <small>30-90 Days Validity</small>
+                    </div>
+                    <div class="feature-item d-flex align-items-center">
+                      <i class="fas fa-check text-success me-2"></i>
+                      <small>Multiple Entry Options</small>
+                    </div>
+                  </div>
+                  <button class="btn btn-outline-primary w-100 rounded-pill">
+                    <i class="fas fa-info-circle me-2"></i>Learn More
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Business Visa -->
+            <div class="col-lg-3 col-md-6">
+              <div
+                class="visa-type-card bg-white rounded-4 shadow-lg border-0 overflow-hidden h-100"
+              >
+                <div class="card-body text-center p-4">
+                  <div class="visa-icon-wrapper mb-4">
+                    <div
+                      class="visa-icon bg-gradient-success text-white rounded-circle d-flex align-items-center justify-content-center mx-auto"
+                      style="
+                        width: 80px;
+                        height: 80px;
+                        background: linear-gradient(45deg, #28a745, #20c997);
+                      "
+                    >
+                      <i class="fas fa-briefcase fs-2"></i>
+                    </div>
+                  </div>
+                  <h4 class="fw-bold mb-3">Business Visa</h4>
+                  <p class="text-muted mb-4">
+                    For business meetings, conferences, trade shows, and
+                    professional networking. Requires business invitation.
+                  </p>
+                  <div class="features mb-4">
+                    <div class="feature-item d-flex align-items-center mb-2">
+                      <i class="fas fa-check text-success me-2"></i>
+                      <small>Business Meetings</small>
+                    </div>
+                    <div class="feature-item d-flex align-items-center mb-2">
+                      <i class="fas fa-check text-success me-2"></i>
+                      <small>Conferences & Events</small>
+                    </div>
+                    <div class="feature-item d-flex align-items-center">
+                      <i class="fas fa-check text-success me-2"></i>
+                      <small>Trade Activities</small>
+                    </div>
+                  </div>
+                  <button class="btn btn-outline-success w-100 rounded-pill">
+                    <i class="fas fa-info-circle me-2"></i>Learn More
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Student Visa -->
+            <div class="col-lg-3 col-md-6">
+              <div
+                class="visa-type-card bg-white rounded-4 shadow-lg border-0 overflow-hidden h-100"
+              >
+                <div class="card-body text-center p-4">
+                  <div class="visa-icon-wrapper mb-4">
+                    <div
+                      class="visa-icon bg-gradient-warning text-white rounded-circle d-flex align-items-center justify-content-center mx-auto"
+                      style="
+                        width: 80px;
+                        height: 80px;
+                        background: linear-gradient(45deg, #ffc107, #fd7e14);
+                      "
+                    >
+                      <i class="fas fa-graduation-cap fs-2"></i>
+                    </div>
+                  </div>
+                  <h4 class="fw-bold mb-3">Student Visa</h4>
+                  <p class="text-muted mb-4">
+                    For pursuing education abroad at universities, colleges, or
+                    other educational institutions. Requires admission proof.
+                  </p>
+                  <div class="features mb-4">
+                    <div class="feature-item d-flex align-items-center mb-2">
+                      <i class="fas fa-check text-success me-2"></i>
+                      <small>University Studies</small>
+                    </div>
+                    <div class="feature-item d-flex align-items-center mb-2">
+                      <i class="fas fa-check text-success me-2"></i>
+                      <small>Research Programs</small>
+                    </div>
+                    <div class="feature-item d-flex align-items-center">
+                      <i class="fas fa-check text-success me-2"></i>
+                      <small>Language Courses</small>
+                    </div>
+                  </div>
+                  <button class="btn btn-outline-warning w-100 rounded-pill">
+                    <i class="fas fa-info-circle me-2"></i>Learn More
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Work Visa -->
+            <div class="col-lg-3 col-md-6">
+              <div
+                class="visa-type-card bg-white rounded-4 shadow-lg border-0 overflow-hidden h-100"
+              >
+                <div class="card-body text-center p-4">
+                  <div class="visa-icon-wrapper mb-4">
+                    <div
+                      class="visa-icon bg-gradient-danger text-white rounded-circle d-flex align-items-center justify-content-center mx-auto"
+                      style="
+                        width: 80px;
+                        height: 80px;
+                        background: linear-gradient(45deg, #dc3545, #e83e8c);
+                      "
+                    >
+                      <i class="fas fa-hard-hat fs-2"></i>
+                    </div>
+                  </div>
+                  <h4 class="fw-bold mb-3">Work Visa</h4>
+                  <p class="text-muted mb-4">
+                    For employment opportunities in foreign countries. Requires
+                    valid job offer and work permit from employer.
+                  </p>
+                  <div class="features mb-4">
+                    <div class="feature-item d-flex align-items-center mb-2">
+                      <i class="fas fa-check text-success me-2"></i>
+                      <small>Employment Opportunities</small>
+                    </div>
+                    <div class="feature-item d-flex align-items-center mb-2">
+                      <i class="fas fa-check text-success me-2"></i>
+                      <small>Skilled Worker Programs</small>
+                    </div>
+                    <div class="feature-item d-flex align-items-center">
+                      <i class="fas fa-check text-success me-2"></i>
+                      <small>Long-term Stay</small>
+                    </div>
+                  </div>
+                  <button class="btn btn-outline-danger w-100 rounded-pill">
+                    <i class="fas fa-info-circle me-2"></i>Learn More
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Additional Visa Types -->
+          <div class="row g-4 mt-4">
+            <!-- Transit Visa -->
+            <div class="col-lg-4 col-md-6">
+              <div
+                class="visa-type-card bg-white rounded-4 shadow border-0 overflow-hidden h-100"
+              >
+                <div class="card-body text-center p-4">
+                  <div class="visa-icon-wrapper mb-3">
+                    <div
+                      class="visa-icon bg-info text-white rounded-circle d-flex align-items-center justify-content-center mx-auto"
+                      style="width: 60px; height: 60px"
+                    >
+                      <i class="fas fa-plane fs-4"></i>
+                    </div>
+                  </div>
+                  <h5 class="fw-bold mb-2">Transit Visa</h5>
+                  <p class="text-muted small mb-3">
+                    For travelers passing through a country to reach their final
+                    destination.
+                  </p>
+                  <button class="btn btn-outline-info btn-sm rounded-pill">
+                    <i class="fas fa-info-circle me-1"></i>Details
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Medical Visa -->
+            <div class="col-lg-4 col-md-6">
+              <div
+                class="visa-type-card bg-white rounded-4 shadow border-0 overflow-hidden h-100"
+              >
+                <div class="card-body text-center p-4">
+                  <div class="visa-icon-wrapper mb-3">
+                    <div
+                      class="visa-icon bg-secondary text-white rounded-circle d-flex align-items-center justify-content-center mx-auto"
+                      style="width: 60px; height: 60px"
+                    >
+                      <i class="fas fa-user-md fs-4"></i>
+                    </div>
+                  </div>
+                  <h5 class="fw-bold mb-2">Medical Visa</h5>
+                  <p class="text-muted small mb-3">
+                    For medical treatment and healthcare services in foreign
+                    countries.
+                  </p>
+                  <button class="btn btn-outline-secondary btn-sm rounded-pill">
+                    <i class="fas fa-info-circle me-1"></i>Details
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Family Visa -->
+            <div class="col-lg-4 col-md-6">
+              <div
+                class="visa-type-card bg-white rounded-4 shadow border-0 overflow-hidden h-100"
+              >
+                <div class="card-body text-center p-4">
+                  <div class="visa-icon-wrapper mb-3">
+                    <div
+                      class="visa-icon bg-dark text-white rounded-circle d-flex align-items-center justify-content-center mx-auto"
+                      style="width: 60px; height: 60px"
+                    >
+                      <i class="fas fa-users fs-4"></i>
+                    </div>
+                  </div>
+                  <h5 class="fw-bold mb-2">Family Visa</h5>
+                  <p class="text-muted small mb-3">
+                    For visiting family members or joining family abroad
+                    permanently.
+                  </p>
+                  <button class="btn btn-outline-dark btn-sm rounded-pill">
+                    <i class="fas fa-info-circle me-1"></i>Details
+                  </button>
+                </div>
+              </div>
             </div>
           </div>
         </div>
       </section>
 
-      <!-- Country-Specific Visa Services Section -->
-      <section id="country-requirements" class="py-5">
+      <!-- Enhanced Application Process Section -->
+      <section
+        id="process"
+        class="py-5 bg-light"
+        style="scroll-margin-top: 80px"
+      >
         <div class="container">
           <div class="text-center mb-5">
-            <h2 class="fw-bold display-5 mb-3">
-              Visa Processing Services From Bangladesh
+            <span class="badge bg-success px-3 py-2 rounded-pill mb-3">
+              <i class="fas fa-clipboard-list me-2"></i>Step by Step Guide
+            </span>
+            <h2 class="fw-bold display-4 mb-4">
+              Visa Application <span class="text-success">Process</span>
             </h2>
-            <p class="lead text-muted">
-              Please choose your destination country to see specific
-              requirements and services
+            <p class="lead text-muted" style="max-width: 600px; margin: 0 auto">
+              Follow our comprehensive step-by-step guide for a successful visa
+              application
             </p>
           </div>
 
-          <div class="visa-services-container p-4 bg-light rounded-3 shadow-sm">
-            <div class="text-center mb-4">
-              <h3 class="fw-bold text-success">
-                Please Choose Your Destination
-              </h3>
-              <div class="row justify-content-center my-4">
-                <div class="col-md-6 col-lg-4">
-                  <select class="form-select form-select-lg" id="countrySelect">
-                    <option selected>Select Country</option>
-                    <option value="china">China</option>
-                    <option value="pakistan">Pakistan & Dubai</option>
-                    <option value="vietnam">Vietnam & Dubai</option>
-                    <option value="thailand">Thailand</option>
-                    <option value="singapore">Singapore</option>
-                    <option value="malaysia">Malaysia</option>
-                    <option value="japan">Japan & Dubai</option>
-                    <option value="indonesia">Indonesia</option>
-                    <option value="nepal">Nepal</option>
-                    <option value="srilanka">Sri Lanka</option>
-                    <option value="myanmar">Myanmar (Burma)</option>
-                    <option value="brunei">Brunei</option>
-                    <option value="uae">UAE (Dubai)</option>
-                  </select>
+          <div class="row justify-content-center">
+            <div class="col-lg-10">
+              <!-- Process Timeline -->
+              <div class="process-timeline">
+                <!-- Step 1 -->
+                <div
+                  class="process-step-enhanced d-flex align-items-start mb-5"
+                >
+                  <div
+                    class="step-number-enhanced bg-primary text-white rounded-circle d-flex align-items-center justify-content-center me-4"
+                    style="width: 60px; height: 60px; min-width: 60px"
+                  >
+                    <span class="fw-bold fs-4">1</span>
+                  </div>
+                  <div class="step-content flex-grow-1">
+                    <div class="bg-white rounded-4 shadow-sm p-4">
+                      <h4 class="fw-bold text-primary mb-3">
+                        <i class="fas fa-search me-2"></i>Determine Visa Type
+                      </h4>
+                      <p class="text-muted mb-3">
+                        Identify the correct visa category based on your purpose
+                        of travel. Each visa type has specific requirements and
+                        processing times.
+                      </p>
+                      <div class="row g-3">
+                        <div class="col-md-6">
+                          <div class="d-flex align-items-center">
+                            <i
+                              class="fas fa-check-circle text-success me-2"
+                            ></i>
+                            <small>Tourism & Leisure</small>
+                          </div>
+                        </div>
+                        <div class="col-md-6">
+                          <div class="d-flex align-items-center">
+                            <i
+                              class="fas fa-check-circle text-success me-2"
+                            ></i>
+                            <small>Business & Work</small>
+                          </div>
+                        </div>
+                        <div class="col-md-6">
+                          <div class="d-flex align-items-center">
+                            <i
+                              class="fas fa-check-circle text-success me-2"
+                            ></i>
+                            <small>Education & Study</small>
+                          </div>
+                        </div>
+                        <div class="col-md-6">
+                          <div class="d-flex align-items-center">
+                            <i
+                              class="fas fa-check-circle text-success me-2"
+                            ></i>
+                            <small>Medical & Treatment</small>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Step 2 -->
+                <div
+                  class="process-step-enhanced d-flex align-items-start mb-5"
+                >
+                  <div
+                    class="step-number-enhanced bg-success text-white rounded-circle d-flex align-items-center justify-content-center me-4"
+                    style="width: 60px; height: 60px; min-width: 60px"
+                  >
+                    <span class="fw-bold fs-4">2</span>
+                  </div>
+                  <div class="step-content flex-grow-1">
+                    <div class="bg-white rounded-4 shadow-sm p-4">
+                      <h4 class="fw-bold text-success mb-3">
+                        <i class="fas fa-file-alt me-2"></i>Gather Required
+                        Documents
+                      </h4>
+                      <p class="text-muted mb-3">
+                        Prepare all necessary documents according to your visa
+                        type. Ensure all documents are valid and meet embassy
+                        requirements.
+                      </p>
+                      <div class="row g-3">
+                        <div class="col-md-6">
+                          <div class="d-flex align-items-center">
+                            <i class="fas fa-passport text-primary me-2"></i>
+                            <small>Valid Passport (6+ months)</small>
+                          </div>
+                        </div>
+                        <div class="col-md-6">
+                          <div class="d-flex align-items-center">
+                            <i class="fas fa-camera text-primary me-2"></i>
+                            <small>Passport Photos</small>
+                          </div>
+                        </div>
+                        <div class="col-md-6">
+                          <div class="d-flex align-items-center">
+                            <i class="fas fa-dollar-sign text-primary me-2"></i>
+                            <small>Financial Statements</small>
+                          </div>
+                        </div>
+                        <div class="col-md-6">
+                          <div class="d-flex align-items-center">
+                            <i class="fas fa-plane text-primary me-2"></i>
+                            <small>Travel Itinerary</small>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Step 3 -->
+                <div
+                  class="process-step-enhanced d-flex align-items-start mb-5"
+                >
+                  <div
+                    class="step-number-enhanced bg-warning text-white rounded-circle d-flex align-items-center justify-content-center me-4"
+                    style="width: 60px; height: 60px; min-width: 60px"
+                  >
+                    <span class="fw-bold fs-4">3</span>
+                  </div>
+                  <div class="step-content flex-grow-1">
+                    <div class="bg-white rounded-4 shadow-sm p-4">
+                      <h4 class="fw-bold text-warning mb-3">
+                        <i class="fas fa-paper-plane me-2"></i>Submit
+                        Application
+                      </h4>
+                      <p class="text-muted mb-3">
+                        Submit your complete application to the embassy,
+                        consulate, or authorized visa application center with
+                        all required documents.
+                      </p>
+                      <div
+                        class="alert alert-warning border-0 bg-warning bg-opacity-10"
+                      >
+                        <i
+                          class="fas fa-exclamation-triangle text-warning me-2"
+                        ></i>
+                        <small
+                          >Ensure all forms are filled correctly and documents
+                          are properly arranged</small
+                        >
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Step 4 -->
+                <div
+                  class="process-step-enhanced d-flex align-items-start mb-5"
+                >
+                  <div
+                    class="step-number-enhanced bg-info text-white rounded-circle d-flex align-items-center justify-content-center me-4"
+                    style="width: 60px; height: 60px; min-width: 60px"
+                  >
+                    <span class="fw-bold fs-4">4</span>
+                  </div>
+                  <div class="step-content flex-grow-1">
+                    <div class="bg-white rounded-4 shadow-sm p-4">
+                      <h4 class="fw-bold text-info mb-3">
+                        <i class="fas fa-credit-card me-2"></i>Pay Fees &
+                        Schedule Interview
+                      </h4>
+                      <p class="text-muted mb-3">
+                        Pay the required visa application fee and schedule an
+                        interview appointment if required by the embassy or
+                        consulate.
+                      </p>
+                      <div class="row g-3">
+                        <div class="col-md-6">
+                          <div class="d-flex align-items-center">
+                            <i class="fas fa-money-bill text-info me-2"></i>
+                            <small>Application Fee Payment</small>
+                          </div>
+                        </div>
+                        <div class="col-md-6">
+                          <div class="d-flex align-items-center">
+                            <i class="fas fa-calendar-check text-info me-2"></i>
+                            <small>Interview Scheduling</small>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Step 5 -->
+                <div class="process-step-enhanced d-flex align-items-start">
+                  <div
+                    class="step-number-enhanced bg-danger text-white rounded-circle d-flex align-items-center justify-content-center me-4"
+                    style="width: 60px; height: 60px; min-width: 60px"
+                  >
+                    <span class="fw-bold fs-4">5</span>
+                  </div>
+                  <div class="step-content flex-grow-1">
+                    <div class="bg-white rounded-4 shadow-sm p-4">
+                      <h4 class="fw-bold text-danger mb-3">
+                        <i class="fas fa-clock me-2"></i>Processing & Collection
+                      </h4>
+                      <p class="text-muted mb-3">
+                        Wait for visa processing and track your application
+                        status. Processing times vary by country and visa type.
+                      </p>
+                      <div class="row g-3">
+                        <div class="col-md-6">
+                          <div class="d-flex align-items-center">
+                            <i class="fas fa-search text-danger me-2"></i>
+                            <small>Track Application Status</small>
+                          </div>
+                        </div>
+                        <div class="col-md-6">
+                          <div class="d-flex align-items-center">
+                            <i class="fas fa-bell text-danger me-2"></i>
+                            <small>Receive Notification</small>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Action Buttons -->
+              <div class="text-center mt-5">
+                <div class="row g-3 justify-content-center">
+                  <div class="col-md-4">
+                    <a
+                      href="#"
+                      class="btn btn-primary btn-lg w-100 rounded-pill"
+                    >
+                      <i class="fas fa-download me-2"></i>Download Checklist
+                    </a>
+                  </div>
+                  <div class="col-md-4">
+                    <a
+                      href="#country-requirements"
+                      class="btn btn-outline-primary btn-lg w-100 rounded-pill"
+                    >
+                      <i class="fas fa-globe me-2"></i>Country Requirements
+                    </a>
+                  </div>
+                  <div class="col-md-4">
+                    <a
+                      href="../pages/contact.html"
+                      class="btn btn-success btn-lg w-100 rounded-pill"
+                    >
+                      <i class="fas fa-headset me-2"></i>Get Assistance
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Enhanced Requirements Section -->
+      <section id="requirements" class="py-5" style="scroll-margin-top: 80px">
+        <div class="container">
+          <div class="text-center mb-5">
+            <span class="badge bg-warning px-3 py-2 rounded-pill mb-3">
+              <i class="fas fa-file-alt me-2"></i>Document Requirements
+            </span>
+            <h2 class="fw-bold display-4 mb-4">
+              General Visa <span class="text-warning">Requirements</span>
+            </h2>
+            <p class="lead text-muted" style="max-width: 600px; margin: 0 auto">
+              Essential documents needed for most visa applications worldwide
+            </p>
+          </div>
+
+          <div class="row align-items-center">
+            <div class="col-lg-6 mb-5 mb-lg-0">
+              <div class="position-relative">
+                <img
+                  src="https://images.unsplash.com/photo-1580086319619-3ed498161c77?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
+                  alt="Visa Documents"
+                  class="img-fluid rounded-4 shadow-lg"
+                />
+                <div
+                  class="position-absolute top-0 start-0 w-100 h-100 bg-primary bg-opacity-10 rounded-4"
+                ></div>
+                <div class="position-absolute bottom-0 start-0 p-4">
+                  <div class="bg-white rounded-3 p-3 shadow">
+                    <div class="d-flex align-items-center">
+                      <i class="fas fa-shield-alt text-success fs-3 me-3"></i>
+                      <div>
+                        <h6 class="mb-0 fw-bold">100% Secure</h6>
+                        <small class="text-muted">Document Processing</small>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
 
-            <div class="country-visa-list">
-              <!-- China -->
-              <div
-                class="visa-country-item d-flex justify-content-between align-items-center p-3 mb-3 bg-white rounded shadow-sm"
-              >
-                <div class="d-flex align-items-center">
-                  <span class="country-flag me-3">🇨🇳</span>
-                  <span class="fw-bold"
-                    >China Visa Service from Bangladesh</span
-                  >
+            <div class="col-lg-6">
+              <div class="requirements-list">
+                <!-- Essential Documents -->
+                <div class="requirement-category mb-4">
+                  <h4 class="fw-bold text-primary mb-3">
+                    <i class="fas fa-star me-2"></i>Essential Documents
+                  </h4>
+                  <div class="row g-3">
+                    <div class="col-12">
+                      <div
+                        class="requirement-item bg-white rounded-3 p-3 shadow-sm border-start border-primary border-4"
+                      >
+                        <div class="d-flex align-items-center">
+                          <i class="fas fa-passport text-primary fs-4 me-3"></i>
+                          <div>
+                            <h6 class="mb-1 fw-bold">Valid Passport</h6>
+                            <small class="text-muted"
+                              >Minimum 6 months validity with 2+ blank
+                              pages</small
+                            >
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-12">
+                      <div
+                        class="requirement-item bg-white rounded-3 p-3 shadow-sm border-start border-success border-4"
+                      >
+                        <div class="d-flex align-items-center">
+                          <i class="fas fa-file-alt text-success fs-4 me-3"></i>
+                          <div>
+                            <h6 class="mb-1 fw-bold">Application Form</h6>
+                            <small class="text-muted"
+                              >Completed and signed visa application form</small
+                            >
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-12">
+                      <div
+                        class="requirement-item bg-white rounded-3 p-3 shadow-sm border-start border-warning border-4"
+                      >
+                        <div class="d-flex align-items-center">
+                          <i class="fas fa-camera text-warning fs-4 me-3"></i>
+                          <div>
+                            <h6 class="mb-1 fw-bold">Passport Photos</h6>
+                            <small class="text-muted"
+                              >2 recent photos with white background
+                              (35x45mm)</small
+                            >
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
                 </div>
-                <a href="#" class="btn btn-danger rounded-pill px-4"
-                  >Details <i class="fas fa-chevron-right ms-2"></i
-                ></a>
-              </div>
 
-              <!-- Pakistan -->
-              <div
-                class="visa-country-item d-flex justify-content-between align-items-center p-3 mb-3 bg-white rounded shadow-sm"
-              >
-                <div class="d-flex align-items-center">
-                  <span class="country-flag me-3">🇵🇰</span>
-                  <span class="fw-bold"
-                    >Pakistan Visa Service from Bangladesh & Dubai</span
-                  >
+                <!-- Travel Documents -->
+                <div class="requirement-category mb-4">
+                  <h5 class="fw-bold text-info mb-3">
+                    <i class="fas fa-plane me-2"></i>Travel Documents
+                  </h5>
+                  <div class="row g-2">
+                    <div class="col-md-6">
+                      <div class="d-flex align-items-center">
+                        <i class="fas fa-check-circle text-success me-2"></i>
+                        <small>Flight Reservations</small>
+                      </div>
+                    </div>
+                    <div class="col-md-6">
+                      <div class="d-flex align-items-center">
+                        <i class="fas fa-check-circle text-success me-2"></i>
+                        <small>Hotel Bookings</small>
+                      </div>
+                    </div>
+                    <div class="col-md-6">
+                      <div class="d-flex align-items-center">
+                        <i class="fas fa-check-circle text-success me-2"></i>
+                        <small>Travel Insurance</small>
+                      </div>
+                    </div>
+                    <div class="col-md-6">
+                      <div class="d-flex align-items-center">
+                        <i class="fas fa-check-circle text-success me-2"></i>
+                        <small>Travel Itinerary</small>
+                      </div>
+                    </div>
+                  </div>
                 </div>
-                <a href="#" class="btn btn-danger rounded-pill px-4"
-                  >Details <i class="fas fa-chevron-right ms-2"></i
-                ></a>
-              </div>
 
-              <!-- Vietnam -->
-              <div
-                class="visa-country-item d-flex justify-content-between align-items-center p-3 mb-3 bg-white rounded shadow-sm"
-              >
-                <div class="d-flex align-items-center">
-                  <span class="country-flag me-3">🇻🇳</span>
-                  <span class="fw-bold"
-                    >Vietnam Visa Service from Bangladesh & Dubai</span
-                  >
+                <!-- Financial Documents -->
+                <div class="requirement-category mb-4">
+                  <h5 class="fw-bold text-danger mb-3">
+                    <i class="fas fa-dollar-sign me-2"></i>Financial Documents
+                  </h5>
+                  <div class="row g-2">
+                    <div class="col-md-6">
+                      <div class="d-flex align-items-center">
+                        <i class="fas fa-check-circle text-success me-2"></i>
+                        <small>Bank Statements (6 months)</small>
+                      </div>
+                    </div>
+                    <div class="col-md-6">
+                      <div class="d-flex align-items-center">
+                        <i class="fas fa-check-circle text-success me-2"></i>
+                        <small>Employment Letter</small>
+                      </div>
+                    </div>
+                    <div class="col-md-6">
+                      <div class="d-flex align-items-center">
+                        <i class="fas fa-check-circle text-success me-2"></i>
+                        <small>Income Tax Returns</small>
+                      </div>
+                    </div>
+                    <div class="col-md-6">
+                      <div class="d-flex align-items-center">
+                        <i class="fas fa-check-circle text-success me-2"></i>
+                        <small>Salary Certificates</small>
+                      </div>
+                    </div>
+                  </div>
                 </div>
-                <a href="#" class="btn btn-danger rounded-pill px-4"
-                  >Details <i class="fas fa-chevron-right ms-2"></i
-                ></a>
-              </div>
 
-              <!-- Thailand -->
-              <div
-                class="visa-country-item d-flex justify-content-between align-items-center p-3 mb-3 bg-white rounded shadow-sm"
-              >
-                <div class="d-flex align-items-center">
-                  <span class="country-flag me-3">🇹🇭</span>
-                  <span class="fw-bold"
-                    >Thailand Visa Service from Bangladesh</span
+                <!-- Action Buttons -->
+                <div class="d-flex gap-3 mt-4">
+                  <a
+                    href="#country-requirements"
+                    class="btn btn-primary rounded-pill px-4"
                   >
+                    <i class="fas fa-globe me-2"></i>Country Requirements
+                  </a>
+                  <a href="#" class="btn btn-outline-primary rounded-pill px-4">
+                    <i class="fas fa-download me-2"></i>Download Checklist
+                  </a>
                 </div>
-                <a href="#" class="btn btn-danger rounded-pill px-4"
-                  >Details <i class="fas fa-chevron-right ms-2"></i
-                ></a>
-              </div>
-
-              <!-- Singapore -->
-              <div
-                class="visa-country-item d-flex justify-content-between align-items-center p-3 mb-3 bg-white rounded shadow-sm"
-              >
-                <div class="d-flex align-items-center">
-                  <span class="country-flag me-3">🇸🇬</span>
-                  <span class="fw-bold"
-                    >Singapore Visa Service from Bangladesh</span
-                  >
-                </div>
-                <a href="#" class="btn btn-danger rounded-pill px-4"
-                  >Details <i class="fas fa-chevron-right ms-2"></i
-                ></a>
-              </div>
-
-              <!-- Malaysia -->
-              <div
-                class="visa-country-item d-flex justify-content-between align-items-center p-3 mb-3 bg-white rounded shadow-sm"
-              >
-                <div class="d-flex align-items-center">
-                  <span class="country-flag me-3">🇲🇾</span>
-                  <span class="fw-bold"
-                    >Malaysia Visa Service from Bangladesh</span
-                  >
-                </div>
-                <a href="#" class="btn btn-danger rounded-pill px-4"
-                  >Details <i class="fas fa-chevron-right ms-2"></i
-                ></a>
-              </div>
-
-              <!-- Tourist Visa Fee Info -->
-              <div class="bg-info bg-opacity-10 p-3 rounded mb-3">
-                <div class="d-flex align-items-center">
-                  <span class="me-2">🌍</span>
-                  <span class="fw-bold">Tourist Visa fee & Processing fee</span>
-                  <a href="#" class="ms-auto btn btn-sm btn-outline-info"
-                    >View Details</a
-                  >
-                </div>
-              </div>
-
-              <!-- More countries can be added here -->
-              <div class="text-center mt-4">
-                <a href="#" class="btn btn-primary"
-                  >View All Countries <i class="fas fa-globe ms-2"></i
-                ></a>
               </div>
             </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Enhanced Country-Specific Visa Services Section -->
+      <section
+        id="country-requirements"
+        class="py-5 bg-light"
+        style="scroll-margin-top: 80px"
+      >
+        <div class="container">
+          <div class="text-center mb-5">
+            <span class="badge bg-info px-3 py-2 rounded-pill mb-3">
+              <i class="fas fa-globe me-2"></i>Country Services
+            </span>
+            <h2 class="fw-bold display-4 mb-4">
+              Visa Services by <span class="text-info">Destination</span>
+            </h2>
+            <p class="lead text-muted" style="max-width: 600px; margin: 0 auto">
+              Choose your destination country to see specific requirements and
+              processing services
+            </p>
+          </div>
+
+          <!-- Country Search and Filter -->
+          <div class="row justify-content-center mb-5">
+            <div class="col-lg-8">
+              <div class="bg-white rounded-4 shadow-lg p-4">
+                <div class="row g-3 align-items-center">
+                  <div class="col-md-8">
+                    <div class="input-group input-group-lg">
+                      <span class="input-group-text bg-light border-end-0">
+                        <i class="fas fa-search text-muted"></i>
+                      </span>
+                      <input
+                        type="text"
+                        class="form-control border-start-0 ps-0"
+                        placeholder="Search for a country..."
+                        id="countrySearch"
+                        style="box-shadow: none; border-color: #e9ecef"
+                      />
+                    </div>
+                  </div>
+                  <div class="col-md-4">
+                    <select
+                      class="form-select form-select-lg"
+                      id="regionFilter"
+                    >
+                      <option value="">All Regions</option>
+                      <option value="asia">Asia</option>
+                      <option value="europe">Europe</option>
+                      <option value="america">America</option>
+                      <option value="africa">Africa</option>
+                      <option value="oceania">Oceania</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Popular Destinations -->
+          <div class="row g-4 mb-5">
+            <div class="col-12">
+              <h4 class="fw-bold mb-4">
+                <i class="fas fa-star text-warning me-2"></i>Popular
+                Destinations
+              </h4>
+            </div>
+
+            <!-- China -->
+            <div class="col-lg-6">
+              <div
+                class="country-card bg-white rounded-4 shadow-lg border-0 overflow-hidden h-100"
+              >
+                <div class="card-body p-4">
+                  <div class="d-flex align-items-center mb-3">
+                    <div
+                      class="country-flag-large me-3"
+                      style="font-size: 2.5rem"
+                    >
+                      🇨🇳
+                    </div>
+                    <div class="flex-grow-1">
+                      <h5 class="fw-bold mb-1">China Visa Service</h5>
+                      <p class="text-muted mb-0">Processing from Bangladesh</p>
+                    </div>
+                    <div class="text-end">
+                      <span class="badge bg-success px-3 py-2 rounded-pill"
+                        >Available</span
+                      >
+                    </div>
+                  </div>
+                  <div class="row g-3 mb-3">
+                    <div class="col-6">
+                      <div class="d-flex align-items-center">
+                        <i class="fas fa-clock text-primary me-2"></i>
+                        <small>7-10 Days</small>
+                      </div>
+                    </div>
+                    <div class="col-6">
+                      <div class="d-flex align-items-center">
+                        <i class="fas fa-dollar-sign text-success me-2"></i>
+                        <small>From ৳8,000</small>
+                      </div>
+                    </div>
+                    <div class="col-6">
+                      <div class="d-flex align-items-center">
+                        <i class="fas fa-passport text-info me-2"></i>
+                        <small>Tourist/Business</small>
+                      </div>
+                    </div>
+                    <div class="col-6">
+                      <div class="d-flex align-items-center">
+                        <i class="fas fa-shield-alt text-warning me-2"></i>
+                        <small>95% Success Rate</small>
+                      </div>
+                    </div>
+                  </div>
+                  <button class="btn btn-primary w-100 rounded-pill">
+                    <i class="fas fa-info-circle me-2"></i>View Details
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Thailand -->
+            <div class="col-lg-6">
+              <div
+                class="country-card bg-white rounded-4 shadow-lg border-0 overflow-hidden h-100"
+              >
+                <div class="card-body p-4">
+                  <div class="d-flex align-items-center mb-3">
+                    <div
+                      class="country-flag-large me-3"
+                      style="font-size: 2.5rem"
+                    >
+                      🇹🇭
+                    </div>
+                    <div class="flex-grow-1">
+                      <h5 class="fw-bold mb-1">Thailand Visa Service</h5>
+                      <p class="text-muted mb-0">Processing from Bangladesh</p>
+                    </div>
+                    <div class="text-end">
+                      <span class="badge bg-success px-3 py-2 rounded-pill"
+                        >Available</span
+                      >
+                    </div>
+                  </div>
+                  <div class="row g-3 mb-3">
+                    <div class="col-6">
+                      <div class="d-flex align-items-center">
+                        <i class="fas fa-clock text-primary me-2"></i>
+                        <small>3-5 Days</small>
+                      </div>
+                    </div>
+                    <div class="col-6">
+                      <div class="d-flex align-items-center">
+                        <i class="fas fa-dollar-sign text-success me-2"></i>
+                        <small>From ৳5,500</small>
+                      </div>
+                    </div>
+                    <div class="col-6">
+                      <div class="d-flex align-items-center">
+                        <i class="fas fa-passport text-info me-2"></i>
+                        <small>Tourist/Business</small>
+                      </div>
+                    </div>
+                    <div class="col-6">
+                      <div class="d-flex align-items-center">
+                        <i class="fas fa-shield-alt text-warning me-2"></i>
+                        <small>98% Success Rate</small>
+                      </div>
+                    </div>
+                  </div>
+                  <button class="btn btn-success w-100 rounded-pill">
+                    <i class="fas fa-info-circle me-2"></i>View Details
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Malaysia -->
+            <div class="col-lg-6">
+              <div
+                class="country-card bg-white rounded-4 shadow-lg border-0 overflow-hidden h-100"
+              >
+                <div class="card-body p-4">
+                  <div class="d-flex align-items-center mb-3">
+                    <div
+                      class="country-flag-large me-3"
+                      style="font-size: 2.5rem"
+                    >
+                      🇲🇾
+                    </div>
+                    <div class="flex-grow-1">
+                      <h5 class="fw-bold mb-1">Malaysia Visa Service</h5>
+                      <p class="text-muted mb-0">Processing from Bangladesh</p>
+                    </div>
+                    <div class="text-end">
+                      <span class="badge bg-success px-3 py-2 rounded-pill"
+                        >Available</span
+                      >
+                    </div>
+                  </div>
+                  <div class="row g-3 mb-3">
+                    <div class="col-6">
+                      <div class="d-flex align-items-center">
+                        <i class="fas fa-clock text-primary me-2"></i>
+                        <small>5-7 Days</small>
+                      </div>
+                    </div>
+                    <div class="col-6">
+                      <div class="d-flex align-items-center">
+                        <i class="fas fa-dollar-sign text-success me-2"></i>
+                        <small>From ৳6,000</small>
+                      </div>
+                    </div>
+                    <div class="col-6">
+                      <div class="d-flex align-items-center">
+                        <i class="fas fa-passport text-info me-2"></i>
+                        <small>Tourist/Business</small>
+                      </div>
+                    </div>
+                    <div class="col-6">
+                      <div class="d-flex align-items-center">
+                        <i class="fas fa-shield-alt text-warning me-2"></i>
+                        <small>96% Success Rate</small>
+                      </div>
+                    </div>
+                  </div>
+                  <button class="btn btn-warning w-100 rounded-pill">
+                    <i class="fas fa-info-circle me-2"></i>View Details
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Singapore -->
+            <div class="col-lg-6">
+              <div
+                class="country-card bg-white rounded-4 shadow-lg border-0 overflow-hidden h-100"
+              >
+                <div class="card-body p-4">
+                  <div class="d-flex align-items-center mb-3">
+                    <div
+                      class="country-flag-large me-3"
+                      style="font-size: 2.5rem"
+                    >
+                      🇸🇬
+                    </div>
+                    <div class="flex-grow-1">
+                      <h5 class="fw-bold mb-1">Singapore Visa Service</h5>
+                      <p class="text-muted mb-0">Processing from Bangladesh</p>
+                    </div>
+                    <div class="text-end">
+                      <span class="badge bg-success px-3 py-2 rounded-pill"
+                        >Available</span
+                      >
+                    </div>
+                  </div>
+                  <div class="row g-3 mb-3">
+                    <div class="col-6">
+                      <div class="d-flex align-items-center">
+                        <i class="fas fa-clock text-primary me-2"></i>
+                        <small>4-6 Days</small>
+                      </div>
+                    </div>
+                    <div class="col-6">
+                      <div class="d-flex align-items-center">
+                        <i class="fas fa-dollar-sign text-success me-2"></i>
+                        <small>From ৳7,500</small>
+                      </div>
+                    </div>
+                    <div class="col-6">
+                      <div class="d-flex align-items-center">
+                        <i class="fas fa-passport text-info me-2"></i>
+                        <small>Tourist/Business</small>
+                      </div>
+                    </div>
+                    <div class="col-6">
+                      <div class="d-flex align-items-center">
+                        <i class="fas fa-shield-alt text-warning me-2"></i>
+                        <small>94% Success Rate</small>
+                      </div>
+                    </div>
+                  </div>
+                  <button class="btn btn-info w-100 rounded-pill">
+                    <i class="fas fa-info-circle me-2"></i>View Details
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- All Countries Button -->
+          <div class="text-center">
+            <a
+              href="#"
+              class="btn btn-outline-primary btn-lg px-5 py-3 rounded-pill"
+            >
+              <i class="fas fa-globe me-2"></i>View All Countries & Services
+            </a>
           </div>
         </div>
       </section>
@@ -1390,29 +2181,24 @@
       </section>
     </main>
 
-    <!-- ফুটার - Enhanced with Bootstrap 5 -->
+    <!-- Enhanced Footer -->
     <footer class="footer">
       <div class="container">
         <div class="row">
           <div class="col-lg-4 mb-4 mb-lg-0">
             <h5 class="fw-bold mb-4 d-flex align-items-center">
               <img
-                src="./img/logo/travelhub-bd-logo.png"
+                src="../img/logo/travelhub-bd-logo.png"
                 alt="TravelHub BD Logo"
                 class="logo-img me-2"
                 style="height: 40px"
               />
-              <span class="lang-bn">ট্রাভেলহাব বিডি</span>
-              <span class="lang-en d-none">TravelHub BD</span>
+              <span>TravelHub BD</span>
             </h5>
-            <p class="lang-bn">
-              আপনার স্বপ্ন গন্তব্যে পৌঁছানোর সহজতম উপায়! আমরা আপনাকে প্রদান করি
-              সেরা ভ্রমণ অভিজ্ঞতা এবং সাশ্রয়ী মূল্যে টিকিট বুকিং সুবিধা।
-            </p>
-            <p class="lang-en d-none">
+            <p>
               The easiest way to reach your dream destination! We provide you
-              the best travel experience and affordable ticket booking
-              facilities.
+              the best travel experience and affordable visa processing
+              services.
             </p>
             <div class="mt-4">
               <a href="#" class="text-white me-3 fs-5"
@@ -1424,163 +2210,108 @@
               <a href="#" class="text-white me-3 fs-5"
                 ><i class="fab fa-instagram"></i
               ></a>
-              <a href="#" class="text-white me-3 fs-5"
-                ><i class="fab fa-linkedin-in"></i
-              ></a>
               <a href="#" class="text-white fs-5"
-                ><i class="fab fa-youtube"></i
+                ><i class="fab fa-linkedin-in"></i
               ></a>
             </div>
           </div>
-          <div class="col-lg-2 col-md-6 mb-4 mb-md-0">
-            <h5 class="fw-bold mb-4 lang-bn">লিংক</h5>
-            <h5 class="fw-bold mb-4 lang-en d-none">Links</h5>
+          <div class="col-lg-2 mb-4 mb-lg-0">
+            <h5 class="fw-bold mb-4">Quick Links</h5>
             <ul class="list-unstyled">
               <li class="mb-2">
-                <a href="#" class="text-white text-decoration-none lang-bn"
-                  ><i class="fas fa-chevron-right me-1"></i> হোম</a
-                ><a
-                  href="#"
-                  class="text-white text-decoration-none lang-en d-none"
-                  ><i class="fas fa-chevron-right me-1"></i> Home</a
+                <a href="../index.html" class="text-decoration-none text-white"
+                  ><i class="fas fa-angle-right me-2"></i>Home</a
                 >
               </li>
               <li class="mb-2">
-                <a href="#" class="text-white text-decoration-none lang-bn"
-                  ><i class="fas fa-chevron-right me-1"></i> টিকিট বুকিং</a
-                ><a
-                  href="#"
-                  class="text-white text-decoration-none lang-en d-none"
-                  ><i class="fas fa-chevron-right me-1"></i> Ticket Booking</a
+                <a
+                  href="./ticketBooking.html"
+                  class="text-decoration-none text-white"
+                  ><i class="fas fa-angle-right me-2"></i>Tickets</a
                 >
               </li>
               <li class="mb-2">
-                <a href="#" class="text-white text-decoration-none lang-bn"
-                  ><i class="fas fa-chevron-right me-1"></i> ভিসা তথ্য</a
-                ><a
-                  href="#"
-                  class="text-white text-decoration-none lang-en d-none"
-                  ><i class="fas fa-chevron-right me-1"></i> Visa Info</a
+                <a
+                  href="../pages/visaInfo.html"
+                  class="text-decoration-none text-white"
+                  ><i class="fas fa-angle-right me-2"></i>Visa Info</a
                 >
               </li>
               <li class="mb-2">
-                <a href="#" class="text-white text-decoration-none lang-bn"
-                  ><i class="fas fa-chevron-right me-1"></i> পরামর্শ</a
-                ><a
-                  href="#"
-                  class="text-white text-decoration-none lang-en d-none"
-                  ><i class="fas fa-chevron-right me-1"></i> Advice</a
+                <a
+                  href="../pages/packages.html"
+                  class="text-decoration-none text-white"
+                  ><i class="fas fa-angle-right me-2"></i>Packages</a
+                >
+              </li>
+              <li class="mb-2">
+                <a
+                  href="../pages/advice.html"
+                  class="text-decoration-none text-white"
+                  ><i class="fas fa-angle-right me-2"></i>Travel Advice</a
                 >
               </li>
               <li>
-                <a href="#" class="text-white text-decoration-none lang-bn"
-                  ><i class="fas fa-chevron-right me-1"></i> যোগাযোগ</a
-                ><a
-                  href="#"
-                  class="text-white text-decoration-none lang-en d-none"
-                  ><i class="fas fa-chevron-right me-1"></i> Contact</a
+                <a
+                  href="../pages/contact.html"
+                  class="text-decoration-none text-white"
+                  ><i class="fas fa-angle-right me-2"></i>Contact</a
                 >
               </li>
             </ul>
           </div>
-          <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
-            <h5 class="fw-bold mb-4 lang-bn">যোগাযোগ</h5>
-            <h5 class="fw-bold mb-4 lang-en d-none">Contact</h5>
-            <ul class="list-unstyled">
-              <li class="mb-3 d-flex">
-                <i class="fas fa-map-marker-alt me-3 mt-1"></i>
-                <span
-                  >InterContinental Hotel Building -3 (Ground Fl)<br />
-                  1 Minto Road Dhaka-1000, Bangladesh</span
-                >
-              </li>
-              <li class="mb-3 d-flex">
-                <i class="fas fa-phone me-3 mt-1"></i>
-                <span>
-                  +88 01713-066646<br />
-                  +88 01833-328668<br />
-                  +88 01616-666369
-                </span>
-              </li>
-              <li class="d-flex">
-                <i class="fas fa-envelope me-3 mt-1"></i>
-                <span>travelhubbd9@gmail.com</span>
-              </li>
-            </ul>
+          <div class="col-lg-3 mb-4 mb-lg-0">
+            <h5 class="fw-bold mb-4">Contact Us</h5>
+            <p class="mb-2">
+              <i class="fas fa-map-marker-alt me-2 text-primary"></i>123 Travel
+              Street, Dhaka, Bangladesh
+            </p>
+            <p class="mb-2">
+              <i class="fas fa-envelope me-2 text-primary"></i
+              >info@travelhubbd.com
+            </p>
+            <p class="mb-2">
+              <i class="fas fa-phone-alt me-2 text-primary"></i>+880 1234 567890
+            </p>
           </div>
-          <div class="col-lg-3 col-md-6">
-            <h5 class="fw-bold mb-4 lang-bn">নিউজলেটার</h5>
-            <h5 class="fw-bold mb-4 lang-en d-none">Newsletter</h5>
-            <p class="lang-bn">
-              আমাদের বিশেষ অফার এবং ভ্রমণ টিপস পেতে সাবস্ক্রাইব করুন
-            </p>
-            <p class="lang-en d-none">
-              Subscribe to get our special offers and travel tips
-            </p>
-            <form>
-              <div class="input-group mb-3">
-                <input
-                  type="email"
-                  class="form-control d-none"
-                  placeholder="আপনার ইমেইল"
-                  lang="bn"
-                  aria-label="Email"
-                />
-                <input
-                  type="email"
-                  class="form-control"
-                  placeholder="Your Email"
-                  lang="en"
-                  aria-label="Email"
-                />
-                <button class="btn btn-light lang-bn" type="button">
-                  সাবস্ক্রাইব
-                </button>
-                <button class="btn btn-light lang-en d-none" type="button">
-                  Subscribe
-                </button>
-              </div>
-            </form>
-            <div class="mt-4">
-              <h6 class="fw-bold lang-bn">পেমেন্ট মাধ্যম</h6>
-              <h6 class="fw-bold lang-en d-none">Payment Methods</h6>
-              <div class="d-flex flex-wrap gap-2 mt-2">
-                <!-- bKash -->
-                <img
-                  src="https://www.bkash.com/uploaded_contents/contents/Logo_bKash_png_1_210x56.png"
-                  alt="bKash"
-                  style="height: 30px"
-                  title="bKash"
-                />
-                <!-- Nagad -->
-                <img
-                  src="https://nagad.com.bd/wp-content/uploads/2022/09/Nagad-Logo-1.png"
-                  alt="Nagad"
-                  style="height: 30px"
-                  title="Nagad"
-                />
-                <!-- Rocket (DBBL Mobile Banking) -->
-                <img
-                  src="https://www.dutchbanglabank.com/wp-content/uploads/2020/05/rocket-logo.png"
-                  alt="Rocket"
-                  style="height: 30px"
-                  title="Rocket (DBBL Mobile Banking)"
-                />
-                <!-- Visa -->
-                <img
-                  src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/Visa_Inc._logo.svg/2560px-Visa_Inc._logo.svg.png"
-                  alt="Visa"
-                  style="height: 30px"
-                  title="Visa"
-                />
-                <!-- Mastercard -->
-                <img
-                  src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/Mastercard-logo.svg/1280px-Mastercard-logo.svg.png"
-                  alt="Mastercard"
-                  style="height: 30px"
-                  title="Mastercard"
-                />
-              </div>
+          <div class="col-lg-3">
+            <h5 class="fw-bold mb-4">Payment Methods</h5>
+            <div class="d-flex flex-wrap gap-2">
+              <!-- bKash -->
+              <img
+                src="https://www.logo.wine/a/logo/BKash/BKash-bKash-Logo.wine.svg"
+                alt="bKash"
+                style="height: 30px"
+                title="bKash"
+              />
+              <!-- Nagad -->
+              <img
+                src="https://download.logo.wine/logo/Nagad/Nagad-Logo.wine.png"
+                alt="Nagad"
+                style="height: 30px"
+                title="Nagad"
+              />
+              <!-- Rocket (DBBL Mobile Banking) -->
+              <img
+                src="https://www.dutchbanglabank.com/wp-content/uploads/2020/05/rocket-logo.png"
+                alt="Rocket"
+                style="height: 30px"
+                title="Rocket (DBBL Mobile Banking)"
+              />
+              <!-- Visa -->
+              <img
+                src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/Visa_Inc._logo.svg/2560px-Visa_Inc._logo.svg.png"
+                alt="Visa"
+                style="height: 30px"
+                title="Visa"
+              />
+              <!-- Mastercard -->
+              <img
+                src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/Mastercard-logo.svg/1280px-Mastercard-logo.svg.png"
+                alt="Mastercard"
+                style="height: 30px"
+                title="Mastercard"
+              />
             </div>
           </div>
         </div>
@@ -1588,27 +2319,15 @@
         <div class="row">
           <div class="col-md-6 text-center text-md-start">
             <p class="mb-0 text-muted">
-              &copy; ২০২৩ <span class="lang-bn">ট্রাভেলহাব বিডি</span
-              ><span class="lang-en d-none">TravelHub BD</span>.
-              <span class="lang-bn">সকল অধিকার সংরক্ষিত</span
-              ><span class="lang-en d-none">All rights reserved</span>
+              &copy; 2023 <span>TravelHub BD</span>.
+              <span>All rights reserved</span>
             </p>
           </div>
           <div class="col-md-6 text-center text-md-end">
-            <a href="#" class="text-white text-decoration-none me-3 lang-bn"
-              >প্রাইভেসি পলিসি</a
-            >
-            <a
-              href="#"
-              class="text-white text-decoration-none me-3 lang-en d-none"
+            <a href="#" class="text-white text-decoration-none me-3"
               >Privacy Policy</a
             >
-            <a href="#" class="text-white text-decoration-none lang-bn"
-              >শর্তাবলী</a
-            >
-            <a href="#" class="text-white text-decoration-none lang-en d-none"
-              >Terms</a
-            >
+            <a href="#" class="text-white text-decoration-none">Terms</a>
           </div>
         </div>
       </div>
@@ -1620,10 +2339,402 @@
     <!-- Font Awesome -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js"></script>
 
-    <!-- ভাষা পরিবর্তন স্ক্রিপ্ট -->
-    <script src="../js/languageSwitch.js"></script>
+    <!-- Custom CSS for Enhanced Animations -->
+    <style>
+      /* Global scroll behavior */
+      html {
+        scroll-behavior: smooth;
+      }
 
-    <!-- Visa Calculator Script -->
-    <script src="../js/visaCalculator.js"></script>
+      /* Fixed navbar adjustments */
+      body {
+        padding-top: 0;
+      }
+
+      /* Navbar z-index fix */
+      .navbar {
+        z-index: 1050;
+      }
+
+      /* Section scroll margin for fixed navbar */
+      section[id] {
+        scroll-margin-top: 80px;
+      }
+
+      /* Ensure proper section spacing */
+      .hero-section {
+        position: relative;
+        z-index: 1;
+      }
+
+      /* Floating animations */
+      @keyframes float {
+        0%,
+        100% {
+          transform: translateY(0px);
+        }
+        50% {
+          transform: translateY(-20px);
+        }
+      }
+
+      /* Mouse scroll indicator */
+      .mouse-icon {
+        width: 25px;
+        height: 45px;
+        border: 2px solid white;
+        border-radius: 15px;
+        position: relative;
+      }
+
+      .wheel {
+        width: 4px;
+        height: 8px;
+        background: white;
+        border-radius: 2px;
+        position: absolute;
+        top: 10px;
+        left: 50%;
+        transform: translateX(-50%);
+        animation: scroll 2s infinite;
+      }
+
+      @keyframes scroll {
+        0% {
+          opacity: 1;
+          top: 10px;
+        }
+        100% {
+          opacity: 0;
+          top: 25px;
+        }
+      }
+
+      /* Enhanced card hover effects */
+      .visa-type-card {
+        transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+      }
+
+      .visa-type-card:hover {
+        transform: translateY(-10px) scale(1.02);
+        box-shadow: 0 25px 50px rgba(0, 0, 0, 0.15);
+      }
+
+      .country-card {
+        transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+      }
+
+      .country-card:hover {
+        transform: translateY(-8px) scale(1.02);
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+      }
+
+      /* Button hover effects */
+      .btn {
+        transition: all 0.3s ease;
+      }
+
+      .btn:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+      }
+
+      /* Stat card hover effects */
+      .stat-card {
+        transition: all 0.3s ease;
+      }
+
+      .stat-card:hover {
+        transform: scale(1.05);
+        background: rgba(255, 255, 255, 0.2) !important;
+      }
+
+      /* Process step animations */
+      .process-step-enhanced {
+        transition: all 0.3s ease;
+      }
+
+      .process-step-enhanced:hover {
+        transform: translateX(10px);
+      }
+
+      /* Requirement item hover */
+      .requirement-item {
+        transition: all 0.3s ease;
+      }
+
+      .requirement-item:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+      }
+
+      /* Fade in animation */
+      .fade-in {
+        opacity: 0;
+        transform: translateY(30px);
+        transition: all 0.8s ease;
+      }
+
+      .fade-in.visible {
+        opacity: 1;
+        transform: translateY(0);
+      }
+
+      /* Accordion animations */
+      .accordion-item {
+        transition: all 0.3s ease;
+      }
+
+      .accordion-item:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+      }
+
+      /* Mobile optimizations */
+      @media (max-width: 768px) {
+        .hero-section {
+          min-height: 80vh;
+          background-attachment: scroll !important;
+        }
+
+        /* Reduce animations on mobile for better performance */
+        .visa-type-card:hover,
+        .country-card:hover,
+        .process-step-enhanced:hover,
+        .requirement-item:hover {
+          transform: none;
+        }
+
+        /* Adjust section padding for mobile */
+        section {
+          padding-top: 3rem !important;
+          padding-bottom: 3rem !important;
+        }
+
+        /* Better mobile navbar */
+        .navbar {
+          backdrop-filter: blur(5px);
+        }
+      }
+    </style>
+
+    <!-- Enhanced Custom JavaScript -->
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        // Enhanced smooth scrolling for anchor links with offset
+        document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+          anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            const target = document.querySelector(this.getAttribute("href"));
+            if (target) {
+              const navbarHeight = 80; // Fixed navbar height
+              const targetPosition =
+                target.getBoundingClientRect().top +
+                window.pageYOffset -
+                navbarHeight;
+
+              window.scrollTo({
+                top: targetPosition,
+                behavior: "smooth",
+              });
+            }
+          });
+        });
+
+        // Enhanced card hover effects
+        const cards = document.querySelectorAll(
+          ".visa-type-card, .country-card"
+        );
+        cards.forEach((card) => {
+          card.addEventListener("mouseenter", function () {
+            this.style.transform = "translateY(-10px) scale(1.02)";
+            this.style.boxShadow = "0 25px 50px rgba(0,0,0,0.15)";
+          });
+
+          card.addEventListener("mouseleave", function () {
+            this.style.transform = "translateY(0) scale(1)";
+            this.style.boxShadow = "";
+          });
+        });
+
+        // Country search functionality
+        const countrySearch = document.getElementById("countrySearch");
+        if (countrySearch) {
+          countrySearch.addEventListener("input", function () {
+            const searchTerm = this.value.toLowerCase();
+            const countryCards = document.querySelectorAll(".country-card");
+
+            countryCards.forEach((card) => {
+              const countryName = card
+                .querySelector("h5")
+                .textContent.toLowerCase();
+              if (countryName.includes(searchTerm)) {
+                card.style.display = "block";
+                card.style.animation = "fadeIn 0.5s ease";
+              } else {
+                card.style.display = "none";
+              }
+            });
+          });
+        }
+
+        // Region filter functionality
+        const regionFilter = document.getElementById("regionFilter");
+        if (regionFilter) {
+          regionFilter.addEventListener("change", function () {
+            const selectedRegion = this.value;
+            const countryCards = document.querySelectorAll(".country-card");
+
+            countryCards.forEach((card) => {
+              if (
+                selectedRegion === "" ||
+                card.dataset.region === selectedRegion
+              ) {
+                card.style.display = "block";
+                card.style.animation = "fadeIn 0.5s ease";
+              } else {
+                card.style.display = "none";
+              }
+            });
+          });
+        }
+
+        // Intersection Observer for fade-in animations
+        const observerOptions = {
+          threshold: 0.1,
+          rootMargin: "0px 0px -50px 0px",
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add("visible");
+            }
+          });
+        }, observerOptions);
+
+        // Add fade-in class to elements and observe them
+        const animateElements = document.querySelectorAll(
+          ".visa-type-card, .country-card, .process-step-enhanced, .requirement-item, h2, .lead"
+        );
+        animateElements.forEach((el) => {
+          el.classList.add("fade-in");
+          observer.observe(el);
+        });
+
+        // Counter animation for stats
+        const counters = document.querySelectorAll(".stat-number");
+        const animateCounter = (counter) => {
+          const target = parseInt(counter.textContent.replace(/[^\d]/g, ""));
+          const increment = target / 100;
+          let current = 0;
+
+          const timer = setInterval(() => {
+            current += increment;
+            if (current >= target) {
+              counter.textContent = counter.textContent.replace(/\d+/, target);
+              clearInterval(timer);
+            } else {
+              counter.textContent = counter.textContent.replace(
+                /\d+/,
+                Math.floor(current)
+              );
+            }
+          }, 20);
+        };
+
+        // Trigger counter animation when stats come into view
+        const statsObserver = new IntersectionObserver(
+          (entries) => {
+            entries.forEach((entry) => {
+              if (entry.isIntersecting) {
+                const counter = entry.target.querySelector(".stat-number");
+                if (counter && !counter.classList.contains("animated")) {
+                  counter.classList.add("animated");
+                  animateCounter(counter);
+                }
+              }
+            });
+          },
+          { threshold: 0.5 }
+        );
+
+        document.querySelectorAll(".stat-card").forEach((stat) => {
+          statsObserver.observe(stat);
+        });
+
+        // Navbar background change on scroll
+        const navbar = document.querySelector(".navbar");
+        window.addEventListener("scroll", () => {
+          if (window.scrollY > 100) {
+            navbar.style.background = "rgba(33, 37, 41, 0.95)";
+            navbar.style.backdropFilter = "blur(10px)";
+          } else {
+            navbar.style.background = "rgba(33, 37, 41, 0.95)";
+            navbar.style.backdropFilter = "blur(10px)";
+          }
+        });
+
+        // Subtle parallax effect for hero section (reduced for better performance)
+        let ticking = false;
+        window.addEventListener("scroll", () => {
+          if (!ticking) {
+            requestAnimationFrame(() => {
+              const scrolled = window.pageYOffset;
+              const hero = document.querySelector(".hero-section");
+              if (hero && scrolled < window.innerHeight) {
+                hero.style.transform = `translateY(${scrolled * 0.2}px)`;
+              }
+              ticking = false;
+            });
+            ticking = true;
+          }
+        });
+
+        // Enhanced accordion animations
+        const accordionButtons = document.querySelectorAll(".accordion-button");
+        accordionButtons.forEach((button) => {
+          button.addEventListener("click", function () {
+            const icon = this.querySelector("i");
+            if (icon) {
+              icon.style.transform = this.classList.contains("collapsed")
+                ? "rotate(0deg)"
+                : "rotate(180deg)";
+            }
+          });
+        });
+
+        // Handle URL hash on page load
+        function handleHashOnLoad() {
+          if (window.location.hash) {
+            setTimeout(() => {
+              const target = document.querySelector(window.location.hash);
+              if (target) {
+                const navbarHeight = 80;
+                const targetPosition =
+                  target.getBoundingClientRect().top +
+                  window.pageYOffset -
+                  navbarHeight;
+
+                window.scrollTo({
+                  top: targetPosition,
+                  behavior: "smooth",
+                });
+              }
+            }, 500); // Delay to ensure page is fully loaded
+          }
+        }
+
+        // Loading animation
+        window.addEventListener("load", () => {
+          document.body.style.opacity = "0";
+          document.body.style.transition = "opacity 0.5s ease";
+          setTimeout(() => {
+            document.body.style.opacity = "1";
+            handleHashOnLoad(); // Handle hash after loading animation
+          }, 100);
+        });
+      });
+    </script>
   </body>
 </html>

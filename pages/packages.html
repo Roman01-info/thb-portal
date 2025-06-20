@@ -1,0 +1,1461 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Travel Packages - TravelHub BD</title>
+
+    <!-- Bootstrap 5 CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../css/style.css" />
+  </head>
+
+  <body>
+    <!-- Navigation Bar - Same as index.html -->
+    <nav
+      class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top shadow-lg"
+      style="
+        backdrop-filter: blur(10px);
+        background: rgba(33, 37, 41, 0.95) !important;
+      "
+    >
+      <div class="container">
+        <!-- Logo with Animation -->
+        <a
+          class="navbar-brand fw-bold d-flex align-items-center"
+          href="../index.html"
+          style="transition: all 0.3s"
+        >
+          <img
+            src="../img/logo/travelhub-bd-logo.png"
+            alt="TravelHub BD Logo"
+            class="logo-img me-2"
+            style="height: 40px; transition: transform 0.3s"
+            onmouseover="this.style.transform='scale(1.1)'"
+            onmouseout="this.style.transform='scale(1)'"
+          />
+          <span style="font-family: 'Montserrat', sans-serif"
+            >TravelHub BD</span
+          >
+        </a>
+
+        <!-- Mobile Toggle Button -->
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-label="Toggle navigation"
+          style="border: none; box-shadow: none"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- Navigation Links -->
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <!-- Home Link -->
+            <li class="nav-item mx-1">
+              <a
+                class="nav-link d-flex align-items-center"
+                href="../index.html"
+                style="position: relative"
+              >
+                <i class="fas fa-home me-1"></i>
+                <span>Home</span>
+                <span class="nav-link-underline"></span>
+              </a>
+            </li>
+
+            <!-- Ticket Booking Link -->
+            <li class="nav-item mx-1">
+              <a
+                class="nav-link d-flex align-items-center"
+                href="../pages/ticketBooking.html"
+                style="position: relative"
+              >
+                <i class="fas fa-ticket-alt me-1"></i>
+                <span>Tickets</span>
+                <span class="nav-link-underline"></span>
+              </a>
+            </li>
+
+            <!-- Visa Info Link -->
+            <li class="nav-item mx-1">
+              <a
+                class="nav-link d-flex align-items-center"
+                href="../pages/visaInfo.html"
+                style="position: relative"
+              >
+                <i class="fas fa-passport me-1"></i>
+                <span>Visa Info</span>
+                <span class="nav-link-underline"></span>
+              </a>
+            </li>
+
+            <!-- Packages Link -->
+            <li class="nav-item mx-1">
+              <a
+                class="nav-link active d-flex align-items-center"
+                href="../pages/packages.html"
+                style="position: relative"
+              >
+                <i class="fas fa-box me-1"></i>
+                <span>Packages</span>
+                <span class="nav-link-underline"></span>
+              </a>
+            </li>
+
+            <!-- Advice Link -->
+            <li class="nav-item mx-1">
+              <a
+                class="nav-link d-flex align-items-center"
+                href="../pages/advice.html"
+                style="position: relative"
+              >
+                <i class="fas fa-comments me-1"></i>
+                <span>Advice</span>
+                <span class="nav-link-underline"></span>
+              </a>
+            </li>
+
+            <!-- Contact Link -->
+            <li class="nav-item mx-1">
+              <a
+                class="nav-link d-flex align-items-center"
+                href="../pages/contact.html"
+                style="position: relative"
+              >
+                <i class="fas fa-phone-alt me-1"></i>
+                <span>Contact</span>
+                <span class="nav-link-underline"></span>
+              </a>
+            </li>
+          </ul>
+
+          <!-- Login Button with Hover Effect -->
+          <a
+            href="#"
+            class="btn btn-light ms-lg-3 d-flex align-items-center"
+            style="border-radius: 20px; padding: 8px 20px; transition: all 0.3s"
+            onmouseover="this.style.transform='translateY(-2px)'; this.style.boxShadow='0 4px 8px rgba(0,0,0,0.2)'"
+            onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='none'"
+          >
+            <i class="fas fa-sign-in-alt me-1"></i>
+            <span>Login</span>
+          </a>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Enhanced Hero Section -->
+    <section
+      class="hero-section d-flex align-items-center position-relative overflow-hidden"
+      style="
+        min-height: 100vh;
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        margin-top: 76px;
+      "
+    >
+      <!-- Background Animation -->
+      <div class="position-absolute w-100 h-100">
+        <div
+          class="position-absolute bg-white opacity-10 rounded-circle"
+          style="
+            width: 300px;
+            height: 300px;
+            top: 10%;
+            right: 10%;
+            animation: float 6s ease-in-out infinite;
+          "
+        ></div>
+        <div
+          class="position-absolute bg-white opacity-5 rounded-circle"
+          style="
+            width: 200px;
+            height: 200px;
+            bottom: 20%;
+            left: 15%;
+            animation: float 8s ease-in-out infinite reverse;
+          "
+        ></div>
+      </div>
+
+      <div class="container position-relative">
+        <div class="row align-items-center">
+          <div class="col-lg-7">
+            <div class="hero-content text-white">
+              <h1 class="display-3 fw-bold mb-4">
+                <i class="fas fa-globe-asia me-3 text-warning"></i>
+                Explore the World
+              </h1>
+              <h2 class="h3 mb-4">Premium Travel Packages for Every Journey</h2>
+              <p class="lead mb-5">
+                From spiritual journeys to luxury getaways, discover our
+                carefully curated travel packages. Experience the world's most
+                beautiful destinations with complete peace of mind.
+              </p>
+
+              <div class="d-flex flex-wrap gap-3 mb-5">
+                <a
+                  href="#packages"
+                  class="btn btn-warning btn-lg px-4 py-3 rounded-pill shadow"
+                >
+                  <i class="fas fa-search me-2"></i>Browse Packages
+                </a>
+                <a
+                  href="../pages/contact.html"
+                  class="btn btn-outline-light btn-lg px-4 py-3 rounded-pill"
+                >
+                  <i class="fas fa-phone me-2"></i>Get Custom Quote
+                </a>
+              </div>
+
+              <!-- Stats -->
+              <div class="row text-center">
+                <div class="col-4">
+                  <div class="stat-item">
+                    <h3 class="display-6 fw-bold text-warning mb-0">50+</h3>
+                    <small class="text-light">Destinations</small>
+                  </div>
+                </div>
+                <div class="col-4">
+                  <div class="stat-item">
+                    <h3 class="display-6 fw-bold text-warning mb-0">15K+</h3>
+                    <small class="text-light">Happy Travelers</small>
+                  </div>
+                </div>
+                <div class="col-4">
+                  <div class="stat-item">
+                    <h3 class="display-6 fw-bold text-warning mb-0">100%</h3>
+                    <small class="text-light">Satisfaction</small>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-5 text-center">
+            <div class="hero-image">
+              <img
+                src="https://images.unsplash.com/photo-1469474968028-56623f02e42e?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
+                alt="Travel Packages"
+                class="img-fluid rounded-4 shadow-lg"
+                style="
+                  transform: perspective(1000px) rotateY(-15deg) rotateX(5deg);
+                "
+              />
+              <!-- Floating Elements -->
+              <div
+                class="position-absolute top-0 start-0 bg-warning text-dark p-3 rounded-circle shadow"
+                style="
+                  transform: translate(-50%, -50%);
+                  animation: bounce 2s infinite;
+                "
+              >
+                <i class="fas fa-plane fs-4"></i>
+              </div>
+              <div
+                class="position-absolute bottom-0 end-0 bg-success text-white p-3 rounded-circle shadow"
+                style="
+                  transform: translate(50%, 50%);
+                  animation: bounce 2s infinite 0.5s;
+                "
+              >
+                <i class="fas fa-map-marked-alt fs-4"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Scroll Indicator -->
+      <div class="position-absolute bottom-0 start-50 translate-middle-x mb-4">
+        <a href="#packages" class="text-white text-decoration-none">
+          <div class="scroll-indicator text-center">
+            <div class="mouse-icon mb-2">
+              <div class="wheel"></div>
+            </div>
+            <small>Scroll Down</small>
+          </div>
+        </a>
+      </div>
+    </section>
+
+    <!-- Package Categories -->
+    <section class="py-5 bg-light" id="packages">
+      <div class="container">
+        <div class="text-center mb-5">
+          <h2 class="fw-bold display-5">Choose Your Perfect Package</h2>
+          <p class="lead text-muted">
+            Select from our carefully curated travel packages
+          </p>
+        </div>
+
+        <!-- Package Filter Tabs -->
+        <ul
+          class="nav nav-pills justify-content-center mb-5 flex-wrap"
+          id="packageTabs"
+        >
+          <li class="nav-item mb-2">
+            <a
+              class="nav-link active rounded-pill px-4 py-2 mx-1"
+              data-bs-toggle="pill"
+              href="#all"
+            >
+              <i class="fas fa-globe me-2"></i>All Packages
+            </a>
+          </li>
+          <li class="nav-item mb-2">
+            <a
+              class="nav-link rounded-pill px-4 py-2 mx-1"
+              data-bs-toggle="pill"
+              href="#hajj-umrah"
+            >
+              <i class="fas fa-kaaba me-2"></i>Hajj & Umrah
+            </a>
+          </li>
+          <li class="nav-item mb-2">
+            <a
+              class="nav-link rounded-pill px-4 py-2 mx-1"
+              data-bs-toggle="pill"
+              href="#international"
+            >
+              <i class="fas fa-plane me-2"></i>International
+            </a>
+          </li>
+          <li class="nav-item mb-2">
+            <a
+              class="nav-link rounded-pill px-4 py-2 mx-1"
+              data-bs-toggle="pill"
+              href="#domestic"
+            >
+              <i class="fas fa-home me-2"></i>Domestic
+            </a>
+          </li>
+          <li class="nav-item mb-2">
+            <a
+              class="nav-link rounded-pill px-4 py-2 mx-1"
+              data-bs-toggle="pill"
+              href="#luxury"
+            >
+              <i class="fas fa-crown me-2"></i>Luxury
+            </a>
+          </li>
+          <li class="nav-item mb-2">
+            <a
+              class="nav-link rounded-pill px-4 py-2 mx-1"
+              data-bs-toggle="pill"
+              href="#budget"
+            >
+              <i class="fas fa-wallet me-2"></i>Budget
+            </a>
+          </li>
+        </ul>
+
+        <!-- Package Content -->
+        <div class="tab-content">
+          <!-- All Packages Tab -->
+          <div class="tab-pane fade show active" id="all">
+            <div class="row g-4">
+              <!-- Package 1: Cox's Bazar -->
+              <div class="col-lg-4 col-md-6">
+                <div class="card h-100 shadow-sm package-card">
+                  <div class="position-relative">
+                    <img
+                      src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
+                      class="card-img-top"
+                      alt="Cox's Bazar"
+                      style="height: 250px; object-fit: cover"
+                    />
+                    <div class="position-absolute top-0 end-0 m-3">
+                      <span class="badge bg-success">Domestic</span>
+                    </div>
+                    <div class="position-absolute bottom-0 start-0 m-3">
+                      <span class="badge bg-primary fs-6">৳ 15,000</span>
+                    </div>
+                  </div>
+                  <div class="card-body">
+                    <h5 class="card-title fw-bold">Cox's Bazar Beach Resort</h5>
+                    <p class="card-text text-muted">
+                      3 Days / 2 Nights at the world's longest sea beach with
+                      luxury accommodation
+                    </p>
+                    <div class="mb-3">
+                      <small class="text-muted">
+                        <i class="fas fa-calendar me-1"></i>3 Days
+                        <i class="fas fa-users ms-3 me-1"></i>2-4 People
+                        <i class="fas fa-star ms-3 me-1 text-warning"></i>4.8
+                      </small>
+                    </div>
+                    <ul class="list-unstyled small">
+                      <li>
+                        <i class="fas fa-check text-success me-2"></i>Hotel
+                        Accommodation
+                      </li>
+                      <li>
+                        <i class="fas fa-check text-success me-2"></i>All Meals
+                      </li>
+                      <li>
+                        <i class="fas fa-check text-success me-2"></i
+                        >Transportation
+                      </li>
+                      <li>
+                        <i class="fas fa-check text-success me-2"></i
+                        >Sightseeing
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="card-footer bg-transparent">
+                    <div
+                      class="d-flex justify-content-between align-items-center"
+                    >
+                      <button class="btn btn-outline-primary btn-sm">
+                        <i class="fas fa-info-circle me-1"></i>Details
+                      </button>
+                      <button class="btn btn-primary btn-sm">
+                        <i class="fas fa-shopping-cart me-1"></i>Book Now
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Package 2: Sundarbans -->
+              <div class="col-lg-4 col-md-6">
+                <div class="card h-100 shadow-sm package-card">
+                  <div class="position-relative">
+                    <img
+                      src="https://images.unsplash.com/photo-1544735716-392fe2489ffa?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
+                      class="card-img-top"
+                      alt="Sundarbans"
+                      style="height: 250px; object-fit: cover"
+                    />
+                    <div class="position-absolute top-0 end-0 m-3">
+                      <span class="badge bg-success">Domestic</span>
+                    </div>
+                    <div class="position-absolute bottom-0 start-0 m-3">
+                      <span class="badge bg-primary fs-6">৳ 12,000</span>
+                    </div>
+                  </div>
+                  <div class="card-body">
+                    <h5 class="card-title fw-bold">Sundarbans Adventure</h5>
+                    <p class="card-text text-muted">
+                      2 Days / 1 Night wildlife safari in the world's largest
+                      mangrove forest
+                    </p>
+                    <div class="mb-3">
+                      <small class="text-muted">
+                        <i class="fas fa-calendar me-1"></i>2 Days
+                        <i class="fas fa-users ms-3 me-1"></i>4-6 People
+                        <i class="fas fa-star ms-3 me-1 text-warning"></i>4.6
+                      </small>
+                    </div>
+                    <ul class="list-unstyled small">
+                      <li>
+                        <i class="fas fa-check text-success me-2"></i>Boat
+                        Accommodation
+                      </li>
+                      <li>
+                        <i class="fas fa-check text-success me-2"></i>All Meals
+                      </li>
+                      <li>
+                        <i class="fas fa-check text-success me-2"></i>Wildlife
+                        Safari
+                      </li>
+                      <li>
+                        <i class="fas fa-check text-success me-2"></i>Guide
+                        Service
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="card-footer bg-transparent">
+                    <div
+                      class="d-flex justify-content-between align-items-center"
+                    >
+                      <button class="btn btn-outline-primary btn-sm">
+                        <i class="fas fa-info-circle me-1"></i>Details
+                      </button>
+                      <button class="btn btn-primary btn-sm">
+                        <i class="fas fa-shopping-cart me-1"></i>Book Now
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Package 3: Dubai -->
+              <div class="col-lg-4 col-md-6">
+                <div class="card h-100 shadow-sm package-card">
+                  <div class="position-relative">
+                    <img
+                      src="https://images.unsplash.com/photo-1518684079-3c830dcef090?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
+                      class="card-img-top"
+                      alt="Dubai"
+                      style="height: 250px; object-fit: cover"
+                    />
+                    <div class="position-absolute top-0 end-0 m-3">
+                      <span class="badge bg-warning text-dark"
+                        >International</span
+                      >
+                    </div>
+                    <div class="position-absolute bottom-0 start-0 m-3">
+                      <span class="badge bg-primary fs-6">৳ 85,000</span>
+                    </div>
+                  </div>
+                  <div class="card-body">
+                    <h5 class="card-title fw-bold">Dubai Luxury Experience</h5>
+                    <p class="card-text text-muted">
+                      5 Days / 4 Nights in the city of gold with luxury hotels
+                      and experiences
+                    </p>
+                    <div class="mb-3">
+                      <small class="text-muted">
+                        <i class="fas fa-calendar me-1"></i>5 Days
+                        <i class="fas fa-users ms-3 me-1"></i>2 People
+                        <i class="fas fa-star ms-3 me-1 text-warning"></i>4.9
+                      </small>
+                    </div>
+                    <ul class="list-unstyled small">
+                      <li>
+                        <i class="fas fa-check text-success me-2"></i>5-Star
+                        Hotel
+                      </li>
+                      <li>
+                        <i class="fas fa-check text-success me-2"></i>Flight
+                        Tickets
+                      </li>
+                      <li>
+                        <i class="fas fa-check text-success me-2"></i>City Tours
+                      </li>
+                      <li>
+                        <i class="fas fa-check text-success me-2"></i>Desert
+                        Safari
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="card-footer bg-transparent">
+                    <div
+                      class="d-flex justify-content-between align-items-center"
+                    >
+                      <button class="btn btn-outline-primary btn-sm">
+                        <i class="fas fa-info-circle me-1"></i>Details
+                      </button>
+                      <button class="btn btn-primary btn-sm">
+                        <i class="fas fa-shopping-cart me-1"></i>Book Now
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Package 4: Thailand -->
+              <div class="col-lg-4 col-md-6">
+                <div class="card h-100 shadow-sm package-card">
+                  <div class="position-relative">
+                    <img
+                      src="https://images.unsplash.com/photo-1528181304800-259b08848526?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
+                      class="card-img-top"
+                      alt="Thailand"
+                      style="height: 250px; object-fit: cover"
+                    />
+                    <div class="position-absolute top-0 end-0 m-3">
+                      <span class="badge bg-warning text-dark"
+                        >International</span
+                      >
+                    </div>
+                    <div class="position-absolute bottom-0 start-0 m-3">
+                      <span class="badge bg-primary fs-6">৳ 65,000</span>
+                    </div>
+                  </div>
+                  <div class="card-body">
+                    <h5 class="card-title fw-bold">Thailand Beach Paradise</h5>
+                    <p class="card-text text-muted">
+                      6 Days / 5 Nights exploring Bangkok and Phuket with
+                      cultural experiences
+                    </p>
+                    <div class="mb-3">
+                      <small class="text-muted">
+                        <i class="fas fa-calendar me-1"></i>6 Days
+                        <i class="fas fa-users ms-3 me-1"></i>2-4 People
+                        <i class="fas fa-star ms-3 me-1 text-warning"></i>4.7
+                      </small>
+                    </div>
+                    <ul class="list-unstyled small">
+                      <li>
+                        <i class="fas fa-check text-success me-2"></i>4-Star
+                        Hotels
+                      </li>
+                      <li>
+                        <i class="fas fa-check text-success me-2"></i>Flight
+                        Tickets
+                      </li>
+                      <li>
+                        <i class="fas fa-check text-success me-2"></i>Island
+                        Hopping
+                      </li>
+                      <li>
+                        <i class="fas fa-check text-success me-2"></i>Cultural
+                        Tours
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="card-footer bg-transparent">
+                    <div
+                      class="d-flex justify-content-between align-items-center"
+                    >
+                      <button class="btn btn-outline-primary btn-sm">
+                        <i class="fas fa-info-circle me-1"></i>Details
+                      </button>
+                      <button class="btn btn-primary btn-sm">
+                        <i class="fas fa-shopping-cart me-1"></i>Book Now
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Package 5: Malaysia -->
+              <div class="col-lg-4 col-md-6">
+                <div class="card h-100 shadow-sm package-card">
+                  <div class="position-relative">
+                    <img
+                      src="https://images.unsplash.com/photo-1523482580672-f109ba8cb9be?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
+                      class="card-img-top"
+                      alt="Malaysia"
+                      style="height: 250px; object-fit: cover"
+                    />
+                    <div class="position-absolute top-0 end-0 m-3">
+                      <span class="badge bg-warning text-dark"
+                        >International</span
+                      >
+                    </div>
+                    <div class="position-absolute bottom-0 start-0 m-3">
+                      <span class="badge bg-primary fs-6">৳ 55,000</span>
+                    </div>
+                  </div>
+                  <div class="card-body">
+                    <h5 class="card-title fw-bold">Malaysia Twin Towers</h5>
+                    <p class="card-text text-muted">
+                      4 Days / 3 Nights in Kuala Lumpur with modern city
+                      experiences
+                    </p>
+                    <div class="mb-3">
+                      <small class="text-muted">
+                        <i class="fas fa-calendar me-1"></i>4 Days
+                        <i class="fas fa-users ms-3 me-1"></i>2-3 People
+                        <i class="fas fa-star ms-3 me-1 text-warning"></i>4.5
+                      </small>
+                    </div>
+                    <ul class="list-unstyled small">
+                      <li>
+                        <i class="fas fa-check text-success me-2"></i>3-Star
+                        Hotels
+                      </li>
+                      <li>
+                        <i class="fas fa-check text-success me-2"></i>Flight
+                        Tickets
+                      </li>
+                      <li>
+                        <i class="fas fa-check text-success me-2"></i>City Tours
+                      </li>
+                      <li>
+                        <i class="fas fa-check text-success me-2"></i>Shopping
+                        Tours
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="card-footer bg-transparent">
+                    <div
+                      class="d-flex justify-content-between align-items-center"
+                    >
+                      <button class="btn btn-outline-primary btn-sm">
+                        <i class="fas fa-info-circle me-1"></i>Details
+                      </button>
+                      <button class="btn btn-primary btn-sm">
+                        <i class="fas fa-shopping-cart me-1"></i>Book Now
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Package 6: Sylhet -->
+              <div class="col-lg-4 col-md-6">
+                <div class="card h-100 shadow-sm package-card">
+                  <div class="position-relative">
+                    <img
+                      src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
+                      class="card-img-top"
+                      alt="Sylhet"
+                      style="height: 250px; object-fit: cover"
+                    />
+                    <div class="position-absolute top-0 end-0 m-3">
+                      <span class="badge bg-success">Domestic</span>
+                    </div>
+                    <div class="position-absolute bottom-0 start-0 m-3">
+                      <span class="badge bg-primary fs-6">৳ 8,000</span>
+                    </div>
+                  </div>
+                  <div class="card-body">
+                    <h5 class="card-title fw-bold">Sylhet Tea Garden</h5>
+                    <p class="card-text text-muted">
+                      3 Days / 2 Nights exploring tea gardens and natural beauty
+                      of Sylhet
+                    </p>
+                    <div class="mb-3">
+                      <small class="text-muted">
+                        <i class="fas fa-calendar me-1"></i>3 Days
+                        <i class="fas fa-users ms-3 me-1"></i>2-6 People
+                        <i class="fas fa-star ms-3 me-1 text-warning"></i>4.4
+                      </small>
+                    </div>
+                    <ul class="list-unstyled small">
+                      <li>
+                        <i class="fas fa-check text-success me-2"></i>Hotel Stay
+                      </li>
+                      <li>
+                        <i class="fas fa-check text-success me-2"></i
+                        >Transportation
+                      </li>
+                      <li>
+                        <i class="fas fa-check text-success me-2"></i>Tea Garden
+                        Tours
+                      </li>
+                      <li>
+                        <i class="fas fa-check text-success me-2"></i>Waterfall
+                        Visits
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="card-footer bg-transparent">
+                    <div
+                      class="d-flex justify-content-between align-items-center"
+                    >
+                      <button class="btn btn-outline-primary btn-sm">
+                        <i class="fas fa-info-circle me-1"></i>Details
+                      </button>
+                      <button class="btn btn-primary btn-sm">
+                        <i class="fas fa-shopping-cart me-1"></i>Book Now
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Package 7: Hajj -->
+              <div class="col-lg-4 col-md-6">
+                <div class="card h-100 shadow-sm package-card border-warning">
+                  <div class="position-relative">
+                    <img
+                      src="https://images.unsplash.com/photo-1591604129939-f1efa4d9f7fa?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
+                      class="card-img-top"
+                      alt="Hajj"
+                      style="height: 250px; object-fit: cover"
+                    />
+                    <div class="position-absolute top-0 end-0 m-3">
+                      <span class="badge bg-warning text-dark">Hajj</span>
+                    </div>
+                    <div class="position-absolute bottom-0 start-0 m-3">
+                      <span class="badge bg-primary fs-6">৳ 4,50,000</span>
+                    </div>
+                    <div class="position-absolute top-0 start-0 m-3">
+                      <span class="badge bg-success">
+                        <i class="fas fa-star me-1"></i>Premium
+                      </span>
+                    </div>
+                  </div>
+                  <div class="card-body">
+                    <h5 class="card-title fw-bold text-warning">
+                      <i class="fas fa-kaaba me-2"></i>Hajj Package 2024
+                    </h5>
+                    <p class="card-text text-muted">
+                      Complete Hajj package with premium accommodation in Makkah
+                      and Madinah
+                    </p>
+                    <div class="mb-3">
+                      <small class="text-muted">
+                        <i class="fas fa-calendar me-1"></i>40 Days
+                        <i class="fas fa-users ms-3 me-1"></i>Per Person
+                        <i class="fas fa-star ms-3 me-1 text-warning"></i>5.0
+                      </small>
+                    </div>
+                    <ul class="list-unstyled small">
+                      <li>
+                        <i class="fas fa-check text-success me-2"></i>5-Star
+                        Hotels
+                      </li>
+                      <li>
+                        <i class="fas fa-check text-success me-2"></i>Flight
+                        Tickets
+                      </li>
+                      <li>
+                        <i class="fas fa-check text-success me-2"></i>Visa
+                        Processing
+                      </li>
+                      <li>
+                        <i class="fas fa-check text-success me-2"></i>Expert
+                        Guide
+                      </li>
+                      <li>
+                        <i class="fas fa-check text-success me-2"></i>All Meals
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="card-footer bg-transparent">
+                    <div
+                      class="d-flex justify-content-between align-items-center"
+                    >
+                      <button class="btn btn-outline-warning btn-sm">
+                        <i class="fas fa-info-circle me-1"></i>Details
+                      </button>
+                      <button class="btn btn-warning btn-sm">
+                        <i class="fas fa-shopping-cart me-1"></i>Book Now
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Package 8: Umrah -->
+              <div class="col-lg-4 col-md-6">
+                <div class="card h-100 shadow-sm package-card border-info">
+                  <div class="position-relative">
+                    <img
+                      src="https://images.unsplash.com/photo-1578662996442-48f60103fc96?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
+                      class="card-img-top"
+                      alt="Umrah"
+                      style="height: 250px; object-fit: cover"
+                    />
+                    <div class="position-absolute top-0 end-0 m-3">
+                      <span class="badge bg-info">Umrah</span>
+                    </div>
+                    <div class="position-absolute bottom-0 start-0 m-3">
+                      <span class="badge bg-primary fs-6">৳ 1,20,000</span>
+                    </div>
+                  </div>
+                  <div class="card-body">
+                    <h5 class="card-title fw-bold text-info">
+                      <i class="fas fa-mosque me-2"></i>Umrah Package
+                    </h5>
+                    <p class="card-text text-muted">
+                      7 Days spiritual journey to Makkah and Madinah with
+                      comfortable stay
+                    </p>
+                    <div class="mb-3">
+                      <small class="text-muted">
+                        <i class="fas fa-calendar me-1"></i>7 Days
+                        <i class="fas fa-users ms-3 me-1"></i>Per Person
+                        <i class="fas fa-star ms-3 me-1 text-warning"></i>4.9
+                      </small>
+                    </div>
+                    <ul class="list-unstyled small">
+                      <li>
+                        <i class="fas fa-check text-success me-2"></i>4-Star
+                        Hotels
+                      </li>
+                      <li>
+                        <i class="fas fa-check text-success me-2"></i>Flight
+                        Tickets
+                      </li>
+                      <li>
+                        <i class="fas fa-check text-success me-2"></i>Visa
+                        Processing
+                      </li>
+                      <li>
+                        <i class="fas fa-check text-success me-2"></i
+                        >Transportation
+                      </li>
+                      <li>
+                        <i class="fas fa-check text-success me-2"></i>Breakfast
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="card-footer bg-transparent">
+                    <div
+                      class="d-flex justify-content-between align-items-center"
+                    >
+                      <button class="btn btn-outline-info btn-sm">
+                        <i class="fas fa-info-circle me-1"></i>Details
+                      </button>
+                      <button class="btn btn-info btn-sm">
+                        <i class="fas fa-shopping-cart me-1"></i>Book Now
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Hajj & Umrah Tab -->
+          <div class="tab-pane fade" id="hajj-umrah">
+            <div class="row g-4">
+              <!-- Hajj Package -->
+              <div class="col-lg-6 col-md-6">
+                <div class="card h-100 shadow-lg package-card border-warning">
+                  <div class="position-relative">
+                    <img
+                      src="https://images.unsplash.com/photo-1591604129939-f1efa4d9f7fa?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
+                      class="card-img-top"
+                      alt="Hajj"
+                      style="height: 300px; object-fit: cover"
+                    />
+                    <div class="position-absolute top-0 end-0 m-3">
+                      <span class="badge bg-warning text-dark fs-6"
+                        >Hajj 2024</span
+                      >
+                    </div>
+                    <div class="position-absolute bottom-0 start-0 m-3">
+                      <span class="badge bg-primary fs-5">৳ 4,50,000</span>
+                    </div>
+                    <div class="position-absolute top-0 start-0 m-3">
+                      <span class="badge bg-success fs-6">
+                        <i class="fas fa-star me-1"></i>Premium
+                      </span>
+                    </div>
+                  </div>
+                  <div class="card-body p-4">
+                    <h4 class="card-title fw-bold text-warning mb-3">
+                      <i class="fas fa-kaaba me-2"></i>Hajj Package 2024
+                    </h4>
+                    <p class="card-text text-muted mb-4">
+                      Complete Hajj package with premium accommodation in Makkah
+                      and Madinah. Experience the spiritual journey of a
+                      lifetime with our expert guidance.
+                    </p>
+                    <div class="mb-4">
+                      <div class="row text-center">
+                        <div class="col-4">
+                          <div class="feature-stat">
+                            <i class="fas fa-calendar text-warning fs-4"></i>
+                            <div class="fw-bold">40 Days</div>
+                            <small class="text-muted">Duration</small>
+                          </div>
+                        </div>
+                        <div class="col-4">
+                          <div class="feature-stat">
+                            <i class="fas fa-star text-warning fs-4"></i>
+                            <div class="fw-bold">5.0</div>
+                            <small class="text-muted">Rating</small>
+                          </div>
+                        </div>
+                        <div class="col-4">
+                          <div class="feature-stat">
+                            <i class="fas fa-hotel text-warning fs-4"></i>
+                            <div class="fw-bold">5-Star</div>
+                            <small class="text-muted">Hotels</small>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <ul class="list-unstyled">
+                      <li class="mb-2">
+                        <i class="fas fa-check text-success me-2"></i>5-Star
+                        Hotels in Makkah & Madinah
+                      </li>
+                      <li class="mb-2">
+                        <i class="fas fa-check text-success me-2"></i>Round-trip
+                        Flight Tickets
+                      </li>
+                      <li class="mb-2">
+                        <i class="fas fa-check text-success me-2"></i>Visa
+                        Processing & Documentation
+                      </li>
+                      <li class="mb-2">
+                        <i class="fas fa-check text-success me-2"></i>Expert
+                        Religious Guide
+                      </li>
+                      <li class="mb-2">
+                        <i class="fas fa-check text-success me-2"></i>All Meals
+                        (Breakfast, Lunch, Dinner)
+                      </li>
+                      <li class="mb-2">
+                        <i class="fas fa-check text-success me-2"></i
+                        >Transportation in Saudi Arabia
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="card-footer bg-transparent p-4">
+                    <div class="d-grid gap-2">
+                      <button class="btn btn-warning btn-lg">
+                        <i class="fas fa-shopping-cart me-2"></i>Book Hajj
+                        Package
+                      </button>
+                      <button class="btn btn-outline-warning">
+                        <i class="fas fa-info-circle me-2"></i>View Details
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Umrah Package -->
+              <div class="col-lg-6 col-md-6">
+                <div class="card h-100 shadow-lg package-card border-info">
+                  <div class="position-relative">
+                    <img
+                      src="https://images.unsplash.com/photo-1578662996442-48f60103fc96?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
+                      class="card-img-top"
+                      alt="Umrah"
+                      style="height: 300px; object-fit: cover"
+                    />
+                    <div class="position-absolute top-0 end-0 m-3">
+                      <span class="badge bg-info fs-6">Umrah</span>
+                    </div>
+                    <div class="position-absolute bottom-0 start-0 m-3">
+                      <span class="badge bg-primary fs-5">৳ 1,20,000</span>
+                    </div>
+                  </div>
+                  <div class="card-body p-4">
+                    <h4 class="card-title fw-bold text-info mb-3">
+                      <i class="fas fa-mosque me-2"></i>Umrah Package
+                    </h4>
+                    <p class="card-text text-muted mb-4">
+                      7 Days spiritual journey to the holy cities of Makkah and
+                      Madinah. Perfect for those seeking a shorter pilgrimage
+                      experience.
+                    </p>
+                    <div class="mb-4">
+                      <div class="row text-center">
+                        <div class="col-4">
+                          <div class="feature-stat">
+                            <i class="fas fa-calendar text-info fs-4"></i>
+                            <div class="fw-bold">7 Days</div>
+                            <small class="text-muted">Duration</small>
+                          </div>
+                        </div>
+                        <div class="col-4">
+                          <div class="feature-stat">
+                            <i class="fas fa-star text-info fs-4"></i>
+                            <div class="fw-bold">4.9</div>
+                            <small class="text-muted">Rating</small>
+                          </div>
+                        </div>
+                        <div class="col-4">
+                          <div class="feature-stat">
+                            <i class="fas fa-hotel text-info fs-4"></i>
+                            <div class="fw-bold">4-Star</div>
+                            <small class="text-muted">Hotels</small>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <ul class="list-unstyled">
+                      <li class="mb-2">
+                        <i class="fas fa-check text-success me-2"></i>4-Star
+                        Hotels near Haram
+                      </li>
+                      <li class="mb-2">
+                        <i class="fas fa-check text-success me-2"></i>Round-trip
+                        Flight Tickets
+                      </li>
+                      <li class="mb-2">
+                        <i class="fas fa-check text-success me-2"></i>Visa
+                        Processing
+                      </li>
+                      <li class="mb-2">
+                        <i class="fas fa-check text-success me-2"></i>Airport
+                        Transfers
+                      </li>
+                      <li class="mb-2">
+                        <i class="fas fa-check text-success me-2"></i>Daily
+                        Breakfast
+                      </li>
+                      <li class="mb-2">
+                        <i class="fas fa-check text-success me-2"></i>Ziyarat
+                        Tours
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="card-footer bg-transparent p-4">
+                    <div class="d-grid gap-2">
+                      <button class="btn btn-info btn-lg">
+                        <i class="fas fa-shopping-cart me-2"></i>Book Umrah
+                        Package
+                      </button>
+                      <button class="btn btn-outline-info">
+                        <i class="fas fa-info-circle me-2"></i>View Details
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer - Same as index.html -->
+    <footer class="footer">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-4 mb-4 mb-lg-0">
+            <h5 class="fw-bold mb-4 d-flex align-items-center">
+              <img
+                src="../img/logo/travelhub-bd-logo.png"
+                alt="TravelHub BD Logo"
+                class="logo-img me-2"
+                style="height: 40px"
+              />
+              <span>TravelHub BD</span>
+            </h5>
+            <p>
+              The easiest way to reach your dream destination! We provide you
+              the best travel experience and affordable ticket booking
+              facilities.
+            </p>
+            <div class="mt-4">
+              <a href="#" class="text-white me-3 fs-5"
+                ><i class="fab fa-facebook-f"></i
+              ></a>
+              <a href="#" class="text-white me-3 fs-5"
+                ><i class="fab fa-twitter"></i
+              ></a>
+              <a href="#" class="text-white me-3 fs-5"
+                ><i class="fab fa-instagram"></i
+              ></a>
+              <a href="#" class="text-white fs-5"
+                ><i class="fab fa-linkedin-in"></i
+              ></a>
+            </div>
+          </div>
+          <div class="col-lg-2 mb-4 mb-lg-0">
+            <h5 class="fw-bold mb-4">Quick Links</h5>
+            <ul class="list-unstyled">
+              <li class="mb-2">
+                <a href="../index.html" class="text-decoration-none text-white"
+                  ><i class="fas fa-angle-right me-2"></i>Home</a
+                >
+              </li>
+              <li class="mb-2">
+                <a
+                  href="../pages/ticketBooking.html"
+                  class="text-decoration-none text-white"
+                  ><i class="fas fa-angle-right me-2"></i>Tickets</a
+                >
+              </li>
+              <li class="mb-2">
+                <a
+                  href="../pages/visaInfo.html"
+                  class="text-decoration-none text-white"
+                  ><i class="fas fa-angle-right me-2"></i>Visa Info</a
+                >
+              </li>
+              <li class="mb-2">
+                <a
+                  href="../pages/packages.html"
+                  class="text-decoration-none text-white"
+                  ><i class="fas fa-angle-right me-2"></i>Packages</a
+                >
+              </li>
+              <li class="mb-2">
+                <a
+                  href="../pages/advice.html"
+                  class="text-decoration-none text-white"
+                  ><i class="fas fa-angle-right me-2"></i>Travel Advice</a
+                >
+              </li>
+              <li>
+                <a
+                  href="../pages/contact.html"
+                  class="text-decoration-none text-white"
+                  ><i class="fas fa-angle-right me-2"></i>Contact</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div class="col-lg-3 mb-4 mb-lg-0">
+            <h5 class="fw-bold mb-4">Contact Us</h5>
+            <p class="mb-2">
+              <i class="fas fa-map-marker-alt me-2 text-primary"></i>123 Travel
+              Street, Dhaka, Bangladesh
+            </p>
+            <p class="mb-2">
+              <i class="fas fa-envelope me-2 text-primary"></i
+              >info@travelhubbd.com
+            </p>
+            <p class="mb-2">
+              <i class="fas fa-phone-alt me-2 text-primary"></i>+880 1234 567890
+            </p>
+          </div>
+          <div class="col-lg-3">
+            <h5 class="fw-bold mb-4">Payment Methods</h5>
+            <div class="d-flex flex-wrap gap-2">
+              <!-- bKash -->
+              <img
+                src="https://www.logo.wine/a/logo/BKash/BKash-bKash-Logo.wine.svg"
+                alt="bKash"
+                style="height: 30px"
+                title="bKash"
+              />
+              <!-- Nagad -->
+              <img
+                src="https://download.logo.wine/logo/Nagad/Nagad-Logo.wine.png"
+                alt="Nagad"
+                style="height: 30px"
+                title="Nagad"
+              />
+              <!-- Rocket (DBBL Mobile Banking) -->
+              <img
+                src="https://www.dutchbanglabank.com/wp-content/uploads/2020/05/rocket-logo.png"
+                alt="Rocket"
+                style="height: 30px"
+                title="Rocket (DBBL Mobile Banking)"
+              />
+              <!-- Visa -->
+              <img
+                src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/Visa_Inc._logo.svg/2560px-Visa_Inc._logo.svg.png"
+                alt="Visa"
+                style="height: 30px"
+                title="Visa"
+              />
+              <!-- Mastercard -->
+              <img
+                src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/Mastercard-logo.svg/1280px-Mastercard-logo.svg.png"
+                alt="Mastercard"
+                style="height: 30px"
+                title="Mastercard"
+              />
+            </div>
+          </div>
+        </div>
+        <hr class="mt-4 mb-3 bg-light" />
+        <div class="row">
+          <div class="col-md-6 text-center text-md-start">
+            <p class="mb-0 text-muted">
+              &copy; 2023 <span>TravelHub BD</span>.
+              <span>All rights reserved</span>
+            </p>
+          </div>
+          <div class="col-md-6 text-center text-md-end">
+            <a href="#" class="text-white text-decoration-none me-3"
+              >Privacy Policy</a
+            >
+            <a href="#" class="text-white text-decoration-none">Terms</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Bootstrap 5 JS Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Font Awesome -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js"></script>
+
+    <!-- Custom CSS for Animations -->
+    <style>
+      @keyframes float {
+        0%,
+        100% {
+          transform: translateY(0px);
+        }
+        50% {
+          transform: translateY(-20px);
+        }
+      }
+
+      @keyframes bounce {
+        0%,
+        20%,
+        50%,
+        80%,
+        100% {
+          transform: translateY(0);
+        }
+        40% {
+          transform: translateY(-10px);
+        }
+        60% {
+          transform: translateY(-5px);
+        }
+      }
+
+      .package-card {
+        transition: all 0.3s ease;
+        border: 1px solid rgba(0, 0, 0, 0.1);
+      }
+
+      .package-card:hover {
+        transform: translateY(-10px) scale(1.02);
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+      }
+
+      .nav-pills .nav-link {
+        transition: all 0.3s ease;
+        border: 2px solid transparent;
+      }
+
+      .nav-pills .nav-link:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+      }
+
+      .nav-pills .nav-link.active {
+        background: linear-gradient(45deg, #007bff, #0056b3);
+        border-color: #007bff;
+      }
+
+      .feature-stat {
+        transition: all 0.3s ease;
+      }
+
+      .feature-stat:hover {
+        transform: scale(1.1);
+      }
+
+      .scroll-indicator {
+        animation: bounce 2s infinite;
+      }
+
+      .mouse-icon {
+        width: 20px;
+        height: 35px;
+        border: 2px solid white;
+        border-radius: 15px;
+        position: relative;
+      }
+
+      .wheel {
+        width: 3px;
+        height: 6px;
+        background: white;
+        border-radius: 2px;
+        position: absolute;
+        top: 8px;
+        left: 50%;
+        transform: translateX(-50%);
+        animation: scroll 2s infinite;
+      }
+
+      @keyframes scroll {
+        0% {
+          opacity: 1;
+          top: 8px;
+        }
+        100% {
+          opacity: 0;
+          top: 20px;
+        }
+      }
+    </style>
+
+    <!-- Custom JavaScript -->
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        // Enhanced package card hover effects
+        const packageCards = document.querySelectorAll(".package-card");
+        packageCards.forEach((card) => {
+          card.addEventListener("mouseenter", function () {
+            this.style.transform = "translateY(-10px) scale(1.02)";
+            this.style.boxShadow = "0 20px 40px rgba(0,0,0,0.15)";
+            this.style.borderColor = "#007bff";
+          });
+
+          card.addEventListener("mouseleave", function () {
+            this.style.transform = "translateY(0) scale(1)";
+            this.style.boxShadow = "0 2px 10px rgba(0,0,0,0.1)";
+            this.style.borderColor = "rgba(0,0,0,0.1)";
+          });
+        });
+
+        // Tab switching with smooth transitions
+        const tabLinks = document.querySelectorAll('[data-bs-toggle="pill"]');
+        tabLinks.forEach((link) => {
+          link.addEventListener("click", function () {
+            // Remove active class from all tabs
+            tabLinks.forEach((tab) => tab.classList.remove("active"));
+            // Add active class to clicked tab
+            this.classList.add("active");
+          });
+        });
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+          anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            const target = document.querySelector(this.getAttribute("href"));
+            if (target) {
+              target.scrollIntoView({
+                behavior: "smooth",
+                block: "start",
+              });
+            }
+          });
+        });
+
+        // Intersection Observer for animations
+        const observerOptions = {
+          threshold: 0.1,
+          rootMargin: "0px 0px -50px 0px",
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.style.opacity = "1";
+              entry.target.style.transform = "translateY(0)";
+            }
+          });
+        }, observerOptions);
+
+        // Observe package cards for scroll animations
+        packageCards.forEach((card) => {
+          card.style.opacity = "0";
+          card.style.transform = "translateY(30px)";
+          card.style.transition = "opacity 0.6s ease, transform 0.6s ease";
+          observer.observe(card);
+        });
+
+        // Price formatting
+        const priceElements = document.querySelectorAll('.badge:contains("৳")');
+        priceElements.forEach((price) => {
+          price.style.fontWeight = "bold";
+          price.style.fontSize = "1.1rem";
+        });
+
+        // Button click effects
+        const buttons = document.querySelectorAll(".btn");
+        buttons.forEach((button) => {
+          button.addEventListener("click", function (e) {
+            // Create ripple effect
+            const ripple = document.createElement("span");
+            const rect = this.getBoundingClientRect();
+            const size = Math.max(rect.width, rect.height);
+            const x = e.clientX - rect.left - size / 2;
+            const y = e.clientY - rect.top - size / 2;
+
+            ripple.style.width = ripple.style.height = size + "px";
+            ripple.style.left = x + "px";
+            ripple.style.top = y + "px";
+            ripple.classList.add("ripple");
+
+            this.appendChild(ripple);
+
+            setTimeout(() => {
+              ripple.remove();
+            }, 600);
+          });
+        });
+      });
+    </script>
+  </body>
+</html>

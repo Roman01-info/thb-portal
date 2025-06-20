@@ -24,7 +24,7 @@
     <link rel="stylesheet" href="../styles/contact.css" />
   </head>
   <body>
-    <!-- নেভিগেশন বার - Same as home page -->
+    <!-- Navigation Bar - Same as home page -->
     <nav
       class="navbar navbar-expand-lg navbar-dark bg-primary sticky-top shadow-sm"
       style="background: linear-gradient(135deg, #0d6efd 0%, #0b5ed7 100%)"
@@ -50,7 +50,7 @@
             >TravelHub BD</span
           >
           <span class="lang-bn" style="font-family: 'Hind Siliguri', sans-serif"
-            >ট্রাভেলহাব বিডি</span
+            >TravelHub BD</span
           >
         </a>
 
@@ -77,7 +77,7 @@
                 style="position: relative"
               >
                 <i class="fas fa-home me-1"></i>
-                <span class="lang-bn">হোম</span>
+                <span class="lang-bn">Home</span>
                 <span class="lang-en d-none">Home</span>
                 <span class="nav-link-underline"></span>
               </a>
@@ -91,7 +91,7 @@
                 style="position: relative"
               >
                 <i class="fas fa-ticket-alt me-1"></i>
-                <span class="lang-bn">টিকিট বুকিং</span>
+                <span class="lang-bn">Tickets</span>
                 <span class="lang-en d-none">Tickets</span>
                 <span class="nav-link-underline"></span>
               </a>
@@ -105,8 +105,22 @@
                 style="position: relative"
               >
                 <i class="fas fa-passport me-1"></i>
-                <span class="lang-bn">ভিসা তথ্য</span>
+                <span class="lang-bn">Visa</span>
                 <span class="lang-en d-none">Visa</span>
+                <span class="nav-link-underline"></span>
+              </a>
+            </li>
+
+            <!-- Packages Link -->
+            <li class="nav-item mx-1">
+              <a
+                class="nav-link d-flex align-items-center"
+                href="../pages/packages.html"
+                style="position: relative"
+              >
+                <i class="fas fa-box me-1"></i>
+                <span class="lang-bn">Packages</span>
+                <span class="lang-en d-none">Packages</span>
                 <span class="nav-link-underline"></span>
               </a>
             </li>
@@ -119,7 +133,7 @@
                 style="position: relative"
               >
                 <i class="fas fa-comments me-1"></i>
-                <span class="lang-bn">পরামর্শ</span>
+                <span class="lang-bn">Advice</span>
                 <span class="lang-en d-none">Advice</span>
                 <span class="nav-link-underline"></span>
               </a>
@@ -133,49 +147,12 @@
                 style="position: relative"
               >
                 <i class="fas fa-phone-alt me-1"></i>
-                <span class="lang-bn">যোগাযোগ</span>
+                <span class="lang-bn">Contact</span>
                 <span class="lang-en d-none">Contact</span>
                 <span class="nav-link-underline"></span>
               </a>
             </li>
           </ul>
-
-          <!-- Language Switcher with Tooltip -->
-          <div
-            class="language-switcher ms-3"
-            data-bs-toggle="tooltip"
-            data-bs-placement="bottom"
-            title="Change Language"
-          >
-            <button
-              class="btn btn-outline-light btn-sm d-flex align-items-center"
-              id="languageToggle"
-              style="
-                border-radius: 20px;
-                padding: 5px 12px;
-                transition: all 0.3s;
-              "
-              onmouseover="this.style.backgroundColor='rgba(255,255,255,0.2)'"
-              onmouseout="this.style.backgroundColor='transparent'"
-            >
-              <img
-                src="https://flagcdn.com/w20/bd.png"
-                class="language-flag lang-bn me-1"
-                alt="Bangla"
-                style="width: 20px; height: auto"
-              />
-              <img
-                src="https://flagcdn.com/w20/gb.png"
-                class="language-flag lang-en d-none me-1"
-                alt="English"
-                style="width: 20px; height: auto"
-              />
-              <span class="lang-bn" style="font-size: 0.9rem">বাংলা</span>
-              <span class="lang-en d-none" style="font-size: 0.9rem"
-                >English</span
-              >
-            </button>
-          </div>
 
           <!-- Login Button with Hover Effect -->
           <a
@@ -186,7 +163,7 @@
             onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='none'"
           >
             <i class="fas fa-sign-in-alt me-1"></i>
-            <span class="lang-bn">লগ ইন</span>
+            <span class="lang-bn">Login</span>
             <span class="lang-en d-none">Login</span>
           </a>
         </div>
@@ -202,7 +179,7 @@
             <h1
               class="display-4 fw-bold mb-4 lang-bn animate__animated animate__fadeIn"
             >
-              <i class="fas fa-headset me-3"></i>আমাদের সাথে যোগাযোগ করুন
+              <i class="fas fa-headset me-3"></i>Contact Us
             </h1>
             <h1
               class="display-4 fw-bold mb-4 lang-en d-none animate__animated animate__fadeIn"
@@ -210,8 +187,8 @@
               <i class="fas fa-headset me-3"></i>Contact Us
             </h1>
             <p class="lead mb-4 lang-bn">
-              আপনার যে কোনো প্রশ্ন, পরামর্শ বা অভিযোগ আমাদের জানান। আমরা ২৪/৭
-              আপনার সেবায় প্রস্তুত।
+              Share any questions, suggestions or complaints with us. We're
+              available 24/7 to serve you.
             </p>
             <p class="lead mb-4 lang-en d-none">
               Share any questions, suggestions or complaints with us. We're
@@ -234,11 +211,9 @@
               <div class="contact-icon">
                 <i class="fas fa-phone-alt"></i>
               </div>
-              <h3 class="lang-bn">ফোন করুন</h3>
+              <h3 class="lang-bn">Call Us</h3>
               <h3 class="lang-en d-none">Call Us</h3>
-              <p class="text-muted lang-bn">
-                আমাদের কল সেন্টারে সরাসরি কথা বলুন
-              </p>
+              <p class="text-muted lang-bn">Talk directly to our call center</p>
               <p class="text-muted lang-en d-none">
                 Talk directly to our call center
               </p>
@@ -267,9 +242,9 @@
               <div class="contact-icon">
                 <i class="fas fa-envelope"></i>
               </div>
-              <h3 class="lang-bn">ইমেইল করুন</h3>
+              <h3 class="lang-bn">Email Us</h3>
               <h3 class="lang-en d-none">Email Us</h3>
-              <p class="text-muted lang-bn">আমাদের ইমেইলে আপনার প্রশ্ন পাঠান</p>
+              <p class="text-muted lang-bn">Send your questions to our email</p>
               <p class="text-muted lang-en d-none">
                 Send your questions to our email
               </p>
@@ -298,15 +273,17 @@
               <div class="contact-icon">
                 <i class="fas fa-map-marker-alt"></i>
               </div>
-              <h3 class="lang-bn">অফিসে আসুন</h3>
+              <h3 class="lang-bn">Visit Office</h3>
               <h3 class="lang-en d-none">Visit Office</h3>
-              <p class="text-muted lang-bn">আমাদের অফিসে সরাসরি পরামর্শ নিন</p>
+              <p class="text-muted lang-bn">
+                Get direct consultation at our office
+              </p>
               <p class="text-muted lang-en d-none">
                 Get direct consultation at our office
               </p>
               <div class="mt-3">
                 <a href="#location-map" class="btn btn-outline-primary lang-bn">
-                  <i class="fas fa-map-marked-alt me-2"></i>অবস্থান দেখুন
+                  <i class="fas fa-map-marked-alt me-2"></i>View Location
                 </a>
                 <a
                   href="#location-map"
@@ -327,11 +304,11 @@
         <div class="row">
           <div class="col-lg-6">
             <div class="pe-lg-5">
-              <h2 class="fw-bold mb-4 lang-bn">আমাদের বার্তা পাঠান</h2>
+              <h2 class="fw-bold mb-4 lang-bn">Send Us a Message</h2>
               <h2 class="fw-bold mb-4 lang-en d-none">Send Us a Message</h2>
               <p class="text-muted mb-4 lang-bn">
-                নিচের ফর্মটি পূরণ করুন এবং আমরা যত তাড়াতাড়ি সম্ভব আপনার সাথে
-                যোগাযোগ করব।
+                Fill out the form below and we'll contact you as soon as
+                possible.
               </p>
               <p class="text-muted mb-4 lang-en d-none">
                 Fill out the form below and we'll contact you as soon as
@@ -340,7 +317,7 @@
 
               <form>
                 <div class="mb-3">
-                  <label for="name" class="form-label lang-bn">আপনার নাম</label>
+                  <label for="name" class="form-label lang-bn">Your Name</label>
                   <label for="name" class="form-label lang-en d-none"
                     >Your Name</label
                   >
@@ -348,7 +325,7 @@
                     type="text"
                     class="form-control"
                     id="name"
-                    placeholder="আপনার পুরো নাম"
+                    placeholder="Your full name"
                     lang="bn"
                     required
                   />
@@ -364,7 +341,7 @@
 
                 <div class="mb-3">
                   <label for="email" class="form-label lang-bn"
-                    >ইমেইল ঠিকানা</label
+                    >Email Address</label
                   >
                   <label for="email" class="form-label lang-en d-none"
                     >Email Address</label
@@ -373,7 +350,7 @@
                     type="email"
                     class="form-control"
                     id="email"
-                    placeholder="আপনার ইমেইল"
+                    placeholder="Your email"
                     lang="bn"
                     required
                   />
@@ -389,7 +366,7 @@
 
                 <div class="mb-3">
                   <label for="phone" class="form-label lang-bn"
-                    >ফোন নম্বর</label
+                    >Phone Number</label
                   >
                   <label for="phone" class="form-label lang-en d-none"
                     >Phone Number</label
@@ -398,7 +375,7 @@
                     type="tel"
                     class="form-control"
                     id="phone"
-                    placeholder="আপনার ফোন নম্বর"
+                    placeholder="Your phone number"
                     lang="bn"
                     required
                   />
@@ -413,34 +390,36 @@
                 </div>
 
                 <div class="mb-3">
-                  <label for="subject" class="form-label lang-bn">বিষয়</label>
+                  <label for="subject" class="form-label lang-bn"
+                    >Subject</label
+                  >
                   <label for="subject" class="form-label lang-en d-none"
                     >Subject</label
                   >
                   <select class="form-select" id="subject" required>
                     <option value="" selected disabled lang="bn">
-                      একটি বিষয় নির্বাচন করুন
+                      Select a subject
                     </option>
                     <option value="" selected disabled lang="en" class="d-none">
                       Select a subject
                     </option>
-                    <option value="ticket" lang="bn">টিকিট সম্পর্কিত</option>
+                    <option value="ticket" lang="bn">Ticket Related</option>
                     <option value="ticket" lang="en" class="d-none">
                       Ticket Related
                     </option>
-                    <option value="visa" lang="bn">ভিসা সম্পর্কিত</option>
+                    <option value="visa" lang="bn">Visa Related</option>
                     <option value="visa" lang="en" class="d-none">
                       Visa Related
                     </option>
-                    <option value="feedback" lang="bn">প্রতিক্রিয়া</option>
+                    <option value="feedback" lang="bn">Feedback</option>
                     <option value="feedback" lang="en" class="d-none">
                       Feedback
                     </option>
-                    <option value="complaint" lang="bn">অভিযোগ</option>
+                    <option value="complaint" lang="bn">Complaint</option>
                     <option value="complaint" lang="en" class="d-none">
                       Complaint
                     </option>
-                    <option value="other" lang="bn">অন্যান্য</option>
+                    <option value="other" lang="bn">Other</option>
                     <option value="other" lang="en" class="d-none">
                       Other
                     </option>
@@ -448,7 +427,9 @@
                 </div>
 
                 <div class="mb-3">
-                  <label for="message" class="form-label lang-bn">বার্তা</label>
+                  <label for="message" class="form-label lang-bn"
+                    >Message</label
+                  >
                   <label for="message" class="form-label lang-en d-none"
                     >Message</label
                   >
@@ -456,7 +437,7 @@
                     class="form-control"
                     id="message"
                     rows="4"
-                    placeholder="আপনার বার্তা এখানে লিখুন"
+                    placeholder="Type your message here"
                     lang="bn"
                     required
                   ></textarea>
@@ -472,7 +453,7 @@
 
                 <div class="d-grid">
                   <button type="submit" class="btn btn-primary btn-lg lang-bn">
-                    <i class="fas fa-paper-plane me-2"></i>বার্তা পাঠান
+                    <i class="fas fa-paper-plane me-2"></i>Send Message
                   </button>
                   <button
                     type="submit"
@@ -500,13 +481,13 @@
             </div>
 
             <div class="mt-4">
-              <h4 class="fw-bold mb-3 lang-bn">অফিসের ঠিকানা</h4>
+              <h4 class="fw-bold mb-3 lang-bn">Office Address</h4>
               <h4 class="fw-bold mb-3 lang-en d-none">Office Address</h4>
 
               <div class="d-flex mb-3">
                 <i class="fas fa-map-marker-alt text-primary me-3 mt-1"></i>
                 <div>
-                  <h5 class="fw-bold mb-1 lang-bn">ট্রাভেলহাব বিডি</h5>
+                  <h5 class="fw-bold mb-1 lang-bn">TravelHub BD</h5>
                   <h5 class="fw-bold mb-1 lang-en d-none">TravelHub BD</h5>
                   <p class="mb-0">
                     InterContinental Hotel Building -3 (Ground Fl)<br />
@@ -518,11 +499,11 @@
               <div class="d-flex mb-3">
                 <i class="fas fa-clock text-primary me-3 mt-1"></i>
                 <div>
-                  <h5 class="fw-bold mb-1 lang-bn">কর্মঘণ্টা</h5>
+                  <h5 class="fw-bold mb-1 lang-bn">Working Hours</h5>
                   <h5 class="fw-bold mb-1 lang-en d-none">Working Hours</h5>
                   <p class="mb-0 lang-bn">
-                    শনি-বৃহ: সকাল ৯টা - রাত ১০টা<br />
-                    শুক্র: বিকাল ৩টা - রাত ১০টা
+                    Sat-Thu: 9AM - 10PM<br />
+                    Fri: 3PM - 10PM
                   </p>
                   <p class="mb-0 lang-en d-none">
                     Sat-Thu: 9AM - 10PM<br />
@@ -532,7 +513,7 @@
               </div>
 
               <div class="social-links mt-4">
-                <h5 class="fw-bold mb-3 lang-bn">সামাজিক যোগাযোগ</h5>
+                <h5 class="fw-bold mb-3 lang-bn">Social Media</h5>
                 <h5 class="fw-bold mb-3 lang-en d-none">Social Media</h5>
                 <a href="#" class="btn btn-outline-primary me-2">
                   <i class="fab fa-facebook-f"></i>
@@ -560,13 +541,13 @@
     <section class="py-5 bg-light">
       <div class="container">
         <div class="text-center mb-5">
-          <h2 class="fw-bold display-5 lang-bn">সচরাচর জিজ্ঞাসিত প্রশ্ন</h2>
+          <h2 class="fw-bold display-5 lang-bn">Frequently Asked Questions</h2>
           <h2 class="fw-bold display-5 lang-en d-none">
             Frequently Asked Questions
           </h2>
           <div class="divider mx-auto bg-primary mb-4"></div>
           <p class="lead lang-bn text-muted">
-            আপনার মনে থাকতে পারে এমন কিছু সাধারণ প্রশ্নের উত্তর এখানে দেওয়া হলো
+            Answers to some common questions you might have
           </p>
           <p class="lead lang-en d-none text-muted">
             Answers to some common questions you might have
@@ -588,7 +569,7 @@
                     aria-controls="collapseOne"
                   >
                     <span class="lang-bn"
-                      >টিকিট বুকিংয়ের জন্য কত সময় লাগে?</span
+                      >How long does ticket booking take?</span
                     >
                     <span class="lang-en d-none"
                       >How long does ticket booking take?</span
@@ -603,9 +584,9 @@
                 >
                   <div class="accordion-body">
                     <p class="lang-bn">
-                      সাধারণত টিকিট বুকিং প্রক্রিয়া সম্পন্ন করতে ২৪ থেকে ৪৮
-                      ঘণ্টা সময় লাগে। তবে জরুরি ক্ষেত্রে আমরা এক্সপ্রেস সার্ভিস
-                      প্রদান করি যা ৬-১২ ঘণ্টার মধ্যে সম্পন্ন হয়।
+                      Usually it takes 24 to 48 hours to complete the ticket
+                      booking process. However, in urgent cases we provide
+                      express service which is completed within 6-12 hours.
                     </p>
                     <p class="lang-en d-none">
                       Usually it takes 24 to 48 hours to complete the ticket
@@ -627,7 +608,9 @@
                     aria-expanded="false"
                     aria-controls="collapseTwo"
                   >
-                    <span class="lang-bn">ভিসা প্রসেসিংয়ে কত সময় লাগে?</span>
+                    <span class="lang-bn"
+                      >How long does visa processing take?</span
+                    >
                     <span class="lang-en d-none"
                       >How long does visa processing take?</span
                     >
@@ -641,9 +624,9 @@
                 >
                   <div class="accordion-body">
                     <p class="lang-bn">
-                      ভিসা প্রসেসিং সময় গন্তব্য দেশের উপর নির্ভর করে। সাধারণত
-                      ৫-১৫ কার্যদিবস সময় লাগে। কিছু দেশের জন্য এক্সপ্রেস
-                      সার্ভিসও পাওয়া যায়।
+                      Visa processing time depends on the destination country.
+                      Usually it takes 5-15 working days. Express service is
+                      also available for some countries.
                     </p>
                     <p class="lang-en d-none">
                       Visa processing time depends on the destination country.
@@ -666,7 +649,8 @@
                     aria-controls="collapseThree"
                   >
                     <span class="lang-bn"
-                      >টিকিট ক্যান্সেল বা পরিবর্তনের নিয়ম কী?</span
+                      >What are the ticket cancellation or change
+                      policies?</span
                     >
                     <span class="lang-en d-none"
                       >What are the ticket cancellation or change
@@ -682,10 +666,10 @@
                 >
                   <div class="accordion-body">
                     <p class="lang-bn">
-                      টিকিট ক্যান্সেল বা পরিবর্তনের নিয়ম এয়ারলাইনের পলিসি
-                      অনুযায়ী পরিবর্তিত হয়। সাধারণত নির্দিষ্ট ফি প্রদান
-                      সাপেক্ষে টিকিট পরিবর্তন বা ক্যান্সেল করা যায়। বিস্তারিত
-                      জানতে আমাদের সাথে যোগাযোগ করুন।
+                      Ticket cancellation or change policies vary according to
+                      airline policies. Generally tickets can be changed or
+                      cancelled subject to payment of certain fees. Contact us
+                      for details.
                     </p>
                     <p class="lang-en d-none">
                       Ticket cancellation or change policies vary according to
@@ -709,7 +693,7 @@
                     aria-controls="collapseFour"
                   >
                     <span class="lang-bn"
-                      >গ্রুপ ট্যুরের জন্য ডিসকাউন্ট পাওয়া যাবে?</span
+                      >Is there discount for group tours?</span
                     >
                     <span class="lang-en d-none"
                       >Is there discount for group tours?</span
@@ -724,10 +708,9 @@
                 >
                   <div class="accordion-body">
                     <p class="lang-bn">
-                      হ্যাঁ, ১০ জনের বেশি গ্রুপের জন্য বিশেষ ডিসকাউন্ট রয়েছে।
-                      গ্রুপের আকার এবং ট্যুর প্যাকেজের উপর ভিত্তি করে ডিসকাউন্ট
-                      রেট পরিবর্তিত হয়। আমাদের গ্রুপ ট্যুর বিশেষজ্ঞের সাথে কথা
-                      বলুন।
+                      Yes, there are special discounts for groups of 10 or more.
+                      Discount rates vary based on group size and tour package.
+                      Talk to our group tour specialist.
                     </p>
                     <p class="lang-en d-none">
                       Yes, there are special discounts for groups of 10 or more.
@@ -750,7 +733,7 @@
                     aria-controls="collapseFive"
                   >
                     <span class="lang-bn"
-                      >পেমেন্টের জন্য কোন কোন মাধ্যম গ্রহণযোগ্য?</span
+                      >What payment methods are accepted?</span
                     >
                     <span class="lang-en d-none"
                       >What payment methods are accepted?</span
@@ -765,9 +748,9 @@
                 >
                   <div class="accordion-body">
                     <p class="lang-bn">
-                      আমরা বিকাশ, নগদ, রকেট, ক্রেডিট/ডেবিট কার্ড (ভিসা,
-                      মাস্টারকার্ড) এবং ব্যাংক ট্রান্সফার গ্রহণ করি। অফিসে ক্যাশ
-                      পেমেন্টও গ্রহণ করা হয়।
+                      We accept bKash, Nagad, Rocket, Credit/Debit Cards (Visa,
+                      Mastercard) and bank transfers. Cash payments are also
+                      accepted at the office.
                     </p>
                     <p class="lang-en d-none">
                       We accept bKash, Nagad, Rocket, Credit/Debit Cards (Visa,
@@ -781,7 +764,7 @@
 
             <div class="text-center mt-5">
               <a href="#" class="btn btn-outline-primary btn-lg lang-bn">
-                <i class="fas fa-question-circle me-2"></i>আরও প্রশ্ন আছে?
+                <i class="fas fa-question-circle me-2"></i>More Questions?
               </a>
               <a href="#" class="btn btn-outline-primary btn-lg lang-en d-none">
                 <i class="fas fa-question-circle me-2"></i>More Questions?
@@ -792,7 +775,7 @@
       </div>
     </section>
 
-    <!-- ফুটার - Same as home page -->
+    <!-- Footer - Same as home page -->
     <footer class="footer">
       <div class="container">
         <div class="row">
@@ -804,12 +787,13 @@
                 class="logo-img me-2"
                 style="height: 40px"
               />
-              <span class="lang-bn">ট্রাভেলহাব বিডি</span>
+              <span class="lang-bn">TravelHub BD</span>
               <span class="lang-en d-none">TravelHub BD</span>
             </h5>
             <p class="lang-bn">
-              আপনার স্বপ্ন গন্তব্যে পৌঁছানোর সহজতম উপায়! আমরা আপনাকে প্রদান করি
-              সেরা ভ্রমণ অভিজ্ঞতা এবং সাশ্রয়ী মূল্যে টিকিট বুকিং সুবিধা।
+              The easiest way to reach your dream destination! We provide you
+              the best travel experience and affordable ticket booking
+              facilities.
             </p>
             <p class="lang-en d-none">
               The easiest way to reach your dream destination! We provide you
@@ -835,14 +819,14 @@
             </div>
           </div>
           <div class="col-lg-2 col-md-6 mb-4 mb-md-0">
-            <h5 class="fw-bold mb-4 lang-bn">লিংক</h5>
+            <h5 class="fw-bold mb-4 lang-bn">Links</h5>
             <h5 class="fw-bold mb-4 lang-en d-none">Links</h5>
             <ul class="list-unstyled">
               <li class="mb-2">
                 <a
                   href="../index.html"
                   class="text-white text-decoration-none lang-bn"
-                  ><i class="fas fa-chevron-right me-1"></i> হোম</a
+                  ><i class="fas fa-chevron-right me-1"></i> Home</a
                 ><a
                   href="../index.html"
                   class="text-white text-decoration-none lang-en d-none"
@@ -853,7 +837,7 @@
                 <a
                   href="../pages/ticketBooking.html"
                   class="text-white text-decoration-none lang-bn"
-                  ><i class="fas fa-chevron-right me-1"></i> টিকিট বুকিং</a
+                  ><i class="fas fa-chevron-right me-1"></i> Ticket Booking</a
                 ><a
                   href="../pages/ticketBooking.html"
                   class="text-white text-decoration-none lang-en d-none"
@@ -864,7 +848,7 @@
                 <a
                   href="../pages/visaInfo.html"
                   class="text-white text-decoration-none lang-bn"
-                  ><i class="fas fa-chevron-right me-1"></i> ভিসা তথ্য</a
+                  ><i class="fas fa-chevron-right me-1"></i> Visa Info</a
                 ><a
                   href="../pages/visaInfo.html"
                   class="text-white text-decoration-none lang-en d-none"
@@ -873,9 +857,20 @@
               </li>
               <li class="mb-2">
                 <a
+                  href="../pages/packages.html"
+                  class="text-white text-decoration-none lang-bn"
+                  ><i class="fas fa-chevron-right me-1"></i> Packages</a
+                ><a
+                  href="../pages/packages.html"
+                  class="text-white text-decoration-none lang-en d-none"
+                  ><i class="fas fa-chevron-right me-1"></i> Packages</a
+                >
+              </li>
+              <li class="mb-2">
+                <a
                   href="../pages/advice.html"
                   class="text-white text-decoration-none lang-bn"
-                  ><i class="fas fa-chevron-right me-1"></i> পরামর্শ</a
+                  ><i class="fas fa-chevron-right me-1"></i> Advice</a
                 ><a
                   href="../pages/advice.html"
                   class="text-white text-decoration-none lang-en d-none"
@@ -884,7 +879,7 @@
               </li>
               <li>
                 <a href="#" class="text-white text-decoration-none lang-bn"
-                  ><i class="fas fa-chevron-right me-1"></i> যোগাযোগ</a
+                  ><i class="fas fa-chevron-right me-1"></i> Contact</a
                 ><a
                   href="#"
                   class="text-white text-decoration-none lang-en d-none"
@@ -894,7 +889,7 @@
             </ul>
           </div>
           <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
-            <h5 class="fw-bold mb-4 lang-bn">যোগাযোগ</h5>
+            <h5 class="fw-bold mb-4 lang-bn">Contact</h5>
             <h5 class="fw-bold mb-4 lang-en d-none">Contact</h5>
             <ul class="list-unstyled">
               <li class="mb-3 d-flex">
@@ -919,10 +914,10 @@
             </ul>
           </div>
           <div class="col-lg-3 col-md-6">
-            <h5 class="fw-bold mb-4 lang-bn">নিউজলেটার</h5>
+            <h5 class="fw-bold mb-4 lang-bn">Newsletter</h5>
             <h5 class="fw-bold mb-4 lang-en d-none">Newsletter</h5>
             <p class="lang-bn">
-              আমাদের বিশেষ অফার এবং ভ্রমণ টিপস পেতে সাবস্ক্রাইব করুন
+              Subscribe to get our special offers and travel tips
             </p>
             <p class="lang-en d-none">
               Subscribe to get our special offers and travel tips
@@ -932,7 +927,7 @@
                 <input
                   type="email"
                   class="form-control d-none"
-                  placeholder="আপনার ইমেইল"
+                  placeholder="Your email"
                   lang="bn"
                   aria-label="Email"
                 />
@@ -944,7 +939,7 @@
                   aria-label="Email"
                 />
                 <button class="btn btn-light lang-bn" type="button">
-                  সাবস্ক্রাইব
+                  Subscribe
                 </button>
                 <button class="btn btn-light lang-en d-none" type="button">
                   Subscribe
@@ -952,7 +947,7 @@
               </div>
             </form>
             <div class="mt-4">
-              <h6 class="fw-bold lang-bn">পেমেন্ট মাধ্যম</h6>
+              <h6 class="fw-bold lang-bn">Payment Methods</h6>
               <h6 class="fw-bold lang-en d-none">Payment Methods</h6>
               <div class="d-flex flex-wrap gap-2 mt-2">
                 <!-- bKash -->
@@ -998,15 +993,15 @@
         <div class="row">
           <div class="col-md-6 text-center text-md-start">
             <p class="mb-0 text-muted">
-              &copy; ২০২৩ <span class="lang-bn">ট্রাভেলহাব বিডি</span
+              &copy; 2023 <span class="lang-bn">TravelHub BD</span
               ><span class="lang-en d-none">TravelHub BD</span>.
-              <span class="lang-bn">সকল অধিকার সংরক্ষিত</span
+              <span class="lang-bn">All rights reserved</span
               ><span class="lang-en d-none">All rights reserved</span>
             </p>
           </div>
           <div class="col-md-6 text-center text-md-end">
             <a href="#" class="text-white text-decoration-none me-3 lang-bn"
-              >প্রাইভেসি পলিসি</a
+              >Privacy Policy</a
             >
             <a
               href="#"
@@ -1014,7 +1009,7 @@
               >Privacy Policy</a
             >
             <a href="#" class="text-white text-decoration-none lang-bn"
-              >শর্তাবলী</a
+              >Terms</a
             >
             <a href="#" class="text-white text-decoration-none lang-en d-none"
               >Terms</a
@@ -1030,7 +1025,7 @@
     <!-- Font Awesome -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js"></script>
 
-    <!-- ভাষা পরিবর্তন স্ক্রিপ্ট -->
+    <!-- Language Switch Script -->
     <script src="../js/languageSwitch.js"></script>
 
     <!-- Contact Form Validation -->

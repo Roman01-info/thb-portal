@@ -19,15 +19,18 @@
     <link rel="stylesheet" href="../styles/style.css" />
   </head>
   <body>
-    <!-- Navigation -->
+    <!-- Enhanced Navigation -->
     <nav
-      class="navbar navbar-expand-lg navbar-dark bg-primary sticky-top shadow-sm"
-      style="background: linear-gradient(135deg, #0d6efd 0%, #0b5ed7 100%)"
+      class="navbar navbar-expand-lg navbar-dark fixed-top shadow-lg"
+      style="
+        backdrop-filter: blur(10px);
+        background: rgba(33, 37, 41, 0.95) !important;
+      "
     >
       <div class="container">
         <a
           class="navbar-brand fw-bold d-flex align-items-center"
-          href="#"
+          href="../index.html"
           style="transition: all 0.3s"
         >
           <img
@@ -38,13 +41,8 @@
             onmouseover="this.style.transform='scale(1.1)'"
             onmouseout="this.style.transform='scale(1)'"
           />
-          <span
-            class="lang-en d-none"
-            style="font-family: 'Montserrat', sans-serif"
+          <span style="font-family: 'Montserrat', sans-serif"
             >TravelHub BD</span
-          >
-          <span class="lang-bn" style="font-family: 'Hind Siliguri', sans-serif"
-            >ট্রাভেলহাব বিডি</span
           >
         </a>
 
@@ -53,6 +51,8 @@
           type="button"
           data-bs-toggle="collapse"
           data-bs-target="#navbarNav"
+          aria-label="Toggle navigation"
+          style="border: none; box-shadow: none"
         >
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -66,8 +66,7 @@
                 style="position: relative"
               >
                 <i class="fas fa-home me-1"></i>
-                <span class="lang-bn">হোম</span>
-                <span class="lang-en d-none">Home</span>
+                <span>Home</span>
                 <span class="nav-link-underline"></span>
               </a>
             </li>
@@ -79,8 +78,7 @@
                 style="position: relative"
               >
                 <i class="fas fa-ticket-alt me-1"></i>
-                <span class="lang-bn">টিকিট বুকিং</span>
-                <span class="lang-en d-none">Tickets</span>
+                <span>Tickets</span>
                 <span class="nav-link-underline"></span>
               </a>
             </li>
@@ -92,8 +90,19 @@
                 style="position: relative"
               >
                 <i class="fas fa-passport me-1"></i>
-                <span class="lang-bn">ভিসা তথ্য</span>
-                <span class="lang-en d-none">Visa Info</span>
+                <span>Visa Info</span>
+                <span class="nav-link-underline"></span>
+              </a>
+            </li>
+
+            <li class="nav-item mx-1">
+              <a
+                class="nav-link d-flex align-items-center"
+                href="../pages/packages.html"
+                style="position: relative"
+              >
+                <i class="fas fa-box me-1"></i>
+                <span>Packages</span>
                 <span class="nav-link-underline"></span>
               </a>
             </li>
@@ -105,8 +114,7 @@
                 style="position: relative"
               >
                 <i class="fas fa-comments me-1"></i>
-                <span class="lang-bn">পরামর্শ</span>
-                <span class="lang-en d-none">Advice</span>
+                <span>Advice</span>
                 <span class="nav-link-underline"></span>
               </a>
             </li>
@@ -114,558 +122,846 @@
             <li class="nav-item mx-1">
               <a
                 class="nav-link d-flex align-items-center"
-                href="#"
+                href="../pages/contact.html"
                 style="position: relative"
               >
                 <i class="fas fa-phone-alt me-1"></i>
-                <span class="lang-bn">যোগাযোগ</span>
-                <span class="lang-en d-none">Contact</span>
+                <span>Contact</span>
                 <span class="nav-link-underline"></span>
               </a>
             </li>
           </ul>
 
-          <div
-            class="language-switcher ms-3"
-            data-bs-toggle="tooltip"
-            data-bs-placement="bottom"
-            title="Change Language"
-          >
-            <button
-              class="btn btn-outline-light btn-sm d-flex align-items-center"
-              id="languageToggle"
-              style="
-                border-radius: 20px;
-                padding: 5px 12px;
-                transition: all 0.3s;
-              "
-            >
-              <img
-                src="https://flagcdn.com/w20/bd.png"
-                class="language-flag lang-bn me-1"
-                alt="Bangla"
-                style="width: 20px; height: auto"
-              />
-              <img
-                src="https://flagcdn.com/w20/gb.png"
-                class="language-flag lang-en d-none me-1"
-                alt="English"
-                style="width: 20px; height: auto"
-              />
-              <span class="lang-bn" style="font-size: 0.9rem">বাংলা</span>
-              <span class="lang-en d-none" style="font-size: 0.9rem"
-                >English</span
-              >
-            </button>
-          </div>
-
           <a
             href="#"
             class="btn btn-light ms-lg-3 d-flex align-items-center"
             style="border-radius: 20px; padding: 8px 20px; transition: all 0.3s"
+            onmouseover="this.style.transform='translateY(-2px)'; this.style.boxShadow='0 4px 8px rgba(0,0,0,0.2)'"
+            onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='none'"
           >
             <i class="fas fa-sign-in-alt me-1"></i>
-            <span class="lang-bn">লগ ইন</span>
-            <span class="lang-en d-none">Login</span>
+            <span>Login</span>
           </a>
         </div>
       </div>
     </nav>
 
-    <!-- Hero Section -->
-    <section class="booking-hero text-center">
+    <!-- Enhanced Hero Section -->
+    <section
+      class="hero-section d-flex align-items-center position-relative overflow-hidden"
+      style="
+        min-height: 100vh;
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        background-image: url('https://images.unsplash.com/photo-1436491865332-7a61a109cc05?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80');
+        background-size: cover;
+        background-position: center;
+        background-attachment: fixed;
+      "
+    >
+      <!-- Overlay -->
+      <div
+        class="position-absolute top-0 start-0 w-100 h-100"
+        style="
+          background: linear-gradient(
+            135deg,
+            rgba(102, 126, 234, 0.8) 0%,
+            rgba(118, 75, 162, 0.8) 100%
+          );
+        "
+      ></div>
+
+      <!-- Floating Animation Elements -->
+      <div class="position-absolute w-100 h-100">
+        <div
+          class="floating-element position-absolute bg-white opacity-10 rounded-circle"
+          style="
+            width: 120px;
+            height: 120px;
+            top: 15%;
+            left: 10%;
+            animation: float 6s ease-in-out infinite;
+          "
+        ></div>
+        <div
+          class="floating-element position-absolute bg-white opacity-5 rounded-circle"
+          style="
+            width: 80px;
+            height: 80px;
+            top: 70%;
+            right: 20%;
+            animation: float 8s ease-in-out infinite reverse;
+          "
+        ></div>
+        <div
+          class="floating-element position-absolute bg-warning opacity-20 rounded-circle"
+          style="
+            width: 100px;
+            height: 100px;
+            bottom: 20%;
+            left: 15%;
+            animation: float 7s ease-in-out infinite;
+          "
+        ></div>
+      </div>
+
+      <div class="container position-relative text-center text-white">
+        <div class="row justify-content-center">
+          <div class="col-lg-10">
+            <div class="mb-4">
+              <span
+                class="badge bg-warning text-dark px-4 py-2 rounded-pill fs-6 mb-4"
+              >
+                <i class="fas fa-plane me-2"></i>Flight Booking Made Easy
+              </span>
+            </div>
+
+            <h1 class="display-2 fw-bold mb-4" style="line-height: 1.2">
+              Book Your Dream
+              <span class="text-warning d-block">Flight Today</span>
+            </h1>
+
+            <p class="lead mb-5 fs-4" style="max-width: 700px; margin: 0 auto">
+              Discover the world with our premium flight booking service. Find
+              the best deals, compare prices, and book your tickets instantly
+              with complete confidence.
+            </p>
+
+            <!-- Quick Stats -->
+            <div class="row text-center g-4 mb-5">
+              <div class="col-md-3 col-6">
+                <div
+                  class="stat-card bg-white bg-opacity-10 backdrop-blur p-4 rounded-4 border border-white border-opacity-20"
+                >
+                  <div class="stat-number fw-bold display-6 text-warning mb-2">
+                    500+
+                  </div>
+                  <div class="stat-label">Airlines</div>
+                </div>
+              </div>
+              <div class="col-md-3 col-6">
+                <div
+                  class="stat-card bg-white bg-opacity-10 backdrop-blur p-4 rounded-4 border border-white border-opacity-20"
+                >
+                  <div class="stat-number fw-bold display-6 text-warning mb-2">
+                    1000+
+                  </div>
+                  <div class="stat-label">Destinations</div>
+                </div>
+              </div>
+              <div class="col-md-3 col-6">
+                <div
+                  class="stat-card bg-white bg-opacity-10 backdrop-blur p-4 rounded-4 border border-white border-opacity-20"
+                >
+                  <div class="stat-number fw-bold display-6 text-warning mb-2">
+                    24/7
+                  </div>
+                  <div class="stat-label">Support</div>
+                </div>
+              </div>
+              <div class="col-md-3 col-6">
+                <div
+                  class="stat-card bg-white bg-opacity-10 backdrop-blur p-4 rounded-4 border border-white border-opacity-20"
+                >
+                  <div class="stat-number fw-bold display-6 text-warning mb-2">
+                    100%
+                  </div>
+                  <div class="stat-label">Secure</div>
+                </div>
+              </div>
+            </div>
+
+            <!-- CTA Buttons -->
+            <div class="d-flex flex-wrap justify-content-center gap-3">
+              <a
+                href="#booking-form"
+                class="btn btn-warning btn-lg px-5 py-3 rounded-pill shadow-lg"
+              >
+                <i class="fas fa-search me-2"></i> Search Flights
+              </a>
+              <a
+                href="../pages/contact.html"
+                class="btn btn-outline-light btn-lg px-5 py-3 rounded-pill"
+              >
+                <i class="fas fa-headset me-2"></i> Get Help
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Scroll Indicator -->
+      <div class="position-absolute bottom-0 start-50 translate-middle-x mb-4">
+        <a href="#booking-form" class="text-white text-decoration-none">
+          <div class="scroll-indicator text-center">
+            <div class="mouse-icon mb-2 mx-auto">
+              <div class="wheel"></div>
+            </div>
+            <small class="d-block">Start Booking</small>
+          </div>
+        </a>
+      </div>
+    </section>
+
+    <!-- Enhanced Booking Form Section -->
+    <section id="booking-form" class="py-5" style="margin-top: -100px; padding-top: 150px;">
       <div class="container">
-        <h1 class="display-4 fw-bold mb-4 lang-bn">ফ্লাইট টিকেট বুক করুন</h1>
-        <h1 class="display-4 fw-bold mb-4 lang-en d-none">
-          Book Your Flight Tickets
-        </h1>
-        <p class="lead fs-4 lang-bn">
-          সারা বিশ্বের যেকোনো গন্তব্যে সেরা দামে টিকেট বুক করুন
-        </p>
-        <p class="lead fs-4 lang-en d-none">
-          Find the best deals for flights to any destination worldwide
-        </p>
-      </div>
-    </section>
+        <div class="row justify-content-center">
+          <div class="col-lg-10">
+            <div class="booking-card bg-white rounded-4 shadow-lg border-0 overflow-hidden">
+              <div class="booking-card-header bg-gradient text-white p-4"
+                   style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);">
+                <div class="text-center">
+                  <h3 class="mb-2 fw-bold">
+                    <i class="fas fa-search me-2"></i> Find Your Perfect Flight
+                  </h3>
+                  <p class="mb-0 opacity-90">Search and compare flights from 500+ airlines worldwide</p>
+                </div>
+              </div>
 
-    <!-- Booking Form Section -->
-    <section class="container mb-5">
-      <div class="booking-card card border-0">
-        <div class="booking-card-header">
-          <h3 class="mb-0 lang-bn">
-            <i class="fas fa-search me-2"></i> ফ্লাইট খুঁজুন
-          </h3>
-          <h3 class="mb-0 lang-en d-none">
-            <i class="fas fa-search me-2"></i> Find Flights
-          </h3>
-        </div>
-        <div class="card-body p-4">
-          <ul
-            class="nav nav-tabs flight-type-tabs mb-4"
-            id="flightTypeTab"
-            role="tablist"
-          >
-            <li class="nav-item" role="presentation">
-              <button
-                class="nav-link active"
-                id="round-trip-tab"
-                data-bs-toggle="tab"
-                data-bs-target="#round-trip"
-                type="button"
-                role="tab"
-              >
-                <i class="fas fa-exchange-alt me-2"></i>
-                <span class="lang-bn">রাউন্ড ট্রিপ</span>
-                <span class="lang-en d-none">Round Trip</span>
-              </button>
-            </li>
-            <li class="nav-item" role="presentation">
-              <button
-                class="nav-link"
-                id="one-way-tab"
-                data-bs-toggle="tab"
-                data-bs-target="#one-way"
-                type="button"
-                role="tab"
-              >
-                <i class="fas fa-arrow-right me-2"></i>
-                <span class="lang-bn">ওয়ান ওয়ে</span>
-                <span class="lang-en d-none">One Way</span>
-              </button>
-            </li>
-            <li class="nav-item" role="presentation">
-              <button
-                class="nav-link"
-                id="multi-city-tab"
-                data-bs-toggle="tab"
-                data-bs-target="#multi-city"
-                type="button"
-                role="tab"
-              >
-                <i class="fas fa-map-marked-alt me-2"></i>
-                <span class="lang-bn">মাল্টি সিটি</span>
-                <span class="lang-en d-none">Multi City</span>
-              </button>
-            </li>
-          </ul>
-
-          <div class="tab-content" id="flightTypeTabContent">
-            <!-- Round Trip Tab -->
-            <div
-              class="tab-pane fade show active"
-              id="round-trip"
-              role="tabpanel"
-            >
-              <form>
-                <div class="row g-3">
-                  <div class="col-md-6">
-                    <label for="from-city" class="form-label lang-bn"
-                      >উড়ানের স্থান</label
+              <div class="card-body p-5">
+                <!-- Enhanced Flight Type Tabs -->
+                <ul class="nav nav-pills justify-content-center mb-5" id="flightTypeTab" role="tablist">
+                  <li class="nav-item me-2" role="presentation">
+                    <button
+                      class="nav-link active rounded-pill px-4 py-3"
+                      id="round-trip-tab"
+                      data-bs-toggle="tab"
+                      data-bs-target="#round-trip"
+                      type="button"
+                      role="tab"
+                      style="transition: all 0.3s ease;"
                     >
-                    <label for="from-city" class="form-label lang-en d-none"
-                      >Flying From</label
-                    >
-                    <div class="input-group">
-                      <span class="input-group-text"
-                        ><i class="fas fa-plane-departure"></i
-                      ></span>
-                      <input
-                        type="text"
-                        class="form-control"
-                        id="from-city"
-                        placeholder="ঢাকা (DAC)"
-                        lang="bn"
-                      />
-                      <input
-                        type="text"
-                        class="form-control d-none"
-                        id="from-city-en"
-                        placeholder="Dhaka (DAC)"
-                        lang="en"
-                      />
-                    </div>
-                  </div>
-                  <div class="col-md-6">
-                    <label for="to-city" class="form-label lang-bn"
-                      >গন্তব্য</label
-                    >
-                    <label for="to-city" class="form-label lang-en d-none"
-                      >Flying To</label
-                    >
-                    <div class="input-group">
-                      <span class="input-group-text"
-                        ><i class="fas fa-plane-arrival"></i
-                      ></span>
-                      <input
-                        type="text"
-                        class="form-control"
-                        id="to-city"
-                        placeholder="দুবাই (DXB)"
-                        lang="bn"
-                      />
-                      <input
-                        type="text"
-                        class="form-control d-none"
-                        id="to-city-en"
-                        placeholder="Dubai (DXB)"
-                        lang="en"
-                      />
-                    </div>
-                  </div>
-                  <div class="col-md-3">
-                    <label for="departure-date" class="form-label lang-bn"
-                      >প্রস্থানের তারিখ</label
-                    >
-                    <label
-                      for="departure-date"
-                      class="form-label lang-en d-none"
-                      >Departure Date</label
-                    >
-                    <div class="input-group">
-                      <span class="input-group-text"
-                        ><i class="far fa-calendar-alt"></i
-                      ></span>
-                      <input
-                        type="date"
-                        class="form-control"
-                        id="departure-date"
-                      />
-                    </div>
-                  </div>
-                  <div class="col-md-3">
-                    <label for="return-date" class="form-label lang-bn"
-                      >ফিরে আসার তারিখ</label
-                    >
-                    <label for="return-date" class="form-label lang-en d-none"
-                      >Return Date</label
-                    >
-                    <div class="input-group">
-                      <span class="input-group-text"
-                        ><i class="far fa-calendar-alt"></i
-                      ></span>
-                      <input
-                        type="date"
-                        class="form-control"
-                        id="return-date"
-                      />
-                    </div>
-                  </div>
-                  <div class="col-md-3">
-                    <label for="passengers" class="form-label lang-bn"
-                      >যাত্রী</label
-                    >
-                    <label for="passengers" class="form-label lang-en d-none"
-                      >Passengers</label
-                    >
-                    <div class="input-group">
-                      <span class="input-group-text"
-                        ><i class="fas fa-users"></i
-                      ></span>
-                      <select class="form-select" id="passengers">
-                        <option value="1" lang="bn">১ যাত্রী</option>
-                        <option value="1" lang="en" class="d-none">
-                          1 Passenger
-                        </option>
-                        <option value="2" lang="bn">২ যাত্রী</option>
-                        <option value="2" lang="en" class="d-none">
-                          2 Passengers
-                        </option>
-                        <option value="3" lang="bn">৩ যাত্রী</option>
-                        <option value="3" lang="en" class="d-none">
-                          3 Passengers
-                        </option>
-                        <option value="4" lang="bn">৪ যাত্রী</option>
-                        <option value="4" lang="en" class="d-none">
-                          4 Passengers
-                        </option>
-                      </select>
-                    </div>
-                  </div>
-                  <div class="col-md-3">
-                    <label for="class" class="form-label lang-bn">ক্লাস</label>
-                    <label for="class" class="form-label lang-en d-none"
-                      >Class</label
-                    >
-                    <div class="input-group">
-                      <span class="input-group-text"
-                        ><i class="fas fa-chair"></i
-                      ></span>
-                      <select class="form-select" id="class">
-                        <option value="economy" lang="bn">ইকোনমি</option>
-                        <option value="economy" lang="en" class="d-none">
-                          Economy
-                        </option>
-                        <option value="business" lang="bn">বিজনেস</option>
-                        <option value="business" lang="en" class="d-none">
-                          Business
-                        </option>
-                        <option value="first" lang="bn">ফার্স্ট ক্লাস</option>
-                        <option value="first" lang="en" class="d-none">
-                          First Class
-                        </option>
-                      </select>
-                    </div>
-                  </div>
-                  <div class="col-12 text-center mt-3">
-                    <button type="submit" class="btn btn-primary search-btn">
-                      <i class="fas fa-search me-2"></i>
-                      <span class="lang-bn">ফ্লাইট খুঁজুন</span>
-                      <span class="lang-en d-none"
-                        ><a
-                          class="text-white text-decoration-none fw-bold"
-                          href="https://tripstar-nk8t.vercel.app"
-                          >Search Flights</a
-                        ></span
-                      >
+                      <i class="fas fa-exchange-alt me-2"></i>
+                      <span>Round Trip</span>
                     </button>
+                  </li>
+                  <li class="nav-item me-2" role="presentation">
+                    <button
+                      class="nav-link rounded-pill px-4 py-3"
+                      id="one-way-tab"
+                      data-bs-toggle="tab"
+                      data-bs-target="#one-way"
+                      type="button"
+                      role="tab"
+                      style="transition: all 0.3s ease;"
+                    >
+                      <i class="fas fa-arrow-right me-2"></i>
+                      <span>One Way</span>
+                    </button>
+                  </li>
+                  <li class="nav-item" role="presentation">
+                    <button
+                      class="nav-link rounded-pill px-4 py-3"
+                      id="multi-city-tab"
+                      data-bs-toggle="tab"
+                      data-bs-target="#multi-city"
+                      type="button"
+                      role="tab"
+                      style="transition: all 0.3s ease;"
+                    >
+                      <i class="fas fa-map-marked-alt me-2"></i>
+                      <span>Multi City</span>
+                    </button>
+                  </li>
+                </ul>
+
+                <div class="tab-content" id="flightTypeTabContent">
+                  <!-- Round Trip Tab -->
+                  <div class="tab-pane fade show active" id="round-trip" role="tabpanel">
+                    <form class="flight-search-form">
+                      <div class="row g-4">
+                        <!-- From City -->
+                        <div class="col-lg-6">
+                          <label for="from-city" class="form-label fw-semibold mb-2">
+                            <i class="fas fa-plane-departure text-primary me-2"></i>Flying From
+                          </label>
+                          <div class="input-group input-group-lg">
+                            <span class="input-group-text bg-light border-end-0">
+                              <i class="fas fa-map-marker-alt text-muted"></i>
+                            </span>
+                            <input
+                              type="text"
+                              class="form-control border-start-0 ps-0"
+                              id="from-city"
+                              placeholder="Dhaka (DAC)"
+                              style="box-shadow: none; border-color: #e9ecef;"
+                            />
+                          </div>
+                        </div>
+
+                        <!-- To City -->
+                        <div class="col-lg-6">
+                          <label for="to-city" class="form-label fw-semibold mb-2">
+                            <i class="fas fa-plane-arrival text-success me-2"></i>Flying To
+                          </label>
+                          <div class="input-group input-group-lg">
+                            <span class="input-group-text bg-light border-end-0">
+                              <i class="fas fa-map-marker-alt text-muted"></i>
+                            </span>
+                            <input
+                              type="text"
+                              class="form-control border-start-0 ps-0"
+                              id="to-city"
+                              placeholder="Dubai (DXB)"
+                              style="box-shadow: none; border-color: #e9ecef;"
+                            />
+                          </div>
+                        </div>
+
+                        <!-- Departure Date -->
+                        <div class="col-lg-3 col-md-6">
+                          <label for="departure-date" class="form-label fw-semibold mb-2">
+                            <i class="fas fa-calendar-alt text-warning me-2"></i>Departure
+                          </label>
+                          <div class="input-group input-group-lg">
+                            <span class="input-group-text bg-light border-end-0">
+                              <i class="far fa-calendar text-muted"></i>
+                            </span>
+                            <input
+                              type="date"
+                              class="form-control border-start-0 ps-0"
+                              id="departure-date"
+                              style="box-shadow: none; border-color: #e9ecef;"
+                            />
+                          </div>
+                        </div>
+
+                        <!-- Return Date -->
+                        <div class="col-lg-3 col-md-6">
+                          <label for="return-date" class="form-label fw-semibold mb-2">
+                            <i class="fas fa-calendar-alt text-info me-2"></i>Return
+                          </label>
+                          <div class="input-group input-group-lg">
+                            <span class="input-group-text bg-light border-end-0">
+                              <i class="far fa-calendar text-muted"></i>
+                            </span>
+                            <input
+                              type="date"
+                              class="form-control border-start-0 ps-0"
+                              id="return-date"
+                              style="box-shadow: none; border-color: #e9ecef;"
+                            />
+                          </div>
+                        </div>
+
+                        <!-- Passengers -->
+                        <div class="col-lg-3 col-md-6">
+                          <label for="passengers" class="form-label fw-semibold mb-2">
+                            <i class="fas fa-users text-purple me-2"></i>Passengers
+                          </label>
+                          <div class="input-group input-group-lg">
+                            <span class="input-group-text bg-light border-end-0">
+                              <i class="fas fa-user text-muted"></i>
+                            </span>
+                            <select class="form-select border-start-0 ps-0" id="passengers"
+                                    style="box-shadow: none; border-color: #e9ecef;">
+                              <option value="1">1 Passenger</option>
+                              <option value="2">2 Passengers</option>
+                              <option value="3">3 Passengers</option>
+                              <option value="4">4 Passengers</option>
+                              <option value="5">5+ Passengers</option>
+                            </select>
+                          </div>
+                        </div>
+
+                        <!-- Class -->
+                        <div class="col-lg-3 col-md-6">
+                          <label for="class" class="form-label fw-semibold mb-2">
+                            <i class="fas fa-chair text-danger me-2"></i>Class
+                          </label>
+                          <div class="input-group input-group-lg">
+                            <span class="input-group-text bg-light border-end-0">
+                              <i class="fas fa-star text-muted"></i>
+                            </span>
+                            <select class="form-select border-start-0 ps-0" id="class"
+                                    style="box-shadow: none; border-color: #e9ecef;">
+                              <option value="economy">Economy</option>
+                              <option value="premium">Premium Economy</option>
+                              <option value="business">Business</option>
+                              <option value="first">First Class</option>
+                            </select>
+                          </div>
+                        </div>
+
+                        <!-- Search Button -->
+                        <div class="col-12 text-center mt-5">
+                          <button type="submit" class="btn btn-lg px-5 py-3 rounded-pill shadow-lg"
+                                  style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); border: none; color: white; transition: all 0.3s ease;">
+                            <i class="fas fa-search me-2"></i>
+                            <span class="fw-bold">Search Flights</span>
+                          </button>
+                          <div class="mt-3">
+                            <small class="text-muted">
+                              <i class="fas fa-shield-alt me-1"></i>
+                              Secure booking with 100% price transparency
+                            </small>
+                          </div>
+                        </div>
+                      </div>
+                    </form>
+                  </div>
+
+                  <!-- One Way Tab -->
+                  <div class="tab-pane fade" id="one-way" role="tabpanel">
+                    <div class="text-center py-5">
+                      <i class="fas fa-plane text-muted mb-3" style="font-size: 3rem;"></i>
+                      <h4 class="text-muted">One Way Flight Search</h4>
+                      <p class="text-muted">Coming soon! Use Round Trip for now.</p>
+                    </div>
+                  </div>
+
+                  <!-- Multi City Tab -->
+                  <div class="tab-pane fade" id="multi-city" role="tabpanel">
+                    <div class="text-center py-5">
+                      <i class="fas fa-map-marked-alt text-muted mb-3" style="font-size: 3rem;"></i>
+                      <h4 class="text-muted">Multi City Flight Search</h4>
+                      <p class="text-muted">Coming soon! Use Round Trip for now.</p>
+                    </div>
                   </div>
                 </div>
-              </form>
-            </div>
-
-            <!-- One Way Tab -->
-            <div class="tab-pane fade" id="one-way" role="tabpanel">
-              <!-- Similar form for one-way flights -->
-            </div>
-
-            <!-- Multi City Tab -->
-            <div class="tab-pane fade" id="multi-city" role="tabpanel">
-              <!-- Similar form for multi-city flights -->
+              </div>
             </div>
           </div>
         </div>
       </div>
     </section>
+        </div>
+      </div>
+    </section>
 
-    <!-- Flight Results Section -->
-    <section class="container mb-5">
-      <h2 class="fw-bold mb-4 lang-bn">
-        <i class="fas fa-list-alt me-2"></i> উপলব্ধ ফ্লাইটসমূহ
-      </h2>
-      <h2 class="fw-bold mb-4 lang-en d-none">
-        <i class="fas fa-list-alt me-2"></i> Available Flights
-      </h2>
+    <!-- Enhanced Flight Results Section -->
+    <section class="py-5 bg-light">
+      <div class="container">
+        <div class="text-center mb-5">
+          <span class="badge bg-primary px-3 py-2 rounded-pill mb-3">
+            <i class="fas fa-plane me-2"></i>Available Flights
+          </span>
+          <h2 class="fw-bold display-5 mb-4">
+            Choose Your <span class="text-primary">Perfect Flight</span>
+          </h2>
+          <p class="lead text-muted">
+            Compare prices and schedules from top airlines
+          </p>
+        </div>
 
-      <div class="row g-4">
-        <!-- Flight Card 1 -->
-        <div class="col-md-6">
-          <div class="ticket-card card p-3">
-            <div class="d-flex justify-content-between align-items-center mb-3">
-              <img
-                src="https://upload.wikimedia.org/wikipedia/en/thumb/9/9b/Biman_Bangladesh_Airlines_Logo.svg/1200px-Biman_Bangladesh_Airlines_Logo.svg.png"
-                alt="Biman Bangladesh"
-                class="airline-logo"
-              />
-              <span class="badge price-badge fs-5 lang-bn">৳ ৩৫,৯৯৯</span>
-              <span class="badge price-badge fs-5 lang-en d-none">$ 349</span>
-            </div>
-
-            <div class="row align-items-center text-center mb-3">
-              <div class="col-4">
-                <div class="time-display">08:00</div>
-                <div class="text-muted small lang-bn">ঢাকা (DAC)</div>
-                <div class="text-muted small lang-en d-none">Dhaka (DAC)</div>
-              </div>
-              <div class="col-4">
-                <div class="flight-icon">
-                  <i class="fas fa-plane"></i>
+        <div class="row g-4">
+          <!-- Enhanced Flight Card 1 -->
+          <div class="col-lg-6">
+            <div class="flight-card bg-white rounded-4 shadow-lg border-0 overflow-hidden h-100">
+              <div class="card-body p-4">
+                <!-- Airline Header -->
+                <div class="d-flex justify-content-between align-items-center mb-4">
+                  <div class="d-flex align-items-center">
+                    <img
+                      src="https://upload.wikimedia.org/wikipedia/en/thumb/9/9b/Biman_Bangladesh_Airlines_Logo.svg/1200px-Biman_Bangladesh_Airlines_Logo.svg.png"
+                      alt="Biman Bangladesh"
+                      class="airline-logo me-3"
+                      style="height: 40px; width: auto;"
+                    />
+                    <div>
+                      <h6 class="mb-0 fw-bold">Biman Bangladesh</h6>
+                      <small class="text-muted">BG 147</small>
+                    </div>
+                  </div>
+                  <div class="text-end">
+                    <div class="price-display fw-bold text-primary fs-4">৳ 35,999</div>
+                    <small class="text-muted">per person</small>
+                  </div>
                 </div>
-                <div class="text-muted small lang-bn">২ ঘণ্টা ৩০ মিনিট</div>
-                <div class="text-muted small lang-en d-none">2h 30m</div>
-              </div>
-              <div class="col-4">
-                <div class="time-display">10:30</div>
-                <div class="text-muted small lang-bn">দুবাই (DXB)</div>
-                <div class="text-muted small lang-en d-none">Dubai (DXB)</div>
-              </div>
-            </div>
 
-            <div class="d-flex justify-content-between align-items-center">
-              <span class="badge bg-light text-dark lang-bn"
-                ><i class="fas fa-suitcase me-1"></i> ২০ কেজি</span
-              >
-              <span class="badge bg-light text-dark lang-en d-none"
-                ><i class="fas fa-suitcase me-1"></i> 20kg</span
-              >
-
-              <button class="btn btn-sm btn-outline-primary lang-bn">
-                <i class="fas fa-ticket-alt me-1"></i> বুক করুন
-              </button>
-              <button class="btn btn-sm btn-outline-primary lang-en d-none">
-                <i class="fas fa-ticket-alt me-1"></i> Book Now
-              </button>
-            </div>
-          </div>
-        </div>
-
-        <!-- Flight Card 2 -->
-        <div class="col-md-6">
-          <div class="ticket-card card p-3">
-            <div class="d-flex justify-content-between align-items-center mb-3">
-              <img
-                src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d0/Emirates_logo.svg/1200px-Emirates_logo.svg.png"
-                alt="Emirates"
-                class="airline-logo"
-              />
-              <span class="badge price-badge fs-5 lang-bn">৳ ৪২,৫০০</span>
-              <span class="badge price-badge fs-5 lang-en d-none">$ 415</span>
-            </div>
-
-            <div class="row align-items-center text-center mb-3">
-              <div class="col-4">
-                <div class="time-display">14:30</div>
-                <div class="text-muted small lang-bn">ঢাকা (DAC)</div>
-                <div class="text-muted small lang-en d-none">Dhaka (DAC)</div>
-              </div>
-              <div class="col-4">
-                <div class="flight-icon">
-                  <i class="fas fa-plane"></i>
+                <!-- Flight Route -->
+                <div class="flight-route mb-4">
+                  <div class="row align-items-center text-center">
+                    <div class="col-4">
+                      <div class="departure-info">
+                        <div class="time-display fw-bold fs-3 text-dark">08:00</div>
+                        <div class="location text-muted">Dhaka (DAC)</div>
+                        <small class="text-muted">Dec 25, 2023</small>
+                      </div>
+                    </div>
+                    <div class="col-4">
+                      <div class="flight-path position-relative">
+                        <div class="flight-line bg-primary" style="height: 2px; width: 100%;"></div>
+                        <i class="fas fa-plane text-primary position-absolute top-50 start-50 translate-middle bg-white px-2"></i>
+                        <div class="duration text-muted small mt-2">2h 30m</div>
+                        <small class="text-success">Non-stop</small>
+                      </div>
+                    </div>
+                    <div class="col-4">
+                      <div class="arrival-info">
+                        <div class="time-display fw-bold fs-3 text-dark">10:30</div>
+                        <div class="location text-muted">Dubai (DXB)</div>
+                        <small class="text-muted">Dec 25, 2023</small>
+                      </div>
+                    </div>
+                  </div>
                 </div>
-                <div class="text-muted small lang-bn">২ ঘণ্টা ১৫ মিনিট</div>
-                <div class="text-muted small lang-en d-none">2h 15m</div>
-              </div>
-              <div class="col-4">
-                <div class="time-display">16:45</div>
-                <div class="text-muted small lang-bn">দুবাই (DXB)</div>
-                <div class="text-muted small lang-en d-none">Dubai (DXB)</div>
+
+                <!-- Flight Details -->
+                <div class="flight-details mb-4">
+                  <div class="row g-3">
+                    <div class="col-6">
+                      <div class="detail-item d-flex align-items-center">
+                        <i class="fas fa-suitcase text-primary me-2"></i>
+                        <span class="small">20kg Baggage</span>
+                      </div>
+                    </div>
+                    <div class="col-6">
+                      <div class="detail-item d-flex align-items-center">
+                        <i class="fas fa-utensils text-success me-2"></i>
+                        <span class="small">Meal Included</span>
+                      </div>
+                    </div>
+                    <div class="col-6">
+                      <div class="detail-item d-flex align-items-center">
+                        <i class="fas fa-wifi text-info me-2"></i>
+                        <span class="small">WiFi Available</span>
+                      </div>
+                    </div>
+                    <div class="col-6">
+                      <div class="detail-item d-flex align-items-center">
+                        <i class="fas fa-chair text-warning me-2"></i>
+                        <span class="small">Economy Class</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Action Buttons -->
+                <div class="d-flex gap-2">
+                  <button class="btn btn-outline-primary flex-fill">
+                    <i class="fas fa-info-circle me-2"></i>Details
+                  </button>
+                  <button class="btn btn-primary flex-fill">
+                    <i class="fas fa-ticket-alt me-2"></i>Book Now
+                  </button>
+                </div>
               </div>
             </div>
+          </div>
 
-            <div class="d-flex justify-content-between align-items-center">
-              <span class="badge bg-light text-dark lang-bn"
-                ><i class="fas fa-suitcase me-1"></i> ৩০ কেজি</span
-              >
-              <span class="badge bg-light text-dark lang-en d-none"
-                ><i class="fas fa-suitcase me-1"></i> 30kg</span
-              >
+          <!-- Enhanced Flight Card 2 -->
+          <div class="col-lg-6">
+            <div class="flight-card bg-white rounded-4 shadow-lg border-0 overflow-hidden h-100">
+              <div class="card-body p-4">
+                <!-- Airline Header -->
+                <div class="d-flex justify-content-between align-items-center mb-4">
+                  <div class="d-flex align-items-center">
+                    <img
+                      src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d0/Emirates_logo.svg/1200px-Emirates_logo.svg.png"
+                      alt="Emirates"
+                      class="airline-logo me-3"
+                      style="height: 40px; width: auto;"
+                    />
+                    <div>
+                      <h6 class="mb-0 fw-bold">Emirates</h6>
+                      <small class="text-muted">EK 582</small>
+                    </div>
+                  </div>
+                  <div class="text-end">
+                    <div class="price-display fw-bold text-success fs-4">৳ 42,500</div>
+                    <small class="text-muted">per person</small>
+                  </div>
+                </div>
 
-              <button class="btn btn-sm btn-outline-primary lang-bn">
-                <i class="fas fa-ticket-alt me-1"></i> বুক করুন
-              </button>
-              <button class="btn btn-sm btn-outline-primary lang-en d-none">
-                <i class="fas fa-ticket-alt me-1"></i> Book Now
-              </button>
+                <!-- Flight Route -->
+                <div class="flight-route mb-4">
+                  <div class="row align-items-center text-center">
+                    <div class="col-4">
+                      <div class="departure-info">
+                        <div class="time-display fw-bold fs-3 text-dark">14:30</div>
+                        <div class="location text-muted">Dhaka (DAC)</div>
+                        <small class="text-muted">Dec 25, 2023</small>
+                      </div>
+                    </div>
+                    <div class="col-4">
+                      <div class="flight-path position-relative">
+                        <div class="flight-line bg-success" style="height: 2px; width: 100%;"></div>
+                        <i class="fas fa-plane text-success position-absolute top-50 start-50 translate-middle bg-white px-2"></i>
+                        <div class="duration text-muted small mt-2">2h 15m</div>
+                        <small class="text-success">Non-stop</small>
+                      </div>
+                    </div>
+                    <div class="col-4">
+                      <div class="arrival-info">
+                        <div class="time-display fw-bold fs-3 text-dark">16:45</div>
+                        <div class="location text-muted">Dubai (DXB)</div>
+                        <small class="text-muted">Dec 25, 2023</small>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Flight Details -->
+                <div class="flight-details mb-4">
+                  <div class="row g-3">
+                    <div class="col-6">
+                      <div class="detail-item d-flex align-items-center">
+                        <i class="fas fa-suitcase text-primary me-2"></i>
+                        <span class="small">30kg Baggage</span>
+                      </div>
+                    </div>
+                    <div class="col-6">
+                      <div class="detail-item d-flex align-items-center">
+                        <i class="fas fa-utensils text-success me-2"></i>
+                        <span class="small">Premium Meal</span>
+                      </div>
+                    </div>
+                    <div class="col-6">
+                      <div class="detail-item d-flex align-items-center">
+                        <i class="fas fa-wifi text-info me-2"></i>
+                        <span class="small">Free WiFi</span>
+                      </div>
+                    </div>
+                    <div class="col-6">
+                      <div class="detail-item d-flex align-items-center">
+                        <i class="fas fa-chair text-warning me-2"></i>
+                        <span class="small">Economy Class</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Action Buttons -->
+                <div class="d-flex gap-2">
+                  <button class="btn btn-outline-success flex-fill">
+                    <i class="fas fa-info-circle me-2"></i>Details
+                  </button>
+                  <button class="btn btn-success flex-fill">
+                    <i class="fas fa-ticket-alt me-2"></i>Book Now
+                  </button>
+                </div>
+              </div>
             </div>
           </div>
         </div>
 
-        <!-- More flight cards can be added here -->
+        <!-- Load More Button -->
+        <div class="text-center mt-5">
+          <button class="btn btn-outline-primary btn-lg px-5 py-3 rounded-pill">
+            <i class="fas fa-plus me-2"></i>Load More Flights
+          </button>
+        </div>
       </div>
     </section>
 
-    <!-- Special Offers Section -->
-    <section class="container mb-5">
-      <h2 class="fw-bold mb-4 lang-bn">
-        <i class="fas fa-percentage me-2"></i> বিশেষ অফার
-      </h2>
-      <h2 class="fw-bold mb-4 lang-en d-none">
-        <i class="fas fa-percentage me-2"></i> Special Offers
-      </h2>
+    <!-- Enhanced Special Offers Section -->
+    <section class="py-5" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);">
+      <div class="container">
+        <div class="text-center mb-5 text-white">
+          <span class="badge bg-warning text-dark px-3 py-2 rounded-pill mb-3">
+            <i class="fas fa-fire me-2"></i>Hot Deals
+          </span>
+          <h2 class="fw-bold display-4 mb-4">
+            Special Flight <span class="text-warning">Offers</span>
+          </h2>
+          <p class="lead opacity-90">
+            Limited time offers on popular destinations. Book now and save big!
+          </p>
+        </div>
 
-      <div class="row">
-        <div class="col-md-4 mb-4">
-          <div class="card h-100 border-0 shadow-sm">
-            <img
-              src="https://images.unsplash.com/photo-1523482580672-f109ba8cb9be?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
-              class="card-img-top"
-              alt="Malaysia Offer"
-            />
-            <div class="card-body">
-              <h5 class="card-title lang-bn">মালয়েশিয়া</h5>
-              <h5 class="card-title lang-en d-none">Malaysia</h5>
-              <p class="card-text text-muted lang-bn">
-                <i class="fas fa-plane text-primary me-2"></i> ঢাকা থেকে
-                কুয়ালালামপুর
-              </p>
-              <p class="card-text text-muted lang-en d-none">
-                <i class="fas fa-plane text-primary me-2"></i> Dhaka to Kuala
-                Lumpur
-              </p>
-              <div class="d-flex justify-content-between align-items-center">
-                <span class="text-danger fw-bold lang-bn">৳ ২৯,৯৯৯ থেকে</span>
-                <span class="text-danger fw-bold lang-en d-none"
-                  >From ৳ 29,999</span
-                >
-                <button class="btn btn-sm btn-outline-primary lang-bn">
-                  বিস্তারিত
+        <div class="row g-4">
+          <!-- Malaysia Offer -->
+          <div class="col-lg-4 col-md-6">
+            <div class="offer-card bg-white rounded-4 shadow-lg border-0 overflow-hidden h-100">
+              <div class="position-relative">
+                <img
+                  src="https://images.unsplash.com/photo-1523482580672-f109ba8cb9be?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
+                  class="card-img-top"
+                  alt="Malaysia Offer"
+                  style="height: 200px; object-fit: cover;"
+                />
+                <div class="position-absolute top-0 end-0 m-3">
+                  <span class="badge bg-danger px-3 py-2 rounded-pill">
+                    <i class="fas fa-percentage me-1"></i>25% OFF
+                  </span>
+                </div>
+                <div class="position-absolute bottom-0 start-0 end-0 bg-gradient-to-t from-black/50 to-transparent p-3">
+                  <h5 class="text-white fw-bold mb-0">Malaysia</h5>
+                </div>
+              </div>
+              <div class="card-body p-4">
+                <div class="mb-3">
+                  <div class="d-flex align-items-center text-muted mb-2">
+                    <i class="fas fa-plane-departure text-primary me-2"></i>
+                    <span>Dhaka (DAC)</span>
+                    <i class="fas fa-arrow-right mx-2"></i>
+                    <span>Kuala Lumpur (KUL)</span>
+                  </div>
+                  <div class="d-flex align-items-center text-muted">
+                    <i class="fas fa-calendar text-success me-2"></i>
+                    <span>Valid until Dec 31, 2023</span>
+                  </div>
+                </div>
+
+                <div class="price-section mb-3">
+                  <div class="d-flex align-items-center">
+                    <span class="text-muted text-decoration-line-through me-2">৳ 39,999</span>
+                    <span class="text-danger fw-bold fs-4">৳ 29,999</span>
+                  </div>
+                  <small class="text-muted">per person, round trip</small>
+                </div>
+
+                <div class="features mb-3">
+                  <div class="row g-2">
+                    <div class="col-6">
+                      <small class="text-muted">
+                        <i class="fas fa-check text-success me-1"></i>Free Baggage
+                      </small>
+                    </div>
+                    <div class="col-6">
+                      <small class="text-muted">
+                        <i class="fas fa-check text-success me-1"></i>Meal Included
+                      </small>
+                    </div>
+                  </div>
+                </div>
+
+                <button class="btn btn-primary w-100 rounded-pill">
+                  <i class="fas fa-ticket-alt me-2"></i>Book This Deal
                 </button>
-                <button class="btn btn-sm btn-outline-primary lang-en d-none">
-                  Details
+              </div>
+            </div>
+          </div>
+
+          <!-- Thailand Offer -->
+          <div class="col-lg-4 col-md-6">
+            <div class="offer-card bg-white rounded-4 shadow-lg border-0 overflow-hidden h-100">
+              <div class="position-relative">
+                <img
+                  src="https://images.unsplash.com/photo-1528181304800-259b08848526?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
+                  class="card-img-top"
+                  alt="Thailand Offer"
+                  style="height: 200px; object-fit: cover;"
+                />
+                <div class="position-absolute top-0 end-0 m-3">
+                  <span class="badge bg-success px-3 py-2 rounded-pill">
+                    <i class="fas fa-percentage me-1"></i>30% OFF
+                  </span>
+                </div>
+                <div class="position-absolute bottom-0 start-0 end-0 bg-gradient-to-t from-black/50 to-transparent p-3">
+                  <h5 class="text-white fw-bold mb-0">Thailand</h5>
+                </div>
+              </div>
+              <div class="card-body p-4">
+                <div class="mb-3">
+                  <div class="d-flex align-items-center text-muted mb-2">
+                    <i class="fas fa-plane-departure text-primary me-2"></i>
+                    <span>Dhaka (DAC)</span>
+                    <i class="fas fa-arrow-right mx-2"></i>
+                    <span>Bangkok (BKK)</span>
+                  </div>
+                  <div class="d-flex align-items-center text-muted">
+                    <i class="fas fa-calendar text-success me-2"></i>
+                    <span>Valid until Dec 31, 2023</span>
+                  </div>
+                </div>
+
+                <div class="price-section mb-3">
+                  <div class="d-flex align-items-center">
+                    <span class="text-muted text-decoration-line-through me-2">৳ 36,500</span>
+                    <span class="text-success fw-bold fs-4">৳ 25,500</span>
+                  </div>
+                  <small class="text-muted">per person, round trip</small>
+                </div>
+
+                <div class="features mb-3">
+                  <div class="row g-2">
+                    <div class="col-6">
+                      <small class="text-muted">
+                        <i class="fas fa-check text-success me-1"></i>Free Baggage
+                      </small>
+                    </div>
+                    <div class="col-6">
+                      <small class="text-muted">
+                        <i class="fas fa-check text-success me-1"></i>Free WiFi
+                      </small>
+                    </div>
+                  </div>
+                </div>
+
+                <button class="btn btn-success w-100 rounded-pill">
+                  <i class="fas fa-ticket-alt me-2"></i>Book This Deal
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Dubai Offer -->
+          <div class="col-lg-4 col-md-6">
+            <div class="offer-card bg-white rounded-4 shadow-lg border-0 overflow-hidden h-100">
+              <div class="position-relative">
+                <img
+                  src="https://images.unsplash.com/photo-1518684079-3c830dcef090?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
+                  class="card-img-top"
+                  alt="Dubai Offer"
+                  style="height: 200px; object-fit: cover;"
+                />
+                <div class="position-absolute top-0 end-0 m-3">
+                  <span class="badge bg-warning text-dark px-3 py-2 rounded-pill">
+                    <i class="fas fa-percentage me-1"></i>20% OFF
+                  </span>
+                </div>
+                <div class="position-absolute bottom-0 start-0 end-0 bg-gradient-to-t from-black/50 to-transparent p-3">
+                  <h5 class="text-white fw-bold mb-0">Dubai</h5>
+                </div>
+              </div>
+              <div class="card-body p-4">
+                <div class="mb-3">
+                  <div class="d-flex align-items-center text-muted mb-2">
+                    <i class="fas fa-plane-departure text-primary me-2"></i>
+                    <span>Dhaka (DAC)</span>
+                    <i class="fas fa-arrow-right mx-2"></i>
+                    <span>Dubai (DXB)</span>
+                  </div>
+                  <div class="d-flex align-items-center text-muted">
+                    <i class="fas fa-calendar text-success me-2"></i>
+                    <span>Valid until Dec 31, 2023</span>
+                  </div>
+                </div>
+
+                <div class="price-section mb-3">
+                  <div class="d-flex align-items-center">
+                    <span class="text-muted text-decoration-line-through me-2">৳ 41,999</span>
+                    <span class="text-warning fw-bold fs-4">৳ 32,999</span>
+                  </div>
+                  <small class="text-muted">per person, round trip</small>
+                </div>
+
+                <div class="features mb-3">
+                  <div class="row g-2">
+                    <div class="col-6">
+                      <small class="text-muted">
+                        <i class="fas fa-check text-success me-1"></i>Premium Meal
+                      </small>
+                    </div>
+                    <div class="col-6">
+                      <small class="text-muted">
+                        <i class="fas fa-check text-success me-1"></i>Extra Baggage
+                      </small>
+                    </div>
+                  </div>
+                </div>
+
+                <button class="btn btn-warning w-100 rounded-pill">
+                  <i class="fas fa-ticket-alt me-2"></i>Book This Deal
                 </button>
               </div>
             </div>
           </div>
         </div>
 
-        <div class="col-md-4 mb-4">
-          <div class="card h-100 border-0 shadow-sm">
-            <img
-              src="https://images.unsplash.com/photo-1528181304800-259b08848526?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
-              class="card-img-top"
-              alt="Thailand Offer"
-            />
-            <div class="card-body">
-              <h5 class="card-title lang-bn">থাইল্যান্ড</h5>
-              <h5 class="card-title lang-en d-none">Thailand</h5>
-              <p class="card-text text-muted lang-bn">
-                <i class="fas fa-plane text-primary me-2"></i> ঢাকা থেকে ব্যাংকক
-              </p>
-              <p class="card-text text-muted lang-en d-none">
-                <i class="fas fa-plane text-primary me-2"></i> Dhaka to Bangkok
-              </p>
-              <div class="d-flex justify-content-between align-items-center">
-                <span class="text-danger fw-bold lang-bn">৳ ২৫,৫০০ থেকে</span>
-                <span class="text-danger fw-bold lang-en d-none"
-                  >From ৳ 25,500</span
-                >
-                <button class="btn btn-sm btn-outline-primary lang-bn">
-                  বিস্তারিত
-                </button>
-                <button class="btn btn-sm btn-outline-primary lang-en d-none">
-                  Details
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-md-4 mb-4">
-          <div class="card h-100 border-0 shadow-sm">
-            <img
-              src="https://images.unsplash.com/photo-1518684079-3c830dcef090?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
-              class="card-img-top"
-              alt="Dubai Offer"
-              height="500"
-            />
-            <div class="card-body">
-              <h5 class="card-title lang-bn">দুবাই</h5>
-              <h5 class="card-title lang-en d-none">Dubai</h5>
-              <p class="card-text text-muted lang-bn">
-                <i class="fas fa-plane text-primary me-2"></i> ঢাকা থেকে দুবাই
-              </p>
-              <p class="card-text text-muted lang-en d-none">
-                <i class="fas fa-plane text-primary me-2"></i> Dhaka to Dubai
-              </p>
-              <div class="d-flex justify-content-between align-items-center">
-                <span class="text-danger fw-bold lang-bn">৳ ৩২,৯৯৯ থেকে</span>
-                <span class="text-danger fw-bold lang-en d-none"
-                  >From ৳ 32,999</span
-                >
-                <button class="btn btn-sm btn-outline-primary lang-bn">
-                  বিস্তারিত
-                </button>
-                <button class="btn btn-sm btn-outline-primary lang-en d-none">
-                  Details
-                </button>
-              </div>
-            </div>
-          </div>
+        <!-- View All Offers Button -->
+        <div class="text-center mt-5">
+          <a href="../pages/packages.html" class="btn btn-outline-light btn-lg px-5 py-3 rounded-pill">
+            <i class="fas fa-eye me-2"></i>View All Offers
+          </a>
         </div>
       </div>
     </section>
 
-    <!-- Footer -->
-    <footer class="bg-dark text-white py-5">
+    <!-- Enhanced Footer -->
+    <footer class="footer">
       <div class="container">
         <div class="row">
           <div class="col-lg-4 mb-4 mb-lg-0">
@@ -676,14 +972,9 @@
                 class="logo-img me-2"
                 style="height: 40px"
               />
-              <span class="lang-bn">ট্রাভেলহাব বিডি</span>
-              <span class="lang-en d-none">TravelHub BD</span>
+              <span>TravelHub BD</span>
             </h5>
-            <p class="lang-bn">
-              আপনার স্বপ্ন গন্তব্যে পৌঁছানোর সহজতম উপায়! আমরা আপনাকে প্রদান করি
-              সেরা ভ্রমণ অভিজ্ঞতা এবং সাশ্রয়ী মূল্যে টিকিট বুকিং সুবিধা।
-            </p>
-            <p class="lang-en d-none">
+            <p>
               The easiest way to reach your dream destination! We provide you
               the best travel experience and affordable ticket booking
               facilities.
@@ -698,192 +989,124 @@
               <a href="#" class="text-white me-3 fs-5"
                 ><i class="fab fa-instagram"></i
               ></a>
-              <a href="#" class="text-white me-3 fs-5"
-                ><i class="fab fa-linkedin-in"></i
-              ></a>
               <a href="#" class="text-white fs-5"
-                ><i class="fab fa-youtube"></i
+                ><i class="fab fa-linkedin-in"></i
               ></a>
             </div>
           </div>
-          <div class="col-lg-2 col-md-6 mb-4 mb-md-0">
-            <h5 class="fw-bold mb-4 lang-bn">লিংক</h5>
-            <h5 class="fw-bold mb-4 lang-en d-none">Links</h5>
+          <div class="col-lg-2 mb-4 mb-lg-0">
+            <h5 class="fw-bold mb-4">Quick Links</h5>
             <ul class="list-unstyled">
               <li class="mb-2">
-                <a
-                  href="../index.html"
-                  class="text-white text-decoration-none lang-bn"
-                  ><i class="fas fa-chevron-right me-1"></i> হোম</a
-                >
-                <a
-                  href="../index.html"
-                  class="text-white text-decoration-none lang-en d-none"
-                  ><i class="fas fa-chevron-right me-1"></i> Home</a
+                <a href="../index.html" class="text-decoration-none text-white"
+                  ><i class="fas fa-angle-right me-2"></i>Home</a
                 >
               </li>
               <li class="mb-2">
                 <a
                   href="./ticketBooking.html"
-                  class="text-white text-decoration-none lang-bn"
-                  ><i class="fas fa-chevron-right me-1"></i> টিকিট বুকিং</a
-                >
-                <a
-                  href="./ticketBooking.html"
-                  class="text-white text-decoration-none lang-en d-none"
-                  ><i class="fas fa-chevron-right me-1"></i> Tickets</a
+                  class="text-decoration-none text-white"
+                  ><i class="fas fa-angle-right me-2"></i>Tickets</a
                 >
               </li>
               <li class="mb-2">
                 <a
                   href="../pages/visaInfo.html"
-                  class="text-white text-decoration-none lang-bn"
-                  ><i class="fas fa-chevron-right me-1"></i> ভিসা তথ্য</a
+                  class="text-decoration-none text-white"
+                  ><i class="fas fa-angle-right me-2"></i>Visa Info</a
                 >
+              </li>
+              <li class="mb-2">
                 <a
-                  href="../pages/visaInfo.html"
-                  class="text-white text-decoration-none lang-en d-none"
-                  ><i class="fas fa-chevron-right me-1"></i> Visa Info</a
+                  href="../pages/packages.html"
+                  class="text-decoration-none text-white"
+                  ><i class="fas fa-angle-right me-2"></i>Packages</a
                 >
               </li>
               <li class="mb-2">
                 <a
                   href="../pages/advice.html"
-                  class="text-white text-decoration-none lang-bn"
-                  ><i class="fas fa-chevron-right me-1"></i> পরামর্শ</a
-                >
-                <a
-                  href="../pages/advice.html"
-                  class="text-white text-decoration-none lang-en d-none"
-                  ><i class="fas fa-chevron-right me-1"></i> Advice</a
+                  class="text-decoration-none text-white"
+                  ><i class="fas fa-angle-right me-2"></i>Travel Advice</a
                 >
               </li>
               <li>
                 <a
-                  href="contact.html"
-                  class="text-white text-decoration-none lang-bn"
-                  ><i class="fas fa-chevron-right me-1"></i> যোগাযোগ</a
-                >
-                <a
-                  href="#"
-                  class="text-white text-decoration-none lang-en d-none"
-                  ><i class="fas fa-chevron-right me-1"></i> Contact</a
+                  href="../pages/contact.html"
+                  class="text-decoration-none text-white"
+                  ><i class="fas fa-angle-right me-2"></i>Contact</a
                 >
               </li>
             </ul>
           </div>
-          <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
-            <h5 class="fw-bold mb-4 lang-bn">যোগাযোগ</h5>
-            <h5 class="fw-bold mb-4 lang-en d-none">Contact</h5>
-            <ul class="list-unstyled">
-              <li class="mb-3 d-flex">
-                <i class="fas fa-map-marker-alt me-3 mt-1"></i>
-                <span
-                  >InterContinental Hotel Building -3 (Ground Fl)<br />
-                  1 Minto Road Dhaka-1000, Bangladesh</span
-                >
-              </li>
-              <li class="mb-3 d-flex">
-                <i class="fas fa-phone me-3 mt-1"></i>
-                <span>
-                  +88 01713-066646<br />
-                  +88 01833-328668<br />
-                  +88 01616-666369
-                </span>
-              </li>
-              <li class="d-flex">
-                <i class="fas fa-envelope me-3 mt-1"></i>
-                <span>travelhubbd9@gmail.com</span>
-              </li>
-            </ul>
+          <div class="col-lg-3 mb-4 mb-lg-0">
+            <h5 class="fw-bold mb-4">Contact Us</h5>
+            <p class="mb-2">
+              <i class="fas fa-map-marker-alt me-2 text-primary"></i>123 Travel
+              Street, Dhaka, Bangladesh
+            </p>
+            <p class="mb-2">
+              <i class="fas fa-envelope me-2 text-primary"></i
+              >info@travelhubbd.com
+            </p>
+            <p class="mb-2">
+              <i class="fas fa-phone-alt me-2 text-primary"></i>+880 1234 567890
+            </p>
           </div>
-          <div class="col-lg-3 col-md-6">
-            <h5 class="fw-bold mb-4 lang-bn">নিউজলেটার</h5>
-            <h5 class="fw-bold mb-4 lang-en d-none">Newsletter</h5>
-            <p class="lang-bn">
-              আমাদের বিশেষ অফার এবং ভ্রমণ টিপস পেতে সাবস্ক্রাইব করুন
-            </p>
-            <p class="lang-en d-none">
-              Subscribe to get our special offers and travel tips
-            </p>
-            <form>
-              <div class="input-group mb-3">
-                <input
-                  type="email"
-                  class="form-control"
-                  placeholder="আপনার ইমেইল"
-                  lang="bn"
-                />
-                <input
-                  type="email"
-                  class="form-control d-none"
-                  placeholder="Your Email"
-                  lang="en"
-                />
-                <button class="btn btn-light lang-bn" type="button">
-                  সাবস্ক্রাইব
-                </button>
-                <button class="btn btn-light lang-en d-none" type="button">
-                  Subscribe
-                </button>
-              </div>
-            </form>
-            <div class="mt-4">
-              <h6 class="fw-bold lang-bn">পেমেন্ট মাধ্যম</h6>
-              <h6 class="fw-bold lang-en d-none">Payment Methods</h6>
-              <div class="d-flex flex-wrap gap-2 mt-2">
-                <img
-                  src="https://www.bkash.com/uploaded_contents/contents/Logo_bKash_png_1_210x56.png"
-                  alt="bKash"
-                  style="height: 25px"
-                />
-                <img
-                  src="https://nagad.com.bd/wp-content/uploads/2022/09/Nagad-Logo-1.png"
-                  alt="Nagad"
-                  style="height: 25px"
-                />
-                <img
-                  src="https://www.dutchbanglabank.com/wp-content/uploads/2020/05/rocket-logo.png"
-                  alt="Rocket"
-                  style="height: 25px"
-                />
-                <img
-                  src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/Visa_Inc._logo.svg/2560px-Visa_Inc._logo.svg.png"
-                  alt="Visa"
-                  style="height: 25px"
-                />
-                <img
-                  src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/Mastercard-logo.svg/1280px-Mastercard-logo.svg.png"
-                  alt="Mastercard"
-                  style="height: 25px"
-                />
-              </div>
+          <div class="col-lg-3">
+            <h5 class="fw-bold mb-4">Payment Methods</h5>
+            <div class="d-flex flex-wrap gap-2">
+              <!-- bKash -->
+              <img
+                src="https://www.logo.wine/a/logo/BKash/BKash-bKash-Logo.wine.svg"
+                alt="bKash"
+                style="height: 30px"
+                title="bKash"
+              />
+              <!-- Nagad -->
+              <img
+                src="https://download.logo.wine/logo/Nagad/Nagad-Logo.wine.png"
+                alt="Nagad"
+                style="height: 30px"
+                title="Nagad"
+              />
+              <!-- Rocket (DBBL Mobile Banking) -->
+              <img
+                src="https://www.dutchbanglabank.com/wp-content/uploads/2020/05/rocket-logo.png"
+                alt="Rocket"
+                style="height: 30px"
+                title="Rocket (DBBL Mobile Banking)"
+              />
+              <!-- Visa -->
+              <img
+                src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/Visa_Inc._logo.svg/2560px-Visa_Inc._logo.svg.png"
+                alt="Visa"
+                style="height: 30px"
+                title="Visa"
+              />
+              <!-- Mastercard -->
+              <img
+                src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/Mastercard-logo.svg/1280px-Mastercard-logo.svg.png"
+                alt="Mastercard"
+                style="height: 30px"
+                title="Mastercard"
+              />
             </div>
           </div>
         </div>
         <hr class="mt-4 mb-3 bg-light" />
         <div class="row">
-          <div class="col-md-6 text-center text-md-start text-white">
-            <p class="mb-0">
-              &copy; ২০২৩ <span class="lang-bn">ট্রাভেলহাব বিডি</span>
-              <span class="lang-en d-none">TravelHub BD</span>.
-              <span class="lang-bn">সকল অধিকার সংরক্ষিত</span>
-              <span class="lang-en d-none">All rights reserved</span>
+          <div class="col-md-6 text-center text-md-start">
+            <p class="mb-0 text-muted">
+              &copy; 2023 <span>TravelHub BD</span>.
+              <span>All rights reserved</span>
             </p>
           </div>
           <div class="col-md-6 text-center text-md-end">
-            <a href="#" class="text-white text-decoration-none me-3 lang-bn"
-              >প্রাইভেসি পলিসি</a
-            >
-            <a
-              href="#"
-              class="text-white text-decoration-none me-3 lang-en d-none"
+            <a href="#" class="text-white text-decoration-none me-3"
               >Privacy Policy</a
             >
-            <a href="#" class="text-white text-decoration-none lang-bn"
-              >শর্তাবলী</a
-            >
-            <a href="#" class="text-white text-decoration-none lang-en d-none"
+            <a href="#" class="text-white text-decoration-none"
               >Terms</a
             >
           </div>
@@ -895,20 +1118,248 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <!-- Font Awesome -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js"></script>
-    <!-- Language Switch Script -->
-    <script src="../js/languageSwitch.js"></script>
-    <script>
-      // Initialize tooltips
-      var tooltipTriggerList = [].slice.call(
-        document.querySelectorAll('[data-bs-toggle="tooltip"]')
-      );
-      var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
-        return new bootstrap.Tooltip(tooltipTriggerEl);
-      });
 
-      // Auto-focus on departure city field
-      document.addEventListener("DOMContentLoaded", function () {
-        document.getElementById("from-city").focus();
+    <!-- Custom CSS for Enhanced Animations -->
+    <style>
+      /* Floating animations */
+      @keyframes float {
+        0%, 100% { transform: translateY(0px); }
+        50% { transform: translateY(-20px); }
+      }
+
+      /* Mouse scroll indicator */
+      .mouse-icon {
+        width: 25px;
+        height: 45px;
+        border: 2px solid white;
+        border-radius: 15px;
+        position: relative;
+      }
+
+      .wheel {
+        width: 4px;
+        height: 8px;
+        background: white;
+        border-radius: 2px;
+        position: absolute;
+        top: 10px;
+        left: 50%;
+        transform: translateX(-50%);
+        animation: scroll 2s infinite;
+      }
+
+      @keyframes scroll {
+        0% { opacity: 1; top: 10px; }
+        100% { opacity: 0; top: 25px; }
+      }
+
+      /* Enhanced card hover effects */
+      .flight-card {
+        transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+      }
+
+      .flight-card:hover {
+        transform: translateY(-10px) scale(1.02);
+        box-shadow: 0 25px 50px rgba(0,0,0,0.15);
+      }
+
+      .offer-card {
+        transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+      }
+
+      .offer-card:hover {
+        transform: translateY(-8px) scale(1.02);
+        box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+      }
+
+      /* Tab hover effects */
+      .nav-pills .nav-link {
+        transition: all 0.3s ease;
+      }
+
+      .nav-pills .nav-link:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+      }
+
+      .nav-pills .nav-link.active {
+        background: linear-gradient(45deg, #667eea, #764ba2);
+      }
+
+      /* Button hover effects */
+      .btn {
+        transition: all 0.3s ease;
+      }
+
+      .btn:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+      }
+
+      /* Form input focus effects */
+      .form-control:focus, .form-select:focus {
+        border-color: #667eea;
+        box-shadow: 0 0 0 0.2rem rgba(102, 126, 234, 0.25);
+        transform: scale(1.02);
+        transition: all 0.3s ease;
+      }
+
+      /* Stat card hover effects */
+      .stat-card {
+        transition: all 0.3s ease;
+      }
+
+      .stat-card:hover {
+        transform: scale(1.05);
+        background: rgba(255, 255, 255, 0.2) !important;
+      }
+
+      /* Fade in animation */
+      .fade-in {
+        opacity: 0;
+        transform: translateY(30px);
+        transition: all 0.8s ease;
+      }
+
+      .fade-in.visible {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    </style>
+
+    <!-- Enhanced Custom JavaScript -->
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+          anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+            const target = document.querySelector(this.getAttribute('href'));
+            if (target) {
+              target.scrollIntoView({
+                behavior: 'smooth',
+                block: 'start'
+              });
+            }
+          });
+        });
+
+        // Enhanced card hover effects
+        const cards = document.querySelectorAll('.flight-card, .offer-card');
+        cards.forEach(card => {
+          card.addEventListener('mouseenter', function() {
+            this.style.transform = 'translateY(-10px) scale(1.02)';
+            this.style.boxShadow = '0 25px 50px rgba(0,0,0,0.15)';
+          });
+
+          card.addEventListener('mouseleave', function() {
+            this.style.transform = 'translateY(0) scale(1)';
+            this.style.boxShadow = '';
+          });
+        });
+
+        // Tab switching effects
+        const tabLinks = document.querySelectorAll('[data-bs-toggle="tab"]');
+        tabLinks.forEach(link => {
+          link.addEventListener('click', function() {
+            // Remove active class from all tabs
+            tabLinks.forEach(tab => tab.classList.remove('active'));
+            // Add active class to clicked tab
+            this.classList.add('active');
+          });
+        });
+
+        // Form validation and enhancement
+        const form = document.querySelector('.flight-search-form');
+        if (form) {
+          form.addEventListener('submit', function(e) {
+            e.preventDefault();
+
+            // Simple validation
+            const fromCity = document.getElementById('from-city').value;
+            const toCity = document.getElementById('to-city').value;
+            const departureDate = document.getElementById('departure-date').value;
+
+            if (!fromCity || !toCity || !departureDate) {
+              alert('Please fill in all required fields');
+              return;
+            }
+
+            // Show loading state
+            const submitBtn = this.querySelector('button[type="submit"]');
+            const originalText = submitBtn.innerHTML;
+            submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin me-2"></i>Searching...';
+            submitBtn.disabled = true;
+
+            // Simulate search delay
+            setTimeout(() => {
+              submitBtn.innerHTML = originalText;
+              submitBtn.disabled = false;
+              alert('Search functionality will be implemented soon!');
+            }, 2000);
+          });
+        }
+
+        // Intersection Observer for fade-in animations
+        const observerOptions = {
+          threshold: 0.1,
+          rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add('visible');
+            }
+          });
+        }, observerOptions);
+
+        // Add fade-in class to elements and observe them
+        const animateElements = document.querySelectorAll('.flight-card, .offer-card, h2, .lead');
+        animateElements.forEach(el => {
+          el.classList.add('fade-in');
+          observer.observe(el);
+        });
+
+        // Auto-focus on departure city field
+        const fromCityInput = document.getElementById('from-city');
+        if (fromCityInput) {
+          fromCityInput.focus();
+        }
+
+        // Date input enhancement
+        const today = new Date().toISOString().split('T')[0];
+        const departureInput = document.getElementById('departure-date');
+        const returnInput = document.getElementById('return-date');
+
+        if (departureInput) {
+          departureInput.min = today;
+          departureInput.addEventListener('change', function() {
+            if (returnInput) {
+              returnInput.min = this.value;
+            }
+          });
+        }
+
+        // Navbar background change on scroll
+        const navbar = document.querySelector('.navbar');
+        window.addEventListener('scroll', () => {
+          if (window.scrollY > 100) {
+            navbar.style.background = 'rgba(33, 37, 41, 0.95)';
+            navbar.style.backdropFilter = 'blur(10px)';
+          } else {
+            navbar.style.background = 'rgba(33, 37, 41, 0.95)';
+            navbar.style.backdropFilter = 'blur(10px)';
+          }
+        });
+
+        // Initialize tooltips
+        const tooltipTriggerList = [].slice.call(
+          document.querySelectorAll('[data-bs-toggle="tooltip"]')
+        );
+        const tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+          return new bootstrap.Tooltip(tooltipTriggerEl);
+        });
       });
     </script>
   </body>

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="bn">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -23,7 +23,7 @@
     <link rel="stylesheet" href="./styles/style.css" />
   </head>
   <body>
-    <!-- নেভিগেশন বার - Enhanced with Bootstrap 5 -->
+    <!-- Navigation Bar - Enhanced with Bootstrap 5 -->
     <nav
       class="navbar navbar-expand-lg navbar-dark bg-primary sticky-top shadow-sm"
       style="background: linear-gradient(135deg, #0d6efd 0%, #0b5ed7 100%)"
@@ -43,13 +43,8 @@
             onmouseover="this.style.transform='scale(1.1)'"
             onmouseout="this.style.transform='scale(1)'"
           />
-          <span
-            class="lang-en d-none"
-            style="font-family: 'Montserrat', sans-serif"
+          <span style="font-family: 'Montserrat', sans-serif"
             >TravelHub BD</span
-          >
-          <span class="lang-bn" style="font-family: 'Hind Siliguri', sans-serif"
-            >ট্রাভেলহাব বিডি</span
           >
         </a>
 
@@ -76,8 +71,7 @@
                 style="position: relative"
               >
                 <i class="fas fa-home me-1"></i>
-                <span class="lang-bn">হোম</span>
-                <span class="lang-en d-none">Home</span>
+                <span>Home</span>
                 <span class="nav-link-underline"></span>
               </a>
             </li>
@@ -90,8 +84,7 @@
                 style="position: relative"
               >
                 <i class="fas fa-ticket-alt me-1"></i>
-                <span class="lang-bn">টিকিট বুকিং</span>
-                <span class="lang-en d-none">Tickets</span>
+                <span>Tickets</span>
                 <span class="nav-link-underline"></span>
               </a>
             </li>
@@ -104,8 +97,20 @@
                 style="position: relative"
               >
                 <i class="fas fa-passport me-1"></i>
-                <span class="lang-bn">ভিসা তথ্য</span>
-                <span class="lang-en d-none">Visa Info</span>
+                <span>Visa Info</span>
+                <span class="nav-link-underline"></span>
+              </a>
+            </li>
+
+            <!-- Packages Link -->
+            <li class="nav-item mx-1">
+              <a
+                class="nav-link d-flex align-items-center"
+                href="./pages/packages.html"
+                style="position: relative"
+              >
+                <i class="fas fa-box me-1"></i>
+                <span>Packages</span>
                 <span class="nav-link-underline"></span>
               </a>
             </li>
@@ -118,8 +123,7 @@
                 style="position: relative"
               >
                 <i class="fas fa-comments me-1"></i>
-                <span class="lang-bn">পরামর্শ</span>
-                <span class="lang-en d-none">Advice</span>
+                <span>Advice</span>
                 <span class="nav-link-underline"></span>
               </a>
             </li>
@@ -132,49 +136,11 @@
                 style="position: relative"
               >
                 <i class="fas fa-phone-alt me-1"></i>
-                <span class="lang-bn">যোগাযোগ</span>
-                <span class="lang-en d-none">Contact</span>
+                <span>Contact</span>
                 <span class="nav-link-underline"></span>
               </a>
             </li>
           </ul>
-
-          <!-- Language Switcher with Tooltip -->
-          <div
-            class="language-switcher ms-3"
-            data-bs-toggle="tooltip"
-            data-bs-placement="bottom"
-            title="Change Language"
-          >
-            <button
-              class="btn btn-outline-light btn-sm d-flex align-items-center"
-              id="languageToggle"
-              style="
-                border-radius: 20px;
-                padding: 5px 12px;
-                transition: all 0.3s;
-              "
-              onmouseover="this.style.backgroundColor='rgba(255,255,255,0.2)'"
-              onmouseout="this.style.backgroundColor='transparent'"
-            >
-              <img
-                src="https://flagcdn.com/w20/bd.png"
-                class="language-flag lang-bn me-1"
-                alt="Bangla"
-                style="width: 20px; height: auto"
-              />
-              <img
-                src="https://flagcdn.com/w20/gb.png"
-                class="language-flag lang-en d-none me-1"
-                alt="English"
-                style="width: 20px; height: auto"
-              />
-              <span class="lang-bn" style="font-size: 0.9rem">বাংলা</span>
-              <span class="lang-en d-none" style="font-size: 0.9rem"
-                >English</span
-              >
-            </button>
-          </div>
 
           <!-- Login Button with Hover Effect -->
           <a
@@ -185,78 +151,219 @@
             onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='none'"
           >
             <i class="fas fa-sign-in-alt me-1"></i>
-            <span class="lang-bn">লগ ইন</span>
-            <span class="lang-en d-none">Login</span>
+            <span>Login</span>
           </a>
         </div>
       </div>
     </nav>
 
-    <!-- Modern Hero Section with Marina Bay Sands -->
+    <!-- Enhanced Hero Section with Marina Bay Sands -->
     <section
-      class="hero-section d-flex align-items-center"
+      class="hero-section d-flex align-items-center position-relative overflow-hidden"
       id="marina-bay-hero"
+      style="
+        min-height: 100vh;
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        background-image: url('https://images.unsplash.com/photo-1525625293386-3f8f99389edd?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80');
+        background-size: cover;
+        background-position: center;
+        background-attachment: fixed;
+      "
     >
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-7 hero-content text-white">
-            <div class="hero-text-container p-4 rounded-3">
-              <h1 class="display-3 fw-bold mb-3 lang-bn hero-title">
-                আপনার যাত্রা শুরু হোক এখানে
-              </h1>
-              <h1 class="display-3 fw-bold mb-3 lang-en d-none hero-title">
-                Your Journey Begins Here
+      <!-- Overlay -->
+      <div
+        class="position-absolute top-0 start-0 w-100 h-100"
+        style="
+          background: linear-gradient(
+            135deg,
+            rgba(102, 126, 234, 0.8) 0%,
+            rgba(118, 75, 162, 0.8) 100%
+          );
+        "
+      ></div>
+
+      <!-- Floating Animation Elements -->
+      <div class="position-absolute w-100 h-100">
+        <div
+          class="floating-element position-absolute bg-white opacity-10 rounded-circle"
+          style="
+            width: 100px;
+            height: 100px;
+            top: 20%;
+            left: 10%;
+            animation: float 6s ease-in-out infinite;
+          "
+        ></div>
+        <div
+          class="floating-element position-absolute bg-white opacity-5 rounded-circle"
+          style="
+            width: 150px;
+            height: 150px;
+            top: 60%;
+            right: 15%;
+            animation: float 8s ease-in-out infinite reverse;
+          "
+        ></div>
+        <div
+          class="floating-element position-absolute bg-warning opacity-20 rounded-circle"
+          style="
+            width: 80px;
+            height: 80px;
+            bottom: 30%;
+            left: 20%;
+            animation: float 7s ease-in-out infinite;
+          "
+        ></div>
+      </div>
+
+      <div class="container position-relative">
+        <div class="row align-items-center">
+          <div class="col-lg-8 hero-content text-white">
+            <div class="hero-text-container">
+              <div class="mb-4">
+                <span
+                  class="badge bg-warning text-dark px-3 py-2 rounded-pill fs-6 mb-3"
+                >
+                  <i class="fas fa-star me-2"></i>Bangladesh's #1 Travel Agency
+                </span>
+              </div>
+
+              <h1
+                class="display-2 fw-bold mb-4 hero-title"
+                style="line-height: 1.2"
+              >
+                Discover the World
+                <span class="text-warning d-block">Your Way</span>
               </h1>
 
-              <p class="lead mb-4 lang-bn hero-subtitle">
-                আপনার স্বপ্নের গন্তব্যে যাওয়ার সময় এসেছে। আমাদের সাথে বিশ্বের
-                সেরা অভিজ্ঞতা অনুভব করুন।
-              </p>
-              <p class="lead mb-4 lang-en d-none hero-subtitle">
-                It's time to embark on your dream destination. Experience the
-                world's best with us.
+              <p class="lead mb-5 hero-subtitle fs-4" style="max-width: 600px">
+                From spiritual journeys to luxury getaways, we craft
+                unforgettable experiences tailored just for you. Your dream
+                destination awaits!
               </p>
 
-              <div class="d-flex flex-wrap gap-3 mt-4">
+              <div class="d-flex flex-wrap gap-3 mb-5">
                 <a
                   href="#packages"
-                  class="btn btn-primary btn-lg px-4 py-3 rounded-pill lang-bn"
+                  class="btn btn-warning btn-lg px-5 py-3 rounded-pill shadow-lg"
                 >
-                  <i class="fas fa-suitcase me-2"></i> প্যাকেজ দেখুন
+                  <i class="fas fa-rocket me-2"></i> Start Your Journey
                 </a>
                 <a
                   href="./pages/contact.html"
-                  class="btn btn-outline-light btn-lg px-4 py-3 rounded-pill lang-bn"
+                  class="btn btn-outline-light btn-lg px-5 py-3 rounded-pill"
                 >
-                  <i class="fas fa-phone-alt me-2"></i> যোগাযোগ করুন
-                </a>
-
-                <a
-                  href="#packages"
-                  class="btn btn-primary btn-lg px-4 py-3 rounded-pill lang-en d-none"
-                >
-                  <i class="fas fa-suitcase me-2"></i> Explore Packages
-                </a>
-                <a
-                  href="./pages/contact.html"
-                  class="btn btn-outline-light btn-lg px-4 py-3 rounded-pill lang-en d-none"
-                >
-                  <i class="fas fa-phone-alt me-2"></i> Contact Us
+                  <i class="fas fa-phone-alt me-2"></i> Get Free Quote
                 </a>
               </div>
 
-              <div class="hero-stats d-flex flex-wrap gap-4 mt-5">
-                <div class="stat-item text-center">
-                  <div class="stat-number fw-bold display-6">10K+</div>
-                  <div class="stat-label small">Happy Travelers</div>
+              <!-- Enhanced Stats -->
+              <div class="row text-center g-4">
+                <div class="col-4">
+                  <div
+                    class="stat-card bg-white bg-opacity-10 backdrop-blur p-4 rounded-4 border border-white border-opacity-20"
+                  >
+                    <div
+                      class="stat-number fw-bold display-5 text-warning mb-2"
+                    >
+                      15K+
+                    </div>
+                    <div class="stat-label">Happy Travelers</div>
+                  </div>
                 </div>
-                <div class="stat-item text-center">
-                  <div class="stat-number fw-bold display-6">50+</div>
-                  <div class="stat-label small">Destinations</div>
+                <div class="col-4">
+                  <div
+                    class="stat-card bg-white bg-opacity-10 backdrop-blur p-4 rounded-4 border border-white border-opacity-20"
+                  >
+                    <div
+                      class="stat-number fw-bold display-5 text-warning mb-2"
+                    >
+                      50+
+                    </div>
+                    <div class="stat-label">Destinations</div>
+                  </div>
                 </div>
-                <div class="stat-item text-center">
-                  <div class="stat-number fw-bold display-6">100%</div>
-                  <div class="stat-label small">Satisfaction</div>
+                <div class="col-4">
+                  <div
+                    class="stat-card bg-white bg-opacity-10 backdrop-blur p-4 rounded-4 border border-white border-opacity-20"
+                  >
+                    <div
+                      class="stat-number fw-bold display-5 text-warning mb-2"
+                    >
+                      100%
+                    </div>
+                    <div class="stat-label">Satisfaction</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 text-center">
+            <div class="hero-image-container position-relative">
+              <!-- Main Image -->
+              <img
+                src="https://images.unsplash.com/photo-1469474968028-56623f02e42e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                alt="Travel Experience"
+                class="img-fluid rounded-4 shadow-lg main-hero-image"
+                style="
+                  transform: perspective(1000px) rotateY(-15deg) rotateX(5deg);
+                  max-width: 400px;
+                "
+              />
+
+              <!-- Floating Cards -->
+              <div
+                class="floating-card position-absolute bg-white p-3 rounded-3 shadow-lg"
+                style="
+                  top: 10%;
+                  left: -10%;
+                  animation: bounce 3s infinite;
+                  max-width: 150px;
+                "
+              >
+                <div class="d-flex align-items-center">
+                  <i class="fas fa-plane text-primary fs-4 me-2"></i>
+                  <div>
+                    <div class="fw-bold text-dark">Flight Booking</div>
+                    <small class="text-muted">Best Prices</small>
+                  </div>
+                </div>
+              </div>
+
+              <div
+                class="floating-card position-absolute bg-white p-3 rounded-3 shadow-lg"
+                style="
+                  bottom: 20%;
+                  right: -15%;
+                  animation: bounce 3s infinite 1s;
+                  max-width: 150px;
+                "
+              >
+                <div class="d-flex align-items-center">
+                  <i class="fas fa-hotel text-success fs-4 me-2"></i>
+                  <div>
+                    <div class="fw-bold text-dark">Hotel Booking</div>
+                    <small class="text-muted">Luxury Stays</small>
+                  </div>
+                </div>
+              </div>
+
+              <div
+                class="floating-card position-absolute bg-white p-3 rounded-3 shadow-lg"
+                style="
+                  top: 50%;
+                  right: 10%;
+                  animation: bounce 3s infinite 2s;
+                  max-width: 150px;
+                "
+              >
+                <div class="d-flex align-items-center">
+                  <i class="fas fa-passport text-warning fs-4 me-2"></i>
+                  <div>
+                    <div class="fw-bold text-dark">Visa Service</div>
+                    <small class="text-muted">Quick Process</small>
+                  </div>
                 </div>
               </div>
             </div>
@@ -264,455 +371,546 @@
         </div>
       </div>
 
-      <!-- Hero Scroll Indicator -->
-      <div class="scroll-indicator">
-        <a href="#packages">
-          <div class="mouse">
-            <div class="wheel"></div>
-          </div>
-          <div>
-            <span class="m-scroll-arrows unu"></span>
-            <span class="m-scroll-arrows doi"></span>
-            <span class="m-scroll-arrows trei"></span>
+      <!-- Enhanced Scroll Indicator -->
+      <div class="position-absolute bottom-0 start-50 translate-middle-x mb-4">
+        <a href="#features" class="text-white text-decoration-none">
+          <div class="scroll-indicator text-center">
+            <div class="mouse-icon mb-2 mx-auto">
+              <div class="wheel"></div>
+            </div>
+            <small class="d-block">Scroll to Explore</small>
           </div>
         </a>
       </div>
     </section>
 
-    <!-- সুবিধা সেকশন - Enhanced with Bootstrap 5 -->
-    <section class="py-5 bg-white position-relative overflow-hidden mt-4">
+    <!-- Enhanced Features Section -->
+    <section
+      id="features"
+      class="py-5 position-relative overflow-hidden"
+      style="background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%)"
+    >
       <!-- Decorative elements -->
       <div class="position-absolute top-0 start-0 w-100 h-100">
         <div
-          class="position-absolute top-0 end-0 bg-light rounded-circle"
-          style="width: 300px; height: 300px; transform: translate(50%, -50%)"
+          class="position-absolute top-0 end-0 bg-primary opacity-5 rounded-circle"
+          style="width: 400px; height: 400px; transform: translate(50%, -50%)"
         ></div>
         <div
-          class="position-absolute bottom-0 start-0 bg-primary opacity-10 rounded-circle"
-          style="width: 400px; height: 400px; transform: translate(-50%, 50%)"
+          class="position-absolute bottom-0 start-0 bg-warning opacity-10 rounded-circle"
+          style="width: 300px; height: 300px; transform: translate(-50%, 50%)"
         ></div>
       </div>
 
       <div class="container position-relative">
         <div class="text-center mb-5">
-          <h2
-            class="fw-bold display-5 lang-bn animate__animated animate__fadeInDown"
-          >
-            আপনার স্বপ্ন গন্তব্যে পৌঁছানোর সহজতম উপায়!
+          <span class="badge bg-primary px-3 py-2 rounded-pill mb-3">
+            <i class="fas fa-star me-2"></i>Why Choose Us
+          </span>
+          <h2 class="fw-bold display-4 mb-4">
+            The Easiest Way to Reach Your
+            <span class="text-primary">Dream Destination!</span>
           </h2>
-          <h2
-            class="fw-bold display-5 lang-en d-none animate__animated animate__fadeInDown"
-          >
-            The easiest way to reach your dream destination!
-          </h2>
-          <div
-            class="divider mx-auto mt-4 bg-primary mb-3"
-            style="height: 4px; width: 90%"
-          ></div>
-          <p
-            class="lead lang-bn animate__animated animate__fadeIn animate__delay-1s"
-          >
-            আপনি যদি একজন ভ্রমণপিপাসু, ব্যবসায়ী বা গ্রুপ ট্যুরের পরিকল্পনা
-            করছেন তবে আমাদের টিকিট বুকিং সেবা আপনার জন্য!
-          </p>
-          <p
-            class="lead lang-en d-none animate__animated animate__fadeIn animate__delay-1s"
-          >
+          <p class="lead text-muted mx-auto" style="max-width: 600px">
             Whether you're a traveler, business person or planning a group tour,
-            our ticket booking service is for you!
+            our comprehensive travel services are designed just for you!
           </p>
         </div>
 
-        <div class="row g-4">
+        <div class="row g-4 mb-5">
           <!-- Feature 1 -->
-          <div class="col-md-4">
+          <div class="col-lg-4 col-md-6">
             <div
-              class="text-center p-4 h-100 border-0 rounded-4 shadow-sm feature-card"
-              style="background-color: #f8f9fa; transition: all 0.3s ease"
+              class="feature-card h-100 p-5 bg-white rounded-4 shadow-lg border-0 text-center position-relative overflow-hidden"
             >
               <div
-                class="feature-icon mb-4 p-3 bg-primary bg-opacity-10 rounded-circle d-inline-flex align-items-center justify-content-center"
-                style="width: 80px; height: 80px; transition: all 0.3s ease"
+                class="position-absolute top-0 end-0 bg-primary opacity-5 rounded-circle"
+                style="
+                  width: 100px;
+                  height: 100px;
+                  transform: translate(50%, -50%);
+                "
+              ></div>
+
+              <div
+                class="feature-icon mb-4 p-4 bg-gradient rounded-circle d-inline-flex align-items-center justify-content-center position-relative"
+                style="
+                  width: 100px;
+                  height: 100px;
+                  background: linear-gradient(45deg, #007bff, #0056b3);
+                "
               >
-                <i
-                  class="fas fa-tag text-primary"
-                  style="font-size: 1.75rem"
-                ></i>
+                <i class="fas fa-tag text-white" style="font-size: 2rem"></i>
               </div>
-              <h3 class="lang-bn mb-3">স্বচ্ছ টিকিটের দাম</h3>
-              <h3 class="lang-en d-none mb-3">Transparent Pricing</h3>
-              <p class="lang-bn text-muted mb-4">
-                কোন গোপন চার্জ নেই! আমরা সম্পূর্ণ স্বচ্ছভাবে টিকিটের মূল্য
-                প্রদর্শন করি যাতে আপনি সঠিক সিদ্ধান্ত নিতে পারেন।
+
+              <h3 class="fw-bold mb-3">Transparent Pricing</h3>
+              <p class="text-muted mb-4">
+                No hidden charges! We display all costs upfront so you can make
+                informed decisions with complete confidence.
               </p>
-              <p class="lang-en d-none text-muted mb-4">
-                No hidden charges! We display ticket prices completely
-                transparently so you can make informed decisions.
-              </p>
-              <a
-                href="#"
-                class="btn btn-primary px-4 lang-bn"
-                style="border-radius: 20px"
-              >
-                বিস্তারিত <i class="fas fa-arrow-right ms-2"></i>
-              </a>
-              <a
-                href="#"
-                class="btn btn-primary px-4 lang-en d-none"
-                style="border-radius: 20px"
-              >
-                Details <i class="fas fa-arrow-right ms-2"></i>
+
+              <div class="feature-benefits mb-4">
+                <div class="d-flex align-items-center mb-2">
+                  <i class="fas fa-check-circle text-success me-2"></i>
+                  <small>No Hidden Fees</small>
+                </div>
+                <div class="d-flex align-items-center mb-2">
+                  <i class="fas fa-check-circle text-success me-2"></i>
+                  <small>Best Price Guarantee</small>
+                </div>
+                <div class="d-flex align-items-center">
+                  <i class="fas fa-check-circle text-success me-2"></i>
+                  <small>Instant Price Comparison</small>
+                </div>
+              </div>
+
+              <a href="#" class="btn btn-primary px-4 py-2 rounded-pill">
+                Learn More <i class="fas fa-arrow-right ms-2"></i>
               </a>
             </div>
           </div>
 
           <!-- Feature 2 -->
-          <div class="col-md-4">
+          <div class="col-lg-4 col-md-6">
             <div
-              class="text-center p-4 h-100 border-0 rounded-4 shadow-sm feature-card"
-              style="background-color: #f8f9fa; transition: all 0.3s ease"
+              class="feature-card h-100 p-5 bg-white rounded-4 shadow-lg border-0 text-center position-relative overflow-hidden"
             >
               <div
-                class="feature-icon mb-4 p-3 bg-primary bg-opacity-10 rounded-circle d-inline-flex align-items-center justify-content-center"
-                style="width: 80px; height: 80px; transition: all 0.3s ease"
+                class="position-absolute top-0 end-0 bg-success opacity-5 rounded-circle"
+                style="
+                  width: 100px;
+                  height: 100px;
+                  transform: translate(50%, -50%);
+                "
+              ></div>
+
+              <div
+                class="feature-icon mb-4 p-4 bg-gradient rounded-circle d-inline-flex align-items-center justify-content-center position-relative"
+                style="
+                  width: 100px;
+                  height: 100px;
+                  background: linear-gradient(45deg, #28a745, #1e7e34);
+                "
               >
-                <i
-                  class="fas fa-bolt text-primary"
-                  style="font-size: 1.75rem"
-                ></i>
+                <i class="fas fa-bolt text-white" style="font-size: 2rem"></i>
               </div>
-              <h3 class="lang-bn mb-3">রিয়েল-টাইম বুকিং</h3>
-              <h3 class="lang-en d-none mb-3">Real-time Booking</h3>
-              <p class="lang-bn text-muted mb-4">
-                দ্রুত এবং নিরাপদ প্রক্রিয়ার মাধ্যমে মুহূর্তের মধ্যে আপনার টিকিট
-                বুক করুন। আমাদের সিস্টেম সর্বদা আপডেটেড।
+
+              <h3 class="fw-bold mb-3">Real-time Booking</h3>
+              <p class="text-muted mb-4">
+                Book your tickets instantly through our lightning-fast and
+                secure system that's always up-to-date.
               </p>
-              <p class="lang-en d-none text-muted mb-4">
-                Book your tickets instantly through a fast and secure process.
-                Our system is always up-to-date.
-              </p>
-              <a
-                href="#"
-                class="btn btn-primary px-4 lang-bn"
-                style="border-radius: 20px"
-              >
-                বিস্তারিত <i class="fas fa-arrow-right ms-2"></i>
-              </a>
-              <a
-                href="#"
-                class="btn btn-primary px-4 lang-en d-none"
-                style="border-radius: 20px"
-              >
-                Details <i class="fas fa-arrow-right ms-2"></i>
+
+              <div class="feature-benefits mb-4">
+                <div class="d-flex align-items-center mb-2">
+                  <i class="fas fa-check-circle text-success me-2"></i>
+                  <small>Instant Confirmation</small>
+                </div>
+                <div class="d-flex align-items-center mb-2">
+                  <i class="fas fa-check-circle text-success me-2"></i>
+                  <small>24/7 Availability</small>
+                </div>
+                <div class="d-flex align-items-center">
+                  <i class="fas fa-check-circle text-success me-2"></i>
+                  <small>Secure Payment</small>
+                </div>
+              </div>
+
+              <a href="#" class="btn btn-success px-4 py-2 rounded-pill">
+                Book Now <i class="fas fa-arrow-right ms-2"></i>
               </a>
             </div>
           </div>
 
           <!-- Feature 3 -->
-          <div class="col-md-4">
+          <div class="col-lg-4 col-md-6">
             <div
-              class="text-center p-4 h-100 border-0 rounded-4 shadow-sm feature-card"
-              style="background-color: #f8f9fa; transition: all 0.3s ease"
+              class="feature-card h-100 p-5 bg-white rounded-4 shadow-lg border-0 text-center position-relative overflow-hidden"
             >
               <div
-                class="feature-icon mb-4 p-3 bg-primary bg-opacity-10 rounded-circle d-inline-flex align-items-center justify-content-center"
-                style="width: 80px; height: 80px; transition: all 0.3s ease"
-              >
-                <i
-                  class="fas fa-star text-primary"
-                  style="font-size: 1.75rem"
-                ></i>
-              </div>
-              <h3 class="lang-bn mb-3">বিশেষ সুবিধা</h3>
-              <h3 class="lang-en d-none mb-3">Special Benefits</h3>
-              <p class="lang-bn text-muted mb-4">
-                ব্যবসায়ীদের জন্য ডেডিকেটেড সার্ভিস এবং গ্রুপ ট্যুরে সেরা
-                চুক্তি। আমাদের বিশেষ অফারগুলো উপভোগ করুন।
-              </p>
-              <p class="lang-en d-none text-muted mb-4">
-                Dedicated service for business people and best deals for group
-                tours. Enjoy our special offers.
-              </p>
-              <a
-                href="#"
-                class="btn btn-primary px-4 lang-bn"
-                style="border-radius: 20px"
-              >
-                বিস্তারিত <i class="fas fa-arrow-right ms-2"></i>
-              </a>
-              <a
-                href="#"
-                class="btn btn-primary px-4 lang-en d-none"
-                style="border-radius: 20px"
-              >
-                Details <i class="fas fa-arrow-right ms-2"></i>
-              </a>
-            </div>
-          </div>
-        </div>
+                class="position-absolute top-0 end-0 bg-warning opacity-5 rounded-circle"
+                style="
+                  width: 100px;
+                  height: 100px;
+                  transform: translate(50%, -50%);
+                "
+              ></div>
 
-        <!-- Additional CTA -->
-        <div class="text-center mt-5 pt-3">
-          <a href="#" class="btn btn-outline-primary btn-lg px-4 me-2 lang-bn">
-            <i class="fas fa-question-circle me-2"></i> আরও জানুন
-          </a>
-          <a href="#" class="btn btn-primary btn-lg px-4 lang-bn">
-            <i class="fas fa-phone-alt me-2"></i> কল করুন
-          </a>
-
-          <a
-            href="#"
-            class="btn btn-outline-primary btn-lg px-4 me-2 lang-en d-none"
-          >
-            <i class="fas fa-question-circle me-2"></i> Learn More
-          </a>
-          <a href="#" class="btn btn-primary btn-lg px-4 lang-en d-none">
-            <i class="fas fa-phone-alt me-2"></i> Call Us
-          </a>
-        </div>
-      </div>
-    </section>
-
-    <!-- আমাদের সেবা - Enhanced with Bootstrap 5 -->
-    <section class="py-5 bg-light">
-      <div class="container">
-        <div class="row align-items-center">
-          <div class="col-lg-6 mb-4 mb-lg-0">
-            <div class="position-relative">
-              <img
-                src="./img/1.jpg"
-                alt="ভ্রমণ"
-                class="img-fluid rounded shadow"
-              />
               <div
-                class="position-absolute bottom-0 start-0 bg-primary text-white p-3 rounded-end"
+                class="feature-icon mb-4 p-4 bg-gradient rounded-circle d-inline-flex align-items-center justify-content-center position-relative"
+                style="
+                  width: 100px;
+                  height: 100px;
+                  background: linear-gradient(45deg, #ffc107, #e0a800);
+                "
               >
-                <h4 class="mb-0 lang-bn">১০০% সন্তুষ্টি গ্যারান্টি</h4>
-                <h4 class="mb-0 lang-en d-none">100% Satisfaction Guarantee</h4>
+                <i class="fas fa-crown text-white" style="font-size: 2rem"></i>
               </div>
+
+              <h3 class="fw-bold mb-3">Premium Services</h3>
+              <p class="text-muted mb-4">
+                Dedicated VIP service for business travelers and exclusive deals
+                for group tours with special benefits.
+              </p>
+
+              <div class="feature-benefits mb-4">
+                <div class="d-flex align-items-center mb-2">
+                  <i class="fas fa-check-circle text-success me-2"></i>
+                  <small>VIP Support</small>
+                </div>
+                <div class="d-flex align-items-center mb-2">
+                  <i class="fas fa-check-circle text-success me-2"></i>
+                  <small>Group Discounts</small>
+                </div>
+                <div class="d-flex align-items-center">
+                  <i class="fas fa-check-circle text-success me-2"></i>
+                  <small>Priority Booking</small>
+                </div>
+              </div>
+
+              <a href="#" class="btn btn-warning px-4 py-2 rounded-pill">
+                Get VIP <i class="fas fa-arrow-right ms-2"></i>
+              </a>
             </div>
           </div>
-          <div class="col-lg-6">
-            <h2 class="fw-bold mb-4 display-5 lang-bn">
-              আপনার ভ্রমণের স্পৃহা জাগানোর উপায়!
-            </h2>
-            <h2 class="fw-bold mb-4 display-5 lang-en d-none">
-              Spark your travel inspiration!
-            </h2>
-            <p class="lead mb-4 lang-bn">
-              আমাদের সেবা ব্যবহার করে আপনি শুধু টিকিটই নয়, ভিসার তথ্য ও
-              অন্যান্য ভ্রমণ পরামর্শও পাবেন। আপনার যাত্রার জন্য সবকিছু একসাথে!
-            </p>
-            <p class="lead mb-4 lang-en d-none">
-              Using our service you'll get not just tickets but also visa
-              information and other travel advice. Everything for your journey
-              in one place!
-            </p>
-            <ul class="list-unstyled">
-              <li class="mb-3">
-                <i class="fas fa-check-circle text-primary me-2"></i>
-                <span class="lang-bn">১০০+ এয়ারলাইনের সাথে পার্টনারশিপ</span
-                ><span class="lang-en d-none"
-                  >Partnership with 100+ airlines</span
-                >
-              </li>
-              <li class="mb-3">
-                <i class="fas fa-check-circle text-primary me-2"></i>
-                <span class="lang-bn">২৪/৭ কাস্টমার সাপোর্ট</span
-                ><span class="lang-en d-none">24/7 customer support</span>
-              </li>
-              <li class="mb-3">
-                <i class="fas fa-check-circle text-primary me-2"></i>
-                <span class="lang-bn">সুরক্ষিত পেমেন্ট সিস্টেম</span
-                ><span class="lang-en d-none">Secure payment system</span>
-              </li>
-              <li class="mb-3">
-                <i class="fas fa-check-circle text-primary me-2"></i>
-                <span class="lang-bn">ভিসা প্রসেসিং সহায়তা</span
-                ><span class="lang-en d-none">Visa processing assistance</span>
-              </li>
-              <li class="mb-3">
-                <i class="fas fa-check-circle text-primary me-2"></i>
-                <span class="lang-bn">ভ্রমণ বীমা সুবিধা</span
-                ><span class="lang-en d-none">Travel insurance facility</span>
-              </li>
-            </ul>
-            <div class="d-flex gap-3">
-              <a href="#" class="btn btn-primary btn-lg mt-3 lang-bn"
-                >আরও জানুন</a
-              >
-              <a href="#" class="btn btn-outline-primary btn-lg mt-3 lang-bn"
-                >যোগাযোগ করুন</a
-              >
+        </div>
 
-              <a href="#" class="btn btn-primary btn-lg mt-3 lang-en d-none"
-                >Learn More</a
-              >
+        <!-- Enhanced CTA Section -->
+        <div class="text-center">
+          <div class="bg-primary bg-opacity-10 rounded-4 p-5">
+            <h3 class="fw-bold mb-3">Ready to Start Your Journey?</h3>
+            <p class="text-muted mb-4">
+              Join thousands of satisfied travelers who trust us with their
+              adventures.
+            </p>
+            <div class="d-flex flex-wrap justify-content-center gap-3">
               <a
-                href="#"
-                class="btn btn-outline-primary btn-lg mt-3 lang-en d-none"
-                >Contact Us</a
+                href="./pages/packages.html"
+                class="btn btn-primary btn-lg px-5 py-3 rounded-pill"
               >
+                <i class="fas fa-suitcase me-2"></i> View Packages
+              </a>
+              <a
+                href="./pages/contact.html"
+                class="btn btn-outline-primary btn-lg px-5 py-3 rounded-pill"
+              >
+                <i class="fas fa-phone-alt me-2"></i> Contact Us
+              </a>
             </div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- টেস্টিমোনিয়াল - Enhanced with Bootstrap 5 -->
-    <section class="py-5 bg-white">
+    <!-- Featured Packages Section -->
+    <section id="packages" class="py-5 bg-white">
       <div class="container">
         <div class="text-center mb-5">
-          <h2 class="fw-bold display-5 lang-bn">আমাদের গ্রাহকদের মতামত</h2>
-          <h2 class="fw-bold display-5 lang-en d-none">
-            Customer Testimonials
+          <span class="badge bg-warning text-dark px-3 py-2 rounded-pill mb-3">
+            <i class="fas fa-suitcase me-2"></i>Featured Packages
+          </span>
+          <h2 class="fw-bold display-4 mb-4">
+            Explore Our <span class="text-primary">Amazing Packages</span>
           </h2>
-          <div class="divider mx-auto bg-primary mb-4"></div>
-          <p class="lead lang-bn text-muted">
-            আমাদের সেবা ব্যবহার করে হাজারো যাত্রী তাদের স্বপ্নের ভ্রমণ উপভোগ
-            করেছেন
-          </p>
-          <p class="lead lang-en d-none text-muted">
-            Thousands of travelers have enjoyed their dream trips using our
-            service
+          <p class="lead text-muted mx-auto" style="max-width: 600px">
+            From spiritual journeys to luxury getaways, discover our handpicked
+            travel packages designed for every type of traveler.
           </p>
         </div>
 
-        <div class="row g-4">
-          <div class="col-md-4">
-            <div class="card h-100 border-0 shadow-sm">
-              <div class="card-body text-center p-4">
+        <div class="row g-4 mb-5">
+          <!-- Package 1: Hajj -->
+          <div class="col-lg-4 col-md-6">
+            <div
+              class="package-card h-100 bg-white rounded-4 shadow-lg border-0 overflow-hidden position-relative"
+            >
+              <div class="position-relative">
                 <img
-                  src="https://randomuser.me/api/portraits/women/32.jpg"
-                  alt="গ্রাহক"
-                  class="testimonial-img mb-3"
+                  src="https://images.unsplash.com/photo-1591604129939-f1efa4d9f7fa?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                  alt="Hajj Package"
+                  class="img-fluid"
+                  style="height: 250px; width: 100%; object-fit: cover"
                 />
-                <h5 class="card-title">আয়েশা খান</h5>
-                <h5 class="card-title d-none lang-en">Ayesha Khan</h5>
-                <div class="text-warning mb-3">
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
+                <div class="position-absolute top-0 end-0 m-3">
+                  <span
+                    class="badge bg-warning text-dark px-3 py-2 rounded-pill"
+                  >
+                    <i class="fas fa-kaaba me-1"></i>Hajj 2024
+                  </span>
                 </div>
-                <p class="card-text lang-bn text-muted">
-                  "অসাধারণ সেবা! মালয়েশিয়া ভ্রমণের জন্য টিকিট বুক করেছিলাম,
-                  সবকিছু খুব সহজ এবং স্বচ্ছ ছিল। বিশেষ করে ভিসা প্রসেসিংয়ে
-                  তাদের সহায়তা খুব উপকারী ছিল।"
+                <div class="position-absolute bottom-0 start-0 m-3">
+                  <span class="badge bg-primary px-3 py-2 rounded-pill fs-6"
+                    >৳ 4,50,000</span
+                  >
+                </div>
+              </div>
+              <div class="p-4">
+                <h4 class="fw-bold mb-3">Premium Hajj Package</h4>
+                <p class="text-muted mb-3">
+                  Complete 40-day Hajj experience with 5-star accommodation in
+                  Makkah and Madinah.
                 </p>
-                <p class="card-text d-none lang-en text-muted">
-                  "Excellent service! Booked tickets for Malaysia trip,
-                  everything was very easy and transparent. Their visa
-                  processing assistance was especially helpful."
-                </p>
+                <div
+                  class="d-flex justify-content-between align-items-center mb-3"
+                >
+                  <small class="text-muted"
+                    ><i class="fas fa-calendar me-1"></i>40 Days</small
+                  >
+                  <small class="text-muted"
+                    ><i class="fas fa-star me-1 text-warning"></i>5.0
+                    Rating</small
+                  >
+                </div>
+                <a
+                  href="./pages/packages.html"
+                  class="btn btn-primary w-100 rounded-pill"
+                >
+                  <i class="fas fa-arrow-right me-2"></i>View Details
+                </a>
               </div>
             </div>
           </div>
-          <div class="col-md-4">
-            <div class="card h-100 border-0 shadow-sm">
-              <div class="card-body text-center p-4">
+
+          <!-- Package 2: Dubai -->
+          <div class="col-lg-4 col-md-6">
+            <div
+              class="package-card h-100 bg-white rounded-4 shadow-lg border-0 overflow-hidden position-relative"
+            >
+              <div class="position-relative">
                 <img
-                  src="https://randomuser.me/api/portraits/men/45.jpg"
-                  alt="গ্রাহক"
-                  class="testimonial-img mb-3"
+                  src="https://images.unsplash.com/photo-1518684079-3c830dcef090?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                  alt="Dubai Package"
+                  class="img-fluid"
+                  style="height: 250px; width: 100%; object-fit: cover"
                 />
-                <h5 class="card-title">রফিকুল ইসলাম</h5>
-                <h5 class="card-title d-none lang-en">Rafiqul Islam</h5>
-                <div class="text-warning mb-3">
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star-half-alt"></i>
+                <div class="position-absolute top-0 end-0 m-3">
+                  <span class="badge bg-success px-3 py-2 rounded-pill">
+                    <i class="fas fa-plane me-1"></i>International
+                  </span>
                 </div>
-                <p class="card-text lang-bn text-muted">
-                  "ব্যবসায়িক ভ্রমণের জন্য নিয়মিত এই সাইট ব্যবহার করি। তাদের
-                  ব্যবসায়িক ক্লায়েন্ট সার্ভিস সত্যিই চমৎকার। সর্বনিম্ন দামে
-                  সেরা সেবা পাওয়া যায়।"
+                <div class="position-absolute bottom-0 start-0 m-3">
+                  <span class="badge bg-primary px-3 py-2 rounded-pill fs-6"
+                    >৳ 85,000</span
+                  >
+                </div>
+              </div>
+              <div class="p-4">
+                <h4 class="fw-bold mb-3">Dubai Luxury Experience</h4>
+                <p class="text-muted mb-3">
+                  5 days in the city of gold with luxury hotels, desert safari,
+                  and city tours.
                 </p>
-                <p class="card-text d-none lang-en text-muted">
-                  "I use this site regularly for business travel. Their business
-                  client service is truly excellent. Best service at minimum
-                  price."
-                </p>
+                <div
+                  class="d-flex justify-content-between align-items-center mb-3"
+                >
+                  <small class="text-muted"
+                    ><i class="fas fa-calendar me-1"></i>5 Days</small
+                  >
+                  <small class="text-muted"
+                    ><i class="fas fa-star me-1 text-warning"></i>4.9
+                    Rating</small
+                  >
+                </div>
+                <a
+                  href="./pages/packages.html"
+                  class="btn btn-success w-100 rounded-pill"
+                >
+                  <i class="fas fa-arrow-right me-2"></i>View Details
+                </a>
               </div>
             </div>
           </div>
-          <div class="col-md-4">
-            <div class="card h-100 border-0 shadow-sm">
-              <div class="card-body text-center p-4">
+
+          <!-- Package 3: Cox's Bazar -->
+          <div class="col-lg-4 col-md-6">
+            <div
+              class="package-card h-100 bg-white rounded-4 shadow-lg border-0 overflow-hidden position-relative"
+            >
+              <div class="position-relative">
                 <img
-                  src="https://randomuser.me/api/portraits/women/68.jpg"
-                  alt="গ্রাহক"
-                  class="testimonial-img mb-3"
+                  src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                  alt="Cox's Bazar Package"
+                  class="img-fluid"
+                  style="height: 250px; width: 100%; object-fit: cover"
                 />
-                <h5 class="card-title">তানিয়া আহমেদ</h5>
-                <h5 class="card-title d-none lang-en">Tania Ahmed</h5>
-                <div class="text-warning mb-3">
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
+                <div class="position-absolute top-0 end-0 m-3">
+                  <span class="badge bg-info px-3 py-2 rounded-pill">
+                    <i class="fas fa-home me-1"></i>Domestic
+                  </span>
                 </div>
-                <p class="card-text lang-bn text-muted">
-                  "১৫ জনের গ্রুপ নিয়ে থাইল্যান্ড ভ্রমণ করেছি। গ্রুপ ডিসকাউন্ট
-                  এবং সমস্ত ব্যবস্থাপনায় তারা খুব পেশাদারিত্ব দেখিয়েছে। সবাই
-                  খুব উপভোগ করেছি!"
+                <div class="position-absolute bottom-0 start-0 m-3">
+                  <span class="badge bg-primary px-3 py-2 rounded-pill fs-6"
+                    >৳ 15,000</span
+                  >
+                </div>
+              </div>
+              <div class="p-4">
+                <h4 class="fw-bold mb-3">Cox's Bazar Beach Resort</h4>
+                <p class="text-muted mb-3">
+                  3 days at the world's longest sea beach with luxury
+                  accommodation and meals.
                 </p>
-                <p class="card-text d-none lang-en text-muted">
-                  "Traveled to Thailand with a group of 15. Their group discount
-                  and all arrangements showed great professionalism. Everyone
-                  enjoyed it very much!"
-                </p>
+                <div
+                  class="d-flex justify-content-between align-items-center mb-3"
+                >
+                  <small class="text-muted"
+                    ><i class="fas fa-calendar me-1"></i>3 Days</small
+                  >
+                  <small class="text-muted"
+                    ><i class="fas fa-star me-1 text-warning"></i>4.8
+                    Rating</small
+                  >
+                </div>
+                <a
+                  href="./pages/packages.html"
+                  class="btn btn-info w-100 rounded-pill"
+                >
+                  <i class="fas fa-arrow-right me-2"></i>View Details
+                </a>
               </div>
             </div>
           </div>
         </div>
 
-        <div class="text-center mt-5">
-          <a href="#" class="btn btn-outline-primary btn-lg lang-bn">
-            <i class="fas fa-comment-dots me-2"></i> আরও রিভিউ দেখুন
-          </a>
-          <a href="#" class="btn btn-outline-primary btn-lg lang-en d-none">
-            <i class="fas fa-comment-dots me-2"></i> View More Reviews
+        <div class="text-center">
+          <a
+            href="./pages/packages.html"
+            class="btn btn-outline-primary btn-lg px-5 py-3 rounded-pill"
+          >
+            <i class="fas fa-eye me-2"></i>View All Packages
           </a>
         </div>
       </div>
     </section>
 
-    <!-- কল টু অ্যাকশন - Enhanced with Bootstrap 5 -->
-    <section class="py-5 bg-primary text-white">
-      <div class="container text-center">
-        <div class="row justify-content-center">
-          <div class="col-lg-8">
-            <h2 class="display-5 fw-bold mb-4 lang-bn">এখনই বুক করুন!</h2>
-            <h2 class="display-5 fw-bold mb-4 lang-en d-none">Book Now!</h2>
-            <p class="lead mb-5 lang-bn">
-              আপনার বিমান টিকিট বুকিং এবং ভিসার তথ্যের জন্য আজই আমাদের
-              ওয়েবসাইটে যান এবং আপনার স্বপ্নের যাত্রা শুরু করুন!
-            </p>
-            <p class="lead mb-5 lang-en d-none">
-              Visit our website today for your flight ticket booking and visa
-              information and start your dream journey!
-            </p>
-            <div class="d-grid gap-3 d-sm-flex justify-content-sm-center">
-              <a href="#" class="btn btn-light btn-lg px-5 lang-bn">
-                <i class="fas fa-plane me-2"></i> এখনই বুক করুন
-              </a>
-              <a href="#" class="btn btn-outline-light btn-lg px-5 lang-bn">
-                <i class="fas fa-phone-alt me-2"></i> কল করুন
-              </a>
+    <!-- Enhanced Our Services Section -->
+    <section
+      class="py-5 position-relative overflow-hidden"
+      style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%)"
+    >
+      <!-- Overlay -->
+      <div
+        class="position-absolute top-0 start-0 w-100 h-100"
+        style="background: rgba(0, 0, 0, 0.1)"
+      ></div>
 
-              <a href="#" class="btn btn-light btn-lg px-5 lang-en d-none">
-                <i class="fas fa-plane me-2"></i> Book Now
+      <div class="container position-relative">
+        <div class="row align-items-center">
+          <div class="col-lg-6 mb-5 mb-lg-0">
+            <div class="position-relative">
+              <img
+                src="https://images.unsplash.com/photo-1488646953014-85cb44e25828?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                alt="Travel Services"
+                class="img-fluid rounded-4 shadow-lg"
+              />
+
+              <!-- Floating Service Cards -->
+              <div
+                class="position-absolute top-0 start-0 bg-white p-3 rounded-3 shadow-lg"
+                style="transform: translate(-20px, -20px); max-width: 200px"
+              >
+                <div class="d-flex align-items-center">
+                  <div class="bg-primary bg-opacity-10 p-2 rounded-circle me-3">
+                    <i class="fas fa-shield-alt text-primary"></i>
+                  </div>
+                  <div>
+                    <div class="fw-bold text-dark small">100% Secure</div>
+                    <small class="text-muted">Payment Protection</small>
+                  </div>
+                </div>
+              </div>
+
+              <div
+                class="position-absolute bottom-0 end-0 bg-white p-3 rounded-3 shadow-lg"
+                style="transform: translate(20px, 20px); max-width: 200px"
+              >
+                <div class="d-flex align-items-center">
+                  <div class="bg-success bg-opacity-10 p-2 rounded-circle me-3">
+                    <i class="fas fa-headset text-success"></i>
+                  </div>
+                  <div>
+                    <div class="fw-bold text-dark small">24/7 Support</div>
+                    <small class="text-muted">Always Available</small>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-6 text-white">
+            <span
+              class="badge bg-warning text-dark px-3 py-2 rounded-pill mb-3"
+            >
+              <i class="fas fa-star me-2"></i>Our Services
+            </span>
+            <h2 class="fw-bold display-4 mb-4">
+              Spark Your Travel <span class="text-warning">Inspiration!</span>
+            </h2>
+            <p class="lead mb-4 opacity-90">
+              Get not just tickets but complete travel solutions including visa
+              information, travel advice, and premium support. Everything for
+              your journey in one place!
+            </p>
+
+            <div class="row g-3 mb-4">
+              <div class="col-md-6">
+                <div class="d-flex align-items-center">
+                  <div class="bg-warning bg-opacity-20 p-2 rounded-circle me-3">
+                    <i class="fas fa-plane text-warning"></i>
+                  </div>
+                  <div>
+                    <div class="fw-bold">100+ Airlines</div>
+                    <small class="opacity-75">Global Partnerships</small>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="d-flex align-items-center">
+                  <div class="bg-warning bg-opacity-20 p-2 rounded-circle me-3">
+                    <i class="fas fa-headset text-warning"></i>
+                  </div>
+                  <div>
+                    <div class="fw-bold">24/7 Support</div>
+                    <small class="opacity-75">Always Here for You</small>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="d-flex align-items-center">
+                  <div class="bg-warning bg-opacity-20 p-2 rounded-circle me-3">
+                    <i class="fas fa-shield-alt text-warning"></i>
+                  </div>
+                  <div>
+                    <div class="fw-bold">Secure Payments</div>
+                    <small class="opacity-75">Protected Transactions</small>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="d-flex align-items-center">
+                  <div class="bg-warning bg-opacity-20 p-2 rounded-circle me-3">
+                    <i class="fas fa-passport text-warning"></i>
+                  </div>
+                  <div>
+                    <div class="fw-bold">Visa Assistance</div>
+                    <small class="opacity-75">Complete Processing</small>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="d-flex flex-wrap gap-3">
+              <a
+                href="./pages/contact.html"
+                class="btn btn-warning btn-lg px-4 py-3 rounded-pill"
+              >
+                <i class="fas fa-phone me-2"></i>Get Started
               </a>
               <a
-                href="#"
-                class="btn btn-outline-light btn-lg px-5 lang-en d-none"
+                href="./pages/advice.html"
+                class="btn btn-outline-light btn-lg px-4 py-3 rounded-pill"
               >
-                <i class="fas fa-phone-alt me-2"></i> Call Us
+                <i class="fas fa-info-circle me-2"></i>Learn More
               </a>
             </div>
           </div>
@@ -720,7 +918,7 @@
       </div>
     </section>
 
-    <!-- ফুটার - Enhanced with Bootstrap 5 -->
+    <!-- Footer -->
     <footer class="footer">
       <div class="container">
         <div class="row">
@@ -732,14 +930,9 @@
                 class="logo-img me-2"
                 style="height: 40px"
               />
-              <span class="lang-bn">ট্রাভেলহাব বিডি</span>
-              <span class="lang-en d-none">TravelHub BD</span>
+              <span>TravelHub BD</span>
             </h5>
-            <p class="lang-bn">
-              আপনার স্বপ্ন গন্তব্যে পৌঁছানোর সহজতম উপায়! আমরা আপনাকে প্রদান করি
-              সেরা ভ্রমণ অভিজ্ঞতা এবং সাশ্রয়ী মূল্যে টিকিট বুকিং সুবিধা।
-            </p>
-            <p class="lang-en d-none">
+            <p>
               The easiest way to reach your dream destination! We provide you
               the best travel experience and affordable ticket booking
               facilities.
@@ -754,163 +947,108 @@
               <a href="#" class="text-white me-3 fs-5"
                 ><i class="fab fa-instagram"></i
               ></a>
-              <a href="#" class="text-white me-3 fs-5"
-                ><i class="fab fa-linkedin-in"></i
-              ></a>
               <a href="#" class="text-white fs-5"
-                ><i class="fab fa-youtube"></i
+                ><i class="fab fa-linkedin-in"></i
               ></a>
             </div>
           </div>
-          <div class="col-lg-2 col-md-6 mb-4 mb-md-0">
-            <h5 class="fw-bold mb-4 lang-bn">লিংক</h5>
-            <h5 class="fw-bold mb-4 lang-en d-none">Links</h5>
+          <div class="col-lg-2 mb-4 mb-lg-0">
+            <h5 class="fw-bold mb-4">Quick Links</h5>
             <ul class="list-unstyled">
               <li class="mb-2">
-                <a href="#" class="text-white text-decoration-none lang-bn"
-                  ><i class="fas fa-chevron-right me-1"></i> হোম</a
-                ><a
-                  href="#"
-                  class="text-white text-decoration-none lang-en d-none"
-                  ><i class="fas fa-chevron-right me-1"></i> Home</a
+                <a href="index.html" class="text-decoration-none text-white"
+                  ><i class="fas fa-angle-right me-2"></i>Home</a
                 >
               </li>
               <li class="mb-2">
-                <a href="#" class="text-white text-decoration-none lang-bn"
-                  ><i class="fas fa-chevron-right me-1"></i> টিকিট বুকিং</a
-                ><a
-                  href="#"
-                  class="text-white text-decoration-none lang-en d-none"
-                  ><i class="fas fa-chevron-right me-1"></i> Ticket Booking</a
+                <a
+                  href="./pages/ticketBooking.html"
+                  class="text-decoration-none text-white"
+                  ><i class="fas fa-angle-right me-2"></i>Tickets</a
                 >
               </li>
               <li class="mb-2">
-                <a href="#" class="text-white text-decoration-none lang-bn"
-                  ><i class="fas fa-chevron-right me-1"></i> ভিসা তথ্য</a
-                ><a
-                  href="#"
-                  class="text-white text-decoration-none lang-en d-none"
-                  ><i class="fas fa-chevron-right me-1"></i> Visa Info</a
+                <a
+                  href="./pages/visaInfo.html"
+                  class="text-decoration-none text-white"
+                  ><i class="fas fa-angle-right me-2"></i>Visa Info</a
                 >
               </li>
               <li class="mb-2">
-                <a href="#" class="text-white text-decoration-none lang-bn"
-                  ><i class="fas fa-chevron-right me-1"></i> পরামর্শ</a
-                ><a
-                  href="#"
-                  class="text-white text-decoration-none lang-en d-none"
-                  ><i class="fas fa-chevron-right me-1"></i> Advice</a
+                <a
+                  href="./pages/packages.html"
+                  class="text-decoration-none text-white"
+                  ><i class="fas fa-angle-right me-2"></i>Packages</a
+                >
+              </li>
+              <li class="mb-2">
+                <a
+                  href="./pages/advice.html"
+                  class="text-decoration-none text-white"
+                  ><i class="fas fa-angle-right me-2"></i>Travel Advice</a
                 >
               </li>
               <li>
-                <a href="#" class="text-white text-decoration-none lang-bn"
-                  ><i class="fas fa-chevron-right me-1"></i> যোগাযোগ</a
-                ><a
-                  href="#"
-                  class="text-white text-decoration-none lang-en d-none"
-                  ><i class="fas fa-chevron-right me-1"></i> Contact</a
+                <a
+                  href="./pages/contact.html"
+                  class="text-decoration-none text-white"
+                  ><i class="fas fa-angle-right me-2"></i>Contact</a
                 >
               </li>
             </ul>
           </div>
-          <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
-            <h5 class="fw-bold mb-4 lang-bn">যোগাযোগ</h5>
-            <h5 class="fw-bold mb-4 lang-en d-none">Contact</h5>
-            <ul class="list-unstyled">
-              <li class="mb-3 d-flex">
-                <i class="fas fa-map-marker-alt me-3 mt-1"></i>
-                <span
-                  >InterContinental Hotel Building -3 (Ground Fl)<br />
-                  1 Minto Road Dhaka-1000, Bangladesh</span
-                >
-              </li>
-              <li class="mb-3 d-flex">
-                <i class="fas fa-phone me-3 mt-1"></i>
-                <span>
-                  +88 01713-066646<br />
-                  +88 01833-328668<br />
-                  +88 01616-666369
-                </span>
-              </li>
-              <li class="d-flex">
-                <i class="fas fa-envelope me-3 mt-1"></i>
-                <span>travelhubbd9@gmail.com</span>
-              </li>
-            </ul>
+          <div class="col-lg-3 mb-4 mb-lg-0">
+            <h5 class="fw-bold mb-4">Contact Us</h5>
+            <p class="mb-2">
+              <i class="fas fa-map-marker-alt me-2 text-primary"></i>123 Travel
+              Street, Dhaka, Bangladesh
+            </p>
+            <p class="mb-2">
+              <i class="fas fa-envelope me-2 text-primary"></i
+              >info@travelhubbd.com
+            </p>
+            <p class="mb-2">
+              <i class="fas fa-phone-alt me-2 text-primary"></i>+880 1234 567890
+            </p>
           </div>
-          <div class="col-lg-3 col-md-6">
-            <h5 class="fw-bold mb-4 lang-bn">নিউজলেটার</h5>
-            <h5 class="fw-bold mb-4 lang-en d-none">Newsletter</h5>
-            <p class="lang-bn">
-              আমাদের বিশেষ অফার এবং ভ্রমণ টিপস পেতে সাবস্ক্রাইব করুন
-            </p>
-            <p class="lang-en d-none">
-              Subscribe to get our special offers and travel tips
-            </p>
-            <form>
-              <div class="input-group mb-3">
-                <input
-                  type="email"
-                  class="form-control d-none"
-                  placeholder="আপনার ইমেইল"
-                  lang="bn"
-                  aria-label="Email"
-                />
-                <input
-                  type="email"
-                  class="form-control"
-                  placeholder="Your Email"
-                  lang="en"
-                  aria-label="Email"
-                />
-                <button class="btn btn-light lang-bn" type="button">
-                  সাবস্ক্রাইব
-                </button>
-                <button class="btn btn-light lang-en d-none" type="button">
-                  Subscribe
-                </button>
-              </div>
-            </form>
-            <div class="mt-4">
-              <h6 class="fw-bold lang-bn">পেমেন্ট মাধ্যম</h6>
-              <h6 class="fw-bold lang-en d-none">Payment Methods</h6>
-              <div class="d-flex flex-wrap gap-2 mt-2">
-                <!-- bKash -->
-                <img
-                  src="https://www.bkash.com/uploaded_contents/contents/Logo_bKash_png_1_210x56.png"
-                  alt="bKash"
-                  style="height: 30px"
-                  title="bKash"
-                />
-                <!-- Nagad -->
-                <img
-                  src="https://nagad.com.bd/wp-content/uploads/2022/09/Nagad-Logo-1.png"
-                  alt="Nagad"
-                  style="height: 30px"
-                  title="Nagad"
-                />
-                <!-- Rocket (DBBL Mobile Banking) -->
-                <img
-                  src="https://www.dutchbanglabank.com/wp-content/uploads/2020/05/rocket-logo.png"
-                  alt="Rocket"
-                  style="height: 30px"
-                  title="Rocket (DBBL Mobile Banking)"
-                />
-                <!-- Visa -->
-                <img
-                  src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/Visa_Inc._logo.svg/2560px-Visa_Inc._logo.svg.png"
-                  alt="Visa"
-                  style="height: 30px"
-                  title="Visa"
-                />
-                <!-- Mastercard -->
-                <img
-                  src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/Mastercard-logo.svg/1280px-Mastercard-logo.svg.png"
-                  alt="Mastercard"
-                  style="height: 30px"
-                  title="Mastercard"
-                />
-              </div>
+          <div class="col-lg-3">
+            <h5 class="fw-bold mb-4">Payment Methods</h5>
+            <div class="d-flex flex-wrap gap-2">
+              <!-- bKash -->
+              <img
+                src="https://www.logo.wine/a/logo/BKash/BKash-bKash-Logo.wine.svg"
+                alt="bKash"
+                style="height: 30px"
+                title="bKash"
+              />
+              <!-- Nagad -->
+              <img
+                src="https://download.logo.wine/logo/Nagad/Nagad-Logo.wine.png"
+                alt="Nagad"
+                style="height: 30px"
+                title="Nagad"
+              />
+              <!-- Rocket (DBBL Mobile Banking) -->
+              <img
+                src="https://www.dutchbanglabank.com/wp-content/uploads/2020/05/rocket-logo.png"
+                alt="Rocket"
+                style="height: 30px"
+                title="Rocket (DBBL Mobile Banking)"
+              />
+              <!-- Visa -->
+              <img
+                src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/Visa_Inc._logo.svg/2560px-Visa_Inc._logo.svg.png"
+                alt="Visa"
+                style="height: 30px"
+                title="Visa"
+              />
+              <!-- Mastercard -->
+              <img
+                src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/Mastercard-logo.svg/1280px-Mastercard-logo.svg.png"
+                alt="Mastercard"
+                style="height: 30px"
+                title="Mastercard"
+              />
             </div>
           </div>
         </div>
@@ -918,27 +1056,14 @@
         <div class="row">
           <div class="col-md-6 text-center text-md-start">
             <p class="mb-0 text-muted">
-              &copy; ২০২৩ <span class="lang-bn">ট্রাভেলহাব বিডি</span
-              ><span class="lang-en d-none">TravelHub BD</span>.
-              <span class="lang-bn">সকল অধিকার সংরক্ষিত</span
-              ><span class="lang-en d-none">All rights reserved</span>
+              &copy; 2023 TravelHub BD. All rights reserved
             </p>
           </div>
           <div class="col-md-6 text-center text-md-end">
-            <a href="#" class="text-white text-decoration-none me-3 lang-bn"
-              >প্রাইভেসি পলিসি</a
-            >
-            <a
-              href="#"
-              class="text-white text-decoration-none me-3 lang-en d-none"
+            <a href="#" class="text-white text-decoration-none me-3"
               >Privacy Policy</a
             >
-            <a href="#" class="text-white text-decoration-none lang-bn"
-              >শর্তাবলী</a
-            >
-            <a href="#" class="text-white text-decoration-none lang-en d-none"
-              >Terms</a
-            >
+            <a href="#" class="text-white text-decoration-none">Terms</a>
           </div>
         </div>
       </div>
@@ -946,11 +1071,227 @@
 
     <!-- Bootstrap 5 JS Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-
     <!-- Font Awesome -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js"></script>
 
-    <!-- ভাষা পরিবর্তন স্ক্রিপ্ট -->
-    <script src="./js/languageSwitch.js"></script>
+    <!-- Custom CSS for Enhanced Animations -->
+    <style>
+      /* Floating animations */
+      @keyframes float {
+        0%,
+        100% {
+          transform: translateY(0px);
+        }
+        50% {
+          transform: translateY(-20px);
+        }
+      }
+
+      @keyframes bounce {
+        0%,
+        20%,
+        50%,
+        80%,
+        100% {
+          transform: translateY(0);
+        }
+        40% {
+          transform: translateY(-10px);
+        }
+        60% {
+          transform: translateY(-5px);
+        }
+      }
+
+      /* Mouse scroll indicator */
+      .mouse-icon {
+        width: 25px;
+        height: 45px;
+        border: 2px solid white;
+        border-radius: 15px;
+        position: relative;
+      }
+
+      .wheel {
+        width: 4px;
+        height: 8px;
+        background: white;
+        border-radius: 2px;
+        position: absolute;
+        top: 10px;
+        left: 50%;
+        transform: translateX(-50%);
+        animation: scroll 2s infinite;
+      }
+
+      @keyframes scroll {
+        0% {
+          opacity: 1;
+          top: 10px;
+        }
+        100% {
+          opacity: 0;
+          top: 25px;
+        }
+      }
+
+      /* Enhanced card hover effects */
+      .feature-card {
+        transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+      }
+
+      .feature-card:hover {
+        transform: translateY(-15px) scale(1.02);
+        box-shadow: 0 25px 50px rgba(0, 0, 0, 0.15);
+      }
+
+      .package-card {
+        transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+      }
+
+      .package-card:hover {
+        transform: translateY(-10px) scale(1.03);
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+      }
+
+      /* Floating cards animation */
+      .floating-card {
+        animation: float 3s ease-in-out infinite;
+      }
+
+      .floating-card:nth-child(2) {
+        animation-delay: 1s;
+      }
+
+      .floating-card:nth-child(3) {
+        animation-delay: 2s;
+      }
+
+      /* Button ripple effect */
+      .btn {
+        position: relative;
+        overflow: hidden;
+      }
+
+      .ripple {
+        position: absolute;
+        border-radius: 50%;
+        background: rgba(255, 255, 255, 0.3);
+        transform: scale(0);
+        animation: ripple-animation 0.6s linear;
+        pointer-events: none;
+      }
+
+      @keyframes ripple-animation {
+        to {
+          transform: scale(4);
+          opacity: 0;
+        }
+      }
+
+      /* Fade in animation */
+      .fade-in {
+        opacity: 0;
+        transform: translateY(30px);
+        transition: all 0.8s ease;
+      }
+
+      .fade-in.visible {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    </style>
+
+    <!-- Enhanced Custom JavaScript -->
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+          anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            const target = document.querySelector(this.getAttribute("href"));
+            if (target) {
+              target.scrollIntoView({
+                behavior: "smooth",
+                block: "start",
+              });
+            }
+          });
+        });
+
+        // Enhanced card hover effects
+        const cards = document.querySelectorAll(".feature-card, .package-card");
+        cards.forEach((card) => {
+          card.addEventListener("mouseenter", function () {
+            this.style.transform = "translateY(-15px) scale(1.02)";
+            this.style.boxShadow = "0 25px 50px rgba(0,0,0,0.15)";
+          });
+
+          card.addEventListener("mouseleave", function () {
+            this.style.transform = "translateY(0) scale(1)";
+            this.style.boxShadow = "";
+          });
+        });
+
+        // Button ripple effect
+        const buttons = document.querySelectorAll(".btn");
+        buttons.forEach((button) => {
+          button.addEventListener("click", function (e) {
+            const ripple = document.createElement("span");
+            const rect = this.getBoundingClientRect();
+            const size = Math.max(rect.width, rect.height);
+            const x = e.clientX - rect.left - size / 2;
+            const y = e.clientY - rect.top - size / 2;
+
+            ripple.style.width = ripple.style.height = size + "px";
+            ripple.style.left = x + "px";
+            ripple.style.top = y + "px";
+            ripple.classList.add("ripple");
+
+            this.appendChild(ripple);
+
+            setTimeout(() => {
+              ripple.remove();
+            }, 600);
+          });
+        });
+
+        // Intersection Observer for fade-in animations
+        const observerOptions = {
+          threshold: 0.1,
+          rootMargin: "0px 0px -50px 0px",
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add("visible");
+            }
+          });
+        }, observerOptions);
+
+        // Add fade-in class to elements and observe them
+        const animateElements = document.querySelectorAll(
+          ".feature-card, .package-card, h2, .lead"
+        );
+        animateElements.forEach((el) => {
+          el.classList.add("fade-in");
+          observer.observe(el);
+        });
+
+        // Navbar background change on scroll
+        const navbar = document.querySelector(".navbar");
+        window.addEventListener("scroll", () => {
+          if (window.scrollY > 100) {
+            navbar.style.background = "rgba(33, 37, 41, 0.95)";
+            navbar.style.backdropFilter = "blur(10px)";
+          } else {
+            navbar.style.background =
+              "linear-gradient(135deg, #0d6efd 0%, #0b5ed7 100%)";
+            navbar.style.backdropFilter = "none";
+          }
+        });
+      });
+    </script>
   </body>
 </html>
